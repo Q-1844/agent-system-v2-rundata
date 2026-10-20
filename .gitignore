@@ -1,0 +1,10 @@
+# 活运行数据永不入仓
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+.env
+__pycache__/
+*.pyc
