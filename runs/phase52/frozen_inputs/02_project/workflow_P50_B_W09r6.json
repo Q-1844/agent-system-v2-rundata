@@ -1,0 +1,465 @@
+{
+  "schemaVersion": "workflow_def_v1",
+  "workflowId": "P50_B_W09r6",
+  "name": "W09 六员完整生产",
+  "description": "六员完整生产及独立双审核：新故事 → 可审成片的完整证据链。",
+  "notes": "必需输入：新故事目标、本轮合法资产审批。桥接 Skill 仅在真实接缝需要时使用。",
+  "status": "draft",
+  "nodes": [
+    {
+      "id": "n_start",
+      "type": "boundary_start",
+      "refId": null,
+      "refVersion": null,
+      "label": null,
+      "config": {},
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_producer",
+      "type": "agent",
+      "refId": "producer",
+      "refVersion": null,
+      "label": null,
+      "config": {
+        "objective": "生产计划：写实电影短片《深水惊魂》——海上，一艘船受到巨型海怪（克苏鲁式触须怪物）追赶，船上只有船长与大副两名人类。两人的应对推动剧情。目标成片约 60 秒（50–70 秒完整叙事），横屏 16:9，写实电影风格。首版无旁白、无主动配音、无人物对白，保留合格原生环境声与同步音效。注意：项目内已有写实资产（characters+looks），资源阶段以核验+定点修复优先。"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_sw",
+      "type": "agent",
+      "refId": "script_writer",
+      "refVersion": null,
+      "label": null,
+      "config": {
+        "objective": "【作品目标】写实海难追逐短片：威胁被发现→追赶压力上升→两人有联系的行动→可观察结果（不能靠怪物突然消失或无原因跳场收尾）。无对白、无旁白；船长=操舵/决策，大副=配合/执行。项目内已有此前 run 写好的 5 段故事（s01–s05，n_rv_sw 已审定通过）：先 story.read 核验——满足上述目标则核验采用（可做必要的小幅修订并落盘）；不满足才改写。完成后如实汇报采用/修订/改写哪一种。",
+        "completion": {
+          "strategy": "allow_verified_reuse",
+          "outputs": [
+            {
+              "kind": "scene",
+              "minCount": 3
+            }
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_rv_sw",
+      "type": "human_review",
+      "refId": null,
+      "refVersion": null,
+      "label": "故事审定",
+      "config": {
+        "reviewer": "制作人"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_cd",
+      "type": "agent",
+      "refId": "character_designer",
+      "refVersion": null,
+      "label": null,
+      "config": {
+        "objective": "【写实资产核验+定点修复】项目内已有 4 characters（船长/大副/渔船/海怪，各含三视图）与 4 Looks（gen ready）。上轮 SIV 视觉审查（agnes-2.5-flash）+人工复核结论在案：\n①船长 look_f171aea96f3e：接近合格（写实皮肤/织物好），仅外套细节一致性小项；\n②大副 look_be5b0b5014fa：候选全部为西装商务装（非海上作业装束）+多视图板三人同框（分身风险）——必须重出：写实海上作业服装（防水外套/工装）、单人单视图全身参考、与船长明显可区分（年轻男性、不同发型脸型）；\n③渔船 look_96e67a3354c3：SIV 判 needs_fix——船内含站立人形（人数污染）——必须重出：完全无人物的船体参考（整船外观+驾驶区域+甲板，同一艘船）；\n④海怪 look_79ad00fa0ae5：SIV 判 needs_fix——直立双足 humanoid 沙滩行走，偏离设定——必须重出：触须海怪在水中（partly submerged 更佳），含与船的尺度基准，头部触须+体表质感可识别为同一实体。\n只修复 ②③④（和 ① 的小项，如低成本）；合格的船长参考保留不重做。全部候选生成后照常走 look.review_candidates 视觉审查，把 overall 与依据留档。",
+        "completion": {
+          "strategy": "allow_verified_reuse",
+          "outputs": [
+            {
+              "kind": "character",
+              "minCount": 1
+            },
+            {
+              "kind": "look",
+              "withImage": true,
+              "minCount": 1
+            }
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_rv_cd",
+      "type": "human_review",
+      "refId": null,
+      "refVersion": null,
+      "label": "资源审定（批准 Look）",
+      "config": {
+        "reviewer": "制作人",
+        "selection": {
+          "kind": "look_reference",
+          "entityId": "<运行期在审核卡片选择候选>"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_sc",
+      "type": "agent",
+      "refId": "scene_designer",
+      "refVersion": null,
+      "label": null,
+      "config": {
+        "objective": "建立场景：开阔海域（追船发生地）与渔船甲板（人物活动区）。写实海况：为追赶段落维护简明空间定义（时间/天气/光源/波浪状态/追赶方向）。每个故事段的具体状态用 scene.state_view.prepare 生成 SceneInstanceView 并绑定正确 SceneInstance——后续分镜首帧与视频以状态图为空间依据。",
+        "completion": {
+          "strategy": "allow_verified_reuse",
+          "outputs": [
+            {
+              "kind": "location",
+              "minCount": 2
+            }
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_rv_sc",
+      "type": "human_review",
+      "refId": null,
+      "refVersion": null,
+      "label": "场景审定",
+      "config": {
+        "reviewer": "制作人"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_dir_board",
+      "type": "agent",
+      "refId": "director",
+      "refVersion": null,
+      "label": null,
+      "config": {
+        "objective": "【工作方法】开始执行前先 skill.load \"full-story-relay-calibration\" 并严格遵循其制作方法；本轮不要加载其他技能。\n【任务】按已写好的故事自主设计分镜：镜头清单、资源绑定、分镜图（首帧候选）。每镜规划含：功能与主动作、起止状态（人物位置/持物/船航向/威胁位置）、机位与空间关系、预计可见人物（两人/一人/无人）、必须保留的关键事件、源时长与预计保留时长。所有视频源素材至少 8 秒、默认 10 秒（常规 8–12 秒内安排）。追赶关系按世界空间与相对位置定义（不要求每镜同向）；跨轴线需建立机位关系。两人身份镜用已批准 Look 参考；人物总数纪律：全片只有船长与大副两名人类。",
+        "completion": {
+          "strategy": "allow_verified_reuse",
+          "outputs": [
+            {
+              "kind": "shot",
+              "withImage": true,
+              "minCount": 6
+            }
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_rv_board",
+      "type": "human_review",
+      "refId": null,
+      "refVersion": null,
+      "label": "分镜审定（首帧选用）",
+      "config": {
+        "reviewer": "制作人",
+        "selection": {
+          "kind": "first_frame",
+          "entityId": "<运行期在审核卡片选择候选>"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_dir_video",
+      "type": "agent",
+      "refId": "director",
+      "refVersion": null,
+      "label": null,
+      "config": {
+        "objective": "【工作方法】开始执行前先 skill.load \"full-story-relay-calibration\" 并严格遵循其制作方法；本轮不要加载其他技能。\n【任务】按已选首帧与镜头清单真实生成全部视频：逐镜自主决定模式与接续方式（素材至少 8 秒，默认 10 秒），完成后核对回执、文件真实时长与首中尾帧。生成前先完整审看各镜已选首帧；首帧不合格的镜头先修首帧再提交。视频过程纪律：人物总数不得超过两人、不得出现分身；关键动作（操舵/配合/接触）过程完整；怪物与船保持同一实体与合理尺度。",
+        "completion": {
+          "strategy": "allow_verified_reuse",
+          "outputs": [
+            {
+              "kind": "video_version",
+              "playable": true,
+              "minCount": 6
+            }
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_rv_v1",
+      "type": "human_review",
+      "refId": null,
+      "refVersion": null,
+      "label": "视频一审",
+      "config": {
+        "instructions": "第一轮独立审核：叙事、身份、动作、空间与候选技术状态。",
+        "reviewer": "制作人"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_rv_v2",
+      "type": "human_review",
+      "refId": null,
+      "refVersion": null,
+      "label": "视频二审（选用装配版本）",
+      "config": {
+        "instructions": "第二轮独立审核：保留一审意见，完成用于装配的具体版本选用。",
+        "reviewer": "制作人",
+        "selection": {
+          "kind": "video_version",
+          "entityId": "<运行期在审核卡片选择候选>"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_asm",
+      "type": "agent",
+      "refId": "assembly",
+      "refVersion": null,
+      "label": null,
+      "config": {
+        "objective": "接收精确选片范围装配成片：禁止自动旁白；默认保留合格原生环境声与动作声（逐镜先分类再决定：保留/控增益/如实标记不可用，不合格片段给修复选项交政策裁定）；音乐仅按作品政策。完成渲染并核验可播放。",
+        "completion": {
+          "strategy": "allow_verified_reuse",
+          "outputs": [
+            {
+              "kind": "sequence",
+              "withCompletedRender": true,
+              "minCount": 1
+            }
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_rv_final",
+      "type": "human_review",
+      "refId": null,
+      "refVersion": null,
+      "label": "成片审定",
+      "config": {
+        "reviewer": "制作人"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_end",
+      "type": "boundary_end",
+      "refId": null,
+      "refVersion": null,
+      "label": null,
+      "config": {},
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "n_skill_0",
+      "type": "skill",
+      "refId": "full-story-relay-calibration",
+      "refVersion": null,
+      "label": "full-story-relay-calibration",
+      "config": {},
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_n_start_n_producer",
+      "type": "execution",
+      "source": "n_start",
+      "target": "n_producer",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_producer_n_sw",
+      "type": "execution",
+      "source": "n_producer",
+      "target": "n_sw",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_sw_n_rv_sw",
+      "type": "execution",
+      "source": "n_sw",
+      "target": "n_rv_sw",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_rv_sw_n_cd",
+      "type": "execution",
+      "source": "n_rv_sw",
+      "target": "n_cd",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_cd_n_rv_cd",
+      "type": "execution",
+      "source": "n_cd",
+      "target": "n_rv_cd",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_rv_cd_n_sc",
+      "type": "execution",
+      "source": "n_rv_cd",
+      "target": "n_sc",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_sc_n_rv_sc",
+      "type": "execution",
+      "source": "n_sc",
+      "target": "n_rv_sc",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_rv_sc_n_dir_board",
+      "type": "execution",
+      "source": "n_rv_sc",
+      "target": "n_dir_board",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_dir_board_n_rv_board",
+      "type": "execution",
+      "source": "n_dir_board",
+      "target": "n_rv_board",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_rv_board_n_dir_video",
+      "type": "execution",
+      "source": "n_rv_board",
+      "target": "n_dir_video",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_dir_video_n_rv_v1",
+      "type": "execution",
+      "source": "n_dir_video",
+      "target": "n_rv_v1",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_rv_v1_n_rv_v2",
+      "type": "execution",
+      "source": "n_rv_v1",
+      "target": "n_rv_v2",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_rv_v2_n_asm",
+      "type": "execution",
+      "source": "n_rv_v2",
+      "target": "n_asm",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_asm_n_rv_final",
+      "type": "execution",
+      "source": "n_asm",
+      "target": "n_rv_final",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_n_rv_final_n_end",
+      "type": "execution",
+      "source": "n_rv_final",
+      "target": "n_end",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "eb_n_skill_0_n_dir_video",
+      "type": "skill_binding",
+      "source": "n_skill_0",
+      "target": "n_dir_video",
+      "skillVersion": "1.4.0",
+      "sourcePort": "out",
+      "targetPort": "in"
+    },
+    {
+      "id": "e_skill_board",
+      "type": "skill_binding",
+      "source": "n_skill_0",
+      "target": "n_dir_board",
+      "skillVersion": "1.4.0"
+    }
+  ],
+  "template": {
+    "templateId": "W09",
+    "templateVersion": "p48_e_templates_v1"
+  },
+  "projectId": "P50_B",
+  "revision": 1,
+  "updatedAt": "2026-10-09T19:11:37.254Z",
+  "createdAt": "2026-10-09T16:39:53.159Z",
+  "contentHash": "sha256:c62149a36917e704cfc1661ba86254443c603d07656b58bedd8855bf90566206"
+}

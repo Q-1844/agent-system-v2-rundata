@@ -1,0 +1,41 @@
+{
+  "config_yaml_sha256": "9f2286a15fa268dc60d14940415fda2ab71d5e622f3f4d0acba390a1eef93a8d",
+  "env_sha256_no_content": "2a6cc2ae3f6ccc2daefcd1558ee99fc6c342c58ae901c4b320396895303564bf",
+  "key_params": {
+    "agnes_base_url": "https://api.agnes-ai.cn",
+    "text_model": "agnes-3.0-flash",
+    "vision_model_env": "agnes-2.5-flash (director_vision_review.py 显式)",
+    "image_model": "agnes-image-2.1-flash",
+    "video_model": "agnes-video-2.5-flash",
+    "rpm": {
+      "text": 20,
+      "image_1k": 20,
+      "image_2k": 16,
+      "image_3k": 1,
+      "image_4k": 1,
+      "video": 1
+    },
+    "image": {
+      "size_tier": "1K",
+      "ratio": "16:9",
+      "timeout_s": 300
+    },
+    "video": {
+      "frame_rate": 24,
+      "polling_interval_s": 5,
+      "max_wait_s": 3600
+    },
+    "image_host": {
+      "kind": "github_pages",
+      "repo": "Q-1844/agnes-frame-host",
+      "fallback": "imgbb"
+    },
+    "daily_quota": {
+      "video_seconds": 500,
+      "images": 4000,
+      "text_calls": 7200
+    },
+    "text_provider": "agnes"
+  },
+  "note": "凭据不进入交接；.env 仅记录哈希指纹"
+}

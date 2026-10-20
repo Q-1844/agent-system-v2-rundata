@@ -1,0 +1,92 @@
+{
+  "run_d60cfe3fb6b5": {
+    "runId": "run_d60cfe3fb6b5",
+    "workflowId": "P50_B_W09",
+    "status": "failed",
+    "createdAt": "2026-10-09T15:36:08.000Z",
+    "updatedAt": "2026-10-09T16:20:04.365Z",
+    "name": "W09 六员完整生产",
+    "idempotencyKey": "p50_b_run1",
+    "startParamsHash": "sha256:5fa2c5e91a0403aca5137b5650b5587f54e577b0a677988a587490f1ba1c65a3"
+  },
+  "run_e786730f019b": {
+    "runId": "run_e786730f019b",
+    "workflowId": "P50_B_W09r2",
+    "status": "rejected",
+    "createdAt": "2026-10-09T16:20:04.462Z",
+    "updatedAt": "2026-10-09T16:39:11.595Z",
+    "name": "W09 六员完整生产",
+    "idempotencyKey": "p50_b_run2",
+    "startParamsHash": "sha256:8441e8776a0655417261921bcf69eca977d631e3dfbb29f91a9876b5d68fc896"
+  },
+  "run_3698ccc77b9a": {
+    "runId": "run_3698ccc77b9a",
+    "workflowId": "P50_B_W09r3",
+    "status": "failed",
+    "createdAt": "2026-10-09T16:39:53.330Z",
+    "updatedAt": "2026-10-09T16:42:13.841Z",
+    "name": "W09 六员完整生产",
+    "idempotencyKey": "p50_b_run3",
+    "startParamsHash": "sha256:2d71a09cef929764efddb96b5bcab3f984264378b9875662943650480683585c"
+  },
+  "run_b25f5b900c3b": {
+    "runId": "run_b25f5b900c3b",
+    "workflowId": "P50_B_W09r4",
+    "status": "failed",
+    "createdAt": "2026-10-09T16:43:47.682Z",
+    "updatedAt": "2026-10-09T18:05:44.670Z",
+    "name": "W09 六员完整生产",
+    "idempotencyKey": "p50_b_run4",
+    "startParamsHash": "sha256:fd49529b7cf0de0b0e593a52df201d2fc73fe768ac9ac4f16100c0e75441ed38"
+  },
+  "run_afd8c4c90ed2": {
+    "runId": "run_afd8c4c90ed2",
+    "workflowId": "P50_B_W09r5",
+    "status": "waiting_human",
+    "createdAt": "2026-10-09T18:12:21.848Z",
+    "updatedAt": "2026-10-11T01:32:37.440Z",
+    "name": "W09 六员完整生产",
+    "idempotencyKey": "p50_b_run5",
+    "startParamsHash": "sha256:bd5f50d4f04f74b6309faf25c697e04014e6e9b9dacd737631b21fe669b928af"
+  },
+  "run_8af134406dde": {
+    "runId": "run_8af134406dde",
+    "workflowId": "P50_B_W09r6",
+    "status": "completed",
+    "createdAt": "2026-10-09T19:11:37.403Z",
+    "updatedAt": "2026-10-09T22:49:26.608Z",
+    "name": "W09 六员完整生产",
+    "idempotencyKey": "p50_b_run6",
+    "startParamsHash": "sha256:3b985d420a929182125cf2995ec3168059a704b732de66568f3d913c37dca0da"
+  },
+  "run_36919eb5a073": {
+    "runId": "run_36919eb5a073",
+    "workflowId": "P51_C_W01",
+    "status": "completed",
+    "createdAt": "2026-10-10T02:41:04.779Z",
+    "updatedAt": "2026-10-10T08:45:57.240Z",
+    "name": "P51_C 冻结分镜复验",
+    "idempotencyKey": "p51_c_run1",
+    "startParamsHash": "sha256:4b43e2b193eb994caf99b94c89a7c587d1cfb94e9f418a1b6ef4d4bb1ce66a1c"
+  },
+  "run_9a05fd44f358": {
+    "runId": "run_9a05fd44f358",
+    "workflowId": "P51_E_W01",
+    "status": "failed",
+    "createdAt": "2026-10-11T01:37:30.022Z",
+    "updatedAt": "2026-10-11T02:27:12.643Z",
+    "name": "P51-E 效率验证+修复轮（11 镜重生成）",
+    "idempotencyKey": "p51_e_run1",
+    "startParamsHash": "sha256:ac7e4df3fb66ba0627b85cfcd700b362cdb8f68ded8e667cee830236ddb5cf2b"
+  },
+  "run_58a5f25aeeec": {
+    "runId": "run_58a5f25aeeec",
+    "workflowId": "P51_E_W01",
+    "status": "completed",
+    "createdAt": "2026-10-11T02:30:14.679Z",
+    "updatedAt": "2026-10-11T05:09:42.584Z",
+    "name": "P51-E 效率验证+修复轮（11 镜重生成）",
+    "idempotencyKey": "p51_e_run2",
+    "startParamsHash": "sha256:59dbc7168776ee3383e2c27f0ccb2ba089c7a61efb9e8bf1a43c9c48cdbb8fba"
+  }
+}

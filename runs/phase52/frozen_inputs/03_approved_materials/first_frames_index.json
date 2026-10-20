@@ -1,0 +1,116 @@
+{
+  "count": 22,
+  "location_in_repo": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\frames",
+  "frames": [
+    {
+      "file": "s01_c01_first_v1.png",
+      "sha256": "f518ae6bc78cbf81f258d755767147e9c61ddf0ad7aae648e3b9ba90dbc686fc",
+      "bytes": 921485
+    },
+    {
+      "file": "s01_c02_first_v1.png",
+      "sha256": "fa7428d5b4b5888ad709c816361cbe9ce5e405c91ce17b96456f5641413ef39d",
+      "bytes": 1243465
+    },
+    {
+      "file": "s01_c02_first_v2.png",
+      "sha256": "d81f89f3d30c1807eae47512dd8f6e522eb5dc3038e56a53c2913fe804eed355",
+      "bytes": 1212441
+    },
+    {
+      "file": "s01_c03_first_v1.png",
+      "sha256": "9b4169e10ecdc7dd524867294857fce156814ca0a93429453f01370ab84e29ed",
+      "bytes": 900577
+    },
+    {
+      "file": "s01_c04_first_v1.png",
+      "sha256": "a3d159ba4377a9f254d3135debf4456ab7f9b0e097142f043f51b5b2d0a41ad4",
+      "bytes": 1107995
+    },
+    {
+      "file": "s01_c05_first_v1.png",
+      "sha256": "9da24a5a89a00130076902575d4ca38dac7ef33d0da8e5a75064ebefb958771f",
+      "bytes": 1274286
+    },
+    {
+      "file": "s02_c01_first_v1.png",
+      "sha256": "28245716e7918d5f4de69bcf1974cd16159e4920bd7626bd1bc2cfe12c365477",
+      "bytes": 1124671
+    },
+    {
+      "file": "s02_c02_first_v1.png",
+      "sha256": "d04a5d2efc3f9a2989b512166d0456162b4947c68a5111bfc6f83fb23be2c323",
+      "bytes": 1133664
+    },
+    {
+      "file": "s02_c03_first_v1.png",
+      "sha256": "8320ae434a137d8148403d9ffa67ef5db8d8aa8c33af0c1830da6323c7cfc682",
+      "bytes": 1151804
+    },
+    {
+      "file": "s02_c04_first_v1.png",
+      "sha256": "8d5289da0ba4e92c4a2439b708fbc2d2f7725d4fab056af25ccaa2ee4ed3f146",
+      "bytes": 1318202
+    },
+    {
+      "file": "s03_c01_first_v1.png",
+      "sha256": "1474a37a69c93162f517290ae94e7621c77639a55e3a0ef43d24ec4bdcf05c03",
+      "bytes": 1252192
+    },
+    {
+      "file": "s03_c02_first_v1.png",
+      "sha256": "612893e59055f2eef93d030a4bf90fb474b72016bd9402ded94e2e12d81e1ba3",
+      "bytes": 1235436
+    },
+    {
+      "file": "s03_c03_first_v1.png",
+      "sha256": "fc6299723ac731e5b70c95ff40798b9c4b987bee2223824fe0f018570358fc6c",
+      "bytes": 1422871
+    },
+    {
+      "file": "s03_c04_first_v1.png",
+      "sha256": "4949424fc0da58f5520d6e31106d85a0c555c77dcdd85763b4220abd4d0a5df1",
+      "bytes": 1147522
+    },
+    {
+      "file": "s04_c01_first_v1.png",
+      "sha256": "09ba9058360a5861963123ad840ce2be1d7e4a468880a7f0a85b9b599a6ca22e",
+      "bytes": 1437774
+    },
+    {
+      "file": "s04_c02_first_v1.png",
+      "sha256": "d1d40ecfa5ed0b9e2d1de1986044616a428c673f02211b28cc41cded3e163005",
+      "bytes": 1269314
+    },
+    {
+      "file": "s04_c03_first_v1.png",
+      "sha256": "2b135821199e66b40ddbbcf97c769c6bac0e55491ad9df53bc823f515eff8bb2",
+      "bytes": 1172477
+    },
+    {
+      "file": "s04_c04_first_v1.png",
+      "sha256": "fa7e94a6df06b8530ca97943d6047072e71f96f7bc1dec9dd9fdefa766173df5",
+      "bytes": 1407583
+    },
+    {
+      "file": "s05_c01_first_v1.png",
+      "sha256": "c1398b2391bc9aba794f571108a1ccf4eb05ffe21b4d3c169e88df8f31b5130c",
+      "bytes": 1141783
+    },
+    {
+      "file": "s05_c02_first_v1.png",
+      "sha256": "409041af0f826639df32c714bf47f17a270079ae48515b2726a33931d7f1f807",
+      "bytes": 1107173
+    },
+    {
+      "file": "s05_c03_first_v1.png",
+      "sha256": "1290ec79a08137bb80d76c3cd2d8ac74b5a1d16692c18035d63d7a6f093e20b2",
+      "bytes": 1001970
+    },
+    {
+      "file": "s05_c03_first_v2.png",
+      "sha256": "12d1b63b537894b810e89776b440aeb10097be4701b12a823056e1ec6d55de46",
+      "bytes": 1067594
+    }
+  ]
+}

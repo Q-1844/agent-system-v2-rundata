@@ -1,0 +1,13 @@
+{
+  "repo": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard",
+  "baseline_branch": "feat/agent-v2-phase-d-golden-run",
+  "work_branch_created": "phase52/efficiency",
+  "baseline_commit": "ca02635ac9a932bccd25b02b68e2605e615048d7",
+  "commit_subject": "docs(phase51-E): §11 用户复盘定版与协作流程v2落地记录——审核三查判据/autoApprove/豁免闸/尾帧接续/效率归因确认；待决项清空（影片=测试品可删）",
+  "uncommitted_tracked": [
+    "M _p51_va_multiview_video.py",
+    " M components.d.ts"
+  ],
+  "untracked_count": 831,
+  "recorded_at": "2026-10-11T18:18:05"
+}

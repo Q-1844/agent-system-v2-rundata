@@ -1,0 +1,565 @@
+{
+  "phase": "PHASE52",
+  "exported_at": "2026-10-11T18:18:05",
+  "exported_by": "CodeBuddy (GLM-5.3-Flash) @ workspace c:/Users/曹文淇/Desktop/ai工作流",
+  "repo": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard",
+  "project": "P50_B《深水惊魂》（克苏鲁海怪追渔船；船长+大副）",
+  "git_baseline": {
+    "repo": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard",
+    "baseline_branch": "feat/agent-v2-phase-d-golden-run",
+    "work_branch_created": "phase52/efficiency",
+    "baseline_commit": "ca02635ac9a932bccd25b02b68e2605e615048d7",
+    "commit_subject": "docs(phase51-E): §11 用户复盘定版与协作流程v2落地记录——审核三查判据/autoApprove/豁免闸/尾帧接续/效率归因确认；待决项清空（影片=测试品可删）",
+    "uncommitted_tracked": [
+      "M _p51_va_multiview_video.py",
+      " M components.d.ts"
+    ],
+    "untracked_count": 831,
+    "recorded_at": "2026-10-11T18:18:05"
+  },
+  "config_fingerprint_summary": {
+    "config_yaml_sha256": "9f2286a15fa268dc60d14940415fda2ab71d5e622f3f4d0acba390a1eef93a8d",
+    "env_sha256_no_content": "2a6cc2ae3f6ccc2daefcd1558ee99fc6c342c58ae901c4b320396895303564bf",
+    "note": "凭据不进入交接；.env 仅记录哈希指纹"
+  },
+  "generation_account_nonsensitive": {
+    "agnes_account": "api.agnes-ai.cn 账号（key 存在于 .env，值不导出）",
+    "github_pages_host_account": "Q-1844/agnes-frame-host（图床）",
+    "imgbb": "已配置（回退图床）",
+    "sensenova": "已配置",
+    "quota_pool_note": "Agnes Token Plan：视频 500s/天、生图 4000/天、文本 1500/5h。本机单账号单配额池；WorkBuddy 生成额度是否共享未核实前，不得同时生成。"
+  },
+  "skill_packages": [
+    {
+      "skill_id": "full-story-relay-calibration",
+      "version": "1.6.0",
+      "name": "全片尾帧接力连续性校准",
+      "tier": "builtin_core",
+      "status": "active",
+      "bindings": [
+        {
+          "agent_id": "director",
+          "role": "primary_executor",
+          "routing_priority": 100,
+          "authority_tier": "builtin_core",
+          "activation_mode": "hinted"
+        },
+        {
+          "agent_id": "producer",
+          "role": "coordinator",
+          "routing_priority": 80,
+          "authority_tier": "builtin_core",
+          "activation_mode": "hinted"
+        },
+        {
+          "agent_id": "script_writer",
+          "role": "contributor",
+          "routing_priority": 60,
+          "authority_tier": "builtin_core",
+          "activation_mode": "hinted"
+        },
+        {
+          "agent_id": "character_designer",
+          "role": "conditional",
+          "routing_priority": 40,
+          "authority_tier": "builtin_core",
+          "activation_mode": "hinted"
+        },
+        {
+          "agent_id": "scene_designer",
+          "role": "conditional",
+          "routing_priority": 40,
+          "authority_tier": "builtin_core",
+          "activation_mode": "hinted"
+        }
+      ],
+      "required_capabilities": {
+        "producer": [
+          "project.quota",
+          "director.delegate",
+          "script_writer.delegate",
+          "scene_designer.delegate",
+          "character_designer.delegate"
+        ],
+        "director": [
+          "calibration.run_create",
+          "calibration.seam_measure",
+          "calibration.trace_read",
+          "calibration.trace_upsert",
+          "video.extract_frame",
+          "visual.review_shot",
+          "visual.review_image",
+          "shot.generate_videos",
+          "shot.production.inspect",
+          "shot.production.bind",
+          "shot.production.refresh",
+          "shot.update"
+        ],
+        "script_writer": [
+          "story.list",
+          "story.read",
+          "story.update"
+        ],
+        "character_designer": [
+          "character.list",
+          "character.read",
+          "resource.look.prepare"
+        ],
+        "scene_designer": [
+          "scene.production.inspect",
+          "scene.view.prepare",
+          "scene.state_view.prepare",
+          "scene.state.update"
+        ]
+      },
+      "file_count": 9
+    },
+    {
+      "skill_id": "keyframes-bridge-repair",
+      "version": "1.4.0",
+      "name": "keyframes 接续桥：接缝修复的标准手段",
+      "tier": "builtin_core",
+      "status": "active",
+      "bindings": [
+        {
+          "agent_id": "director",
+          "role": "primary_executor",
+          "routing_priority": 90,
+          "authority_tier": "builtin_core",
+          "activation_mode": "hinted"
+        },
+        {
+          "agent_id": "producer",
+          "role": "coordinator",
+          "routing_priority": 40,
+          "authority_tier": "builtin_core",
+          "activation_mode": "hinted"
+        }
+      ],
+      "required_capabilities": {
+        "producer": [
+          "project.quota",
+          "director.delegate"
+        ],
+        "director": [
+          "shot.bridge_create",
+          "calibration.run_create",
+          "calibration.seam_measure",
+          "calibration.trace_upsert",
+          "visual.sample_frames",
+          "video.extract_frame"
+        ]
+      },
+      "file_count": 4
+    },
+    {
+      "skill_id": "agnes-production-craft",
+      "version": "0.9.0",
+      "name": "Agnes 制作工艺候选包（首帧·动作因果·衔接·修复）",
+      "tier": "candidate",
+      "status": "active",
+      "bindings": [
+        {
+          "agent_id": "director",
+          "role": "primary_executor",
+          "routing_priority": 100,
+          "authority_tier": "builtin",
+          "activation_mode": "hinted",
+          "role_resource": "references/director.md"
+        },
+        {
+          "agent_id": "producer",
+          "role": "coordinator",
+          "routing_priority": 70,
+          "authority_tier": "builtin",
+          "activation_mode": "hinted",
+          "role_resource": "references/producer.md"
+        }
+      ],
+      "required_capabilities": {
+        "producer": [
+          "project.quota",
+          "director.delegate",
+          "script_writer.delegate",
+          "scene_designer.delegate",
+          "character_designer.delegate"
+        ],
+        "director": [
+          "shot.generate_videos",
+          "shot.update",
+          "visual.review_shot",
+          "visual.review_image",
+          "video.extract_frame"
+        ]
+      },
+      "file_count": 10
+    }
+  ],
+  "skill_binding_summary": "full-story-relay-calibration v1.6.0：director=primary_executor(100)、producer=coordinator(80)、script_writer=contributor(60)、character_designer=conditional(40)、scene_designer=conditional(40)；activation_mode=hinted；authority_tier=builtin_core。绑定清单原文见各 skill.json。",
+  "looks": [
+    {
+      "look_id": "look_f171aea96f3e",
+      "character_name": "船长",
+      "label": "Captain Default Look - Crinkled Oilskin",
+      "approval_status": "approved",
+      "generation_status": "ready",
+      "approved_reference_asset_ids": [
+        "ref_e5e8b8e0a54c"
+      ],
+      "cover_asset_id": "ref_e5e8b8e0a54c",
+      "approved_files": [
+        "03_approved_materials/look_f171aea96f3e__ref_e5e8b8e0a54c.png"
+      ]
+    },
+    {
+      "look_id": "look_be5b0b5014fa",
+      "character_name": "大副",
+      "label": "First Mate Maritime Work Attire",
+      "approval_status": "approved",
+      "generation_status": "ready",
+      "approved_reference_asset_ids": [
+        "ref_e8858d5baf12"
+      ],
+      "cover_asset_id": "ref_e8858d5baf12",
+      "approved_files": [
+        "03_approved_materials/look_be5b0b5014fa__ref_e8858d5baf12.png"
+      ]
+    },
+    {
+      "look_id": "look_96e67a3354c3",
+      "character_name": "渔船",
+      "label": "Fishing Boat Exterior - Empty Crew-Free",
+      "approval_status": "approved",
+      "generation_status": "ready",
+      "approved_reference_asset_ids": [
+        "ref_87639e9db8d5"
+      ],
+      "cover_asset_id": "ref_87639e9db8d5",
+      "approved_files": [
+        "03_approved_materials/look_96e67a3354c3__ref_87639e9db8d5.png"
+      ]
+    },
+    {
+      "look_id": "look_79ad00fa0ae5",
+      "character_name": "海怪",
+      "label": "Sea Monster Submerged Mass",
+      "approval_status": "approved",
+      "generation_status": "failed",
+      "approved_reference_asset_ids": [
+        "ref_9c0ba4bed38c"
+      ],
+      "cover_asset_id": "ref_9c0ba4bed38c",
+      "approved_files": [
+        "03_approved_materials/look_79ad00fa0ae5__ref_9c0ba4bed38c.png"
+      ]
+    }
+  ],
+  "storyboard": {
+    "locked_storyboard": "02_project/LOCKED_STORYBOARD.json（20 镜，frozen_from run_b25f5b900c3b）",
+    "common_intent": "02_project/COMMON_INTENT.json",
+    "canonical": "02_project/project.json（story_text 五幕剧本 + 5 场景 20 镜头）"
+  },
+  "first_frames": "22 个首帧资产（哈希清单：03_approved_materials/first_frames_index.json；原文件留在仓库）",
+  "files": [
+    {
+      "path": "01_skill/_loading_mechanism/models.py",
+      "type": "skill_system_source",
+      "sha256": "1512afef1b85fb087f2afe9b329008a5ebd33ed858bdada64dc389c5e852146f",
+      "bytes": 14215,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\src\\agents\\skill_system\\models.py"
+    },
+    {
+      "path": "01_skill/_loading_mechanism/registry.py",
+      "type": "skill_system_source",
+      "sha256": "e32c64b763b56fe31575c335bd19332d74cc678c8e920092b0b4fd05aec80869",
+      "bytes": 6149,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\src\\agents\\skill_system\\registry.py"
+    },
+    {
+      "path": "01_skill/_loading_mechanism/runtime.py",
+      "type": "skill_system_source",
+      "sha256": "7d46e205b4286e1fa5de6d90fe40f32878a81fe174ec361580aeebf4faee32e4",
+      "bytes": 16556,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\src\\agents\\skill_system\\runtime.py"
+    },
+    {
+      "path": "01_skill/builtin_core__full-story-relay-calibration__v1.6.0/references/capability-facts.md",
+      "type": "skill_verbatim",
+      "sha256": "6274e0c5dd0d2d8b4d7aa512522ff106994a7e1902a51205b0b01f91c4ca4c18",
+      "bytes": 10232
+    },
+    {
+      "path": "01_skill/builtin_core__full-story-relay-calibration__v1.6.0/references/character_designer.md",
+      "type": "skill_verbatim",
+      "sha256": "c7775b17c89810ac1f79be33b71ecbd22286e3c201256cf8182b797682175d4d",
+      "bytes": 1292
+    },
+    {
+      "path": "01_skill/builtin_core__full-story-relay-calibration__v1.6.0/references/director.md",
+      "type": "skill_verbatim",
+      "sha256": "d32314859a5b707c9ab0ecec5ec9948c132bbeb2240acc657f371f19aa1ae3e9",
+      "bytes": 14529
+    },
+    {
+      "path": "01_skill/builtin_core__full-story-relay-calibration__v1.6.0/references/producer.md",
+      "type": "skill_verbatim",
+      "sha256": "91d4a30bda9e91dcf5ffb574b1938ded90cec949d2a563bb253e8e9a40f20872",
+      "bytes": 4775
+    },
+    {
+      "path": "01_skill/builtin_core__full-story-relay-calibration__v1.6.0/references/production-recipes.md",
+      "type": "skill_verbatim",
+      "sha256": "0ba54312efc1190f29f71d56eb64304a93af906b6306a355c94e4cf7f4819141",
+      "bytes": 15047
+    },
+    {
+      "path": "01_skill/builtin_core__full-story-relay-calibration__v1.6.0/references/scene_designer.md",
+      "type": "skill_verbatim",
+      "sha256": "24c3e14b628425d09aa2969d2e96caecde4962cf952c388a7776015e732391fd",
+      "bytes": 1869
+    },
+    {
+      "path": "01_skill/builtin_core__full-story-relay-calibration__v1.6.0/references/script_writer.md",
+      "type": "skill_verbatim",
+      "sha256": "c7c60622f6a4246ce9d7b74d5fc4ebd6f6c38c43ed3a15c7742d31ab3b31d86d",
+      "bytes": 4507
+    },
+    {
+      "path": "01_skill/builtin_core__full-story-relay-calibration__v1.6.0/skill.json",
+      "type": "skill_verbatim",
+      "sha256": "f995b27406fe2bdcb5257f2419129ebd94e66d28e11b0d686f75d9f57805d45c",
+      "bytes": 3825
+    },
+    {
+      "path": "01_skill/builtin_core__full-story-relay-calibration__v1.6.0/SKILL.md",
+      "type": "skill_verbatim",
+      "sha256": "ac499d16089a14e3525ad708236e58a5d5aab6498403c596c0f503199d6d008e",
+      "bytes": 26889
+    },
+    {
+      "path": "01_skill/builtin_core__keyframes-bridge-repair__v1.4.0/references/director.md",
+      "type": "skill_verbatim",
+      "sha256": "8971f535faa027352067fa873145c6f8cbcd29d85a9d48797d9608c52ccc5592",
+      "bytes": 3226
+    },
+    {
+      "path": "01_skill/builtin_core__keyframes-bridge-repair__v1.4.0/references/producer.md",
+      "type": "skill_verbatim",
+      "sha256": "5e9520473477d24e9a43ee5e5fe0bb05a2a44e6669daaa052fe438d02654ba65",
+      "bytes": 1083
+    },
+    {
+      "path": "01_skill/builtin_core__keyframes-bridge-repair__v1.4.0/skill.json",
+      "type": "skill_verbatim",
+      "sha256": "12ec44721b5b18e056ec8b8a5b2f6d5a5df088afc82f507cc6dd5626e2601a51",
+      "bytes": 1899
+    },
+    {
+      "path": "01_skill/builtin_core__keyframes-bridge-repair__v1.4.0/SKILL.md",
+      "type": "skill_verbatim",
+      "sha256": "56889414b0ea8ba35e44e7ef7baf2ab62bcab0dbe2fda5073395ec78a13e0e4f",
+      "bytes": 6746
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/references/director.md",
+      "type": "skill_verbatim",
+      "sha256": "58e70d446566d6b65325d4f96444e009a46546826b95ef2288a6215af609982c",
+      "bytes": 1561
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/references/first-frame-image.md",
+      "type": "skill_verbatim",
+      "sha256": "50692a652f4ecd478317b910c6937a34d29c51cffd8787e6875affedc9bb2e21",
+      "bytes": 3088
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/references/model-capability-brief.md",
+      "type": "skill_verbatim",
+      "sha256": "f9120ffb6e5dc101c4a4cc079c73e2ccc83278d433f7a702e73c28c1782261cd",
+      "bytes": 3321
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/references/producer.md",
+      "type": "skill_verbatim",
+      "sha256": "35b46059e4a65d1cfe010bfd3b1079a807764b99293ee259f892fcc18cbfc19f",
+      "bytes": 983
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/references/repair-diagnosis.md",
+      "type": "skill_verbatim",
+      "sha256": "444d94903b2b9b28c6c42e2a57859a63e37d4b2c05f0b2b7ad7daed710d798a0",
+      "bytes": 3095
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/references/research-self-check.md",
+      "type": "skill_verbatim",
+      "sha256": "fce95adbc2a4e3cbbd63c167ad29bedaa6de41c50cff4bf4b8430335ab6b971a",
+      "bytes": 3528
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/references/shot-continuity.md",
+      "type": "skill_verbatim",
+      "sha256": "bf9da25f980b6682fa49f9d9b73644ce7e478cdf11ffe79a21f4228cf19f6dfa",
+      "bytes": 4155
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/references/video-action-causality.md",
+      "type": "skill_verbatim",
+      "sha256": "d2ae0793995f866b9f37bd9743e671154c00f6eb814016346b67c4eb2283091e",
+      "bytes": 3945
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/skill.json",
+      "type": "skill_verbatim",
+      "sha256": "523f523b6badaaff032cc8a78283b53a243486395357b59c67915a9353d98532",
+      "bytes": 2096
+    },
+    {
+      "path": "01_skill/candidate__agnes-production-craft__v0.9.0/SKILL.md",
+      "type": "skill_verbatim",
+      "sha256": "f88676a3ddae469437a83775c262b85a97876acf52fcbf2c9d78738c0cad34df",
+      "bytes": 6328
+    },
+    {
+      "path": "02_project/COMMON_INTENT.json",
+      "type": "locked_intent",
+      "sha256": "9520a47375c2beff9d0e8d0626525f81c26ec5b0fda23e968a6eb9edb4c8d75a",
+      "bytes": 9559,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\_p50_c_package\\COMMON_INTENT.json",
+      "note": "公共意图包：角色/船/怪物/声音政策/叙事段落"
+    },
+    {
+      "path": "02_project/generation_records.jsonl",
+      "type": "evidence",
+      "sha256": "f458281537b3863ed91508c8550062e6f792a19bbfc44caf9506bc2c7be482a7",
+      "bytes": 403563,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\resources\\generation_records.jsonl",
+      "note": "历史生成请求与回执记录（receipts 证据）"
+    },
+    {
+      "path": "02_project/LOCKED_STORYBOARD.json",
+      "type": "locked_storyboard",
+      "sha256": "d37cc550e3418d1f838f011f286de1496cf5627d79e16e9d44a408891cde64ea",
+      "bytes": 16832,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\_p50_c_package\\LOCKED_STORYBOARD.json",
+      "note": "锁定分镜：frozen_from run_b25f5b900c3b 分镜审定通过版本，20 镜"
+    },
+    {
+      "path": "02_project/project.json",
+      "type": "canonical",
+      "sha256": "6290ab468100e8a07fc91791ce63545c7c34cacda49af32778d4cf34e7449150",
+      "bytes": 1645273,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\project.json",
+      "note": "canonical project.json：剧本 story_text + 5 场景 20 镜头"
+    },
+    {
+      "path": "02_project/resources.json",
+      "type": "canonical",
+      "sha256": "3d08c612db05bb1c26adafb8ad9c7f1f630adc8a58754a1f201f102b37d12d6f",
+      "bytes": 42708,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\resources.json",
+      "note": "4 个角色 Look（船长/大副/渔船/海怪）+ 47 个参考资产元数据"
+    },
+    {
+      "path": "02_project/review_records.jsonl",
+      "type": "evidence",
+      "sha256": "a10ef585de10f7a8806545697e3fba20c8f56c24d5354f5071fb242ae450e092",
+      "bytes": 240122,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\resources\\review_records.jsonl",
+      "note": "历史审查记录"
+    },
+    {
+      "path": "02_project/workflow_P50_B_W09r6.json",
+      "type": "workflow_definition",
+      "sha256": "ffbad2aa3be8496232a2eb8e4e5680da8fd131311dcedfca51916b12728f357e",
+      "bytes": 15043,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\workflows\\definitions\\P50_B_W09r6.json",
+      "note": "完成 20 镜生产的工作流定义（六 Agent）"
+    },
+    {
+      "path": "02_project/workflows_runs_index.json",
+      "type": "evidence",
+      "sha256": "b8ebacd51c240f91786e340ff85a5ffee37caa719f3ae92bed2709848382f30d",
+      "bytes": 3579,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\workflows\\runs\\runs_index.json",
+      "note": "全部工作流 run 索引与状态"
+    },
+    {
+      "path": "03_approved_materials/first_frames_index.json",
+      "type": "asset_index",
+      "sha256": "e7734c0d40cb6026b3b0203035e67b7ffc779cbfc7accc2612ccac07ae14625c",
+      "bytes": 3747,
+      "note": "首帧资产哈希清单（22 个文件，原文件在仓库内未复制）"
+    },
+    {
+      "path": "03_approved_materials/look_79ad00fa0ae5__ref_9c0ba4bed38c.png",
+      "type": "approved_reference_image",
+      "sha256": "556c85046e8366b6a91a62847d2e43d9e6e991a1070571b9a166db32f9da1353",
+      "bytes": 1460764,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\resources\\looks\\look_79ad00fa0ae5\\generations\\gen_69daef8ba582\\candidate_01.png",
+      "note": "海怪 已批准参考（view=, source=generated）"
+    },
+    {
+      "path": "03_approved_materials/look_96e67a3354c3__ref_87639e9db8d5.png",
+      "type": "approved_reference_image",
+      "sha256": "7d70123750809bfc720dc55da499fe1889c31634308d1eeb1ab95c9defbe94b9",
+      "bytes": 972324,
+      "note": "渔船 已批准参考，本地缺失，从原始 URL 下载导出",
+      "source_url": "https://cos-platform-outputs.agnes-ai.cn/images/i2i/task_Y7K4sqXAL6RWaNdBxMmZwGe18QNhwcNH/output.png"
+    },
+    {
+      "path": "03_approved_materials/look_be5b0b5014fa__ref_e8858d5baf12.png",
+      "type": "approved_reference_image",
+      "sha256": "9409ec7139e9cb2d4706e578b08d3975895ebca309964dda9da47e3568705ad0",
+      "bytes": 1275801,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\resources\\looks\\look_be5b0b5014fa\\generations\\gen_ced6b03ebd88\\candidate_01.png",
+      "note": "大副 已批准参考（view=, source=generated）"
+    },
+    {
+      "path": "03_approved_materials/look_f171aea96f3e__ref_e5e8b8e0a54c.png",
+      "type": "approved_reference_image",
+      "sha256": "2c93228cb665fa30b0afa7a98edb8c1e5085af8f6d99ce45668350d638d01fc0",
+      "bytes": 1384787,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\P50_B\\output\\resources\\looks\\look_f171aea96f3e\\generations\\gen_b0e5289f766e\\candidate_01.png",
+      "note": "船长 已批准参考（view=, source=generated）"
+    },
+    {
+      "path": "04_baseline/config.yaml",
+      "type": "config_copy",
+      "sha256": "9f2286a15fa268dc60d14940415fda2ab71d5e622f3f4d0acba390a1eef93a8d",
+      "bytes": 5326,
+      "source_abs": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\config\\config.yaml",
+      "note": "平台参数配置原文（密钥均为 ${ENV_VAR} 占位，无明文凭据）"
+    },
+    {
+      "path": "04_baseline/config_fingerprint.json",
+      "type": "baseline",
+      "sha256": "12a05cffc54d94f2818b863eac5f7b099e641b65c5133cc1be08b0736e839497",
+      "bytes": 1160
+    },
+    {
+      "path": "04_baseline/git_baseline.json",
+      "type": "baseline",
+      "sha256": "beac0da11b98ba441fab3dd3cae8275341b564218dd75f8966eaf50682bb863c",
+      "bytes": 637
+    },
+    {
+      "path": "PHASE52_INPUTS_STATUS.md",
+      "type": "file",
+      "sha256": "c5246f1300e5430795f6a31305503e5c423459432f143ca3a79dea8bbb6cfa9f",
+      "bytes": 2761
+    }
+  ],
+  "missing_items": [],
+  "warnings": [
+    "ref_87639e9db8d5 本地文件缺失，已从原始 URL 下载导出；CodeBuddy 已用视觉模型核验：图为无人小型渔船、右舷 3/4 侧视、黄昏平静海面，与 look 标签(Fishing Boat Exterior - Empty Crew-Free)及 view(full starboard three-quarter) 一致"
+  ],
+  "known_dependencies": [
+    "skill.json required_capabilities（capability 校验在 CapabilityRegistry）",
+    "references/production-recipes.md 等依赖文件（已逐字导出）",
+    "锁定分镜依赖 canonical project.json 的场景/镜头定义",
+    "首帧/尾帧接力依赖视频实际保留区间最后一张真实解码帧（见 LOCKED_STORYBOARD rules）"
+  ],
+  "manifest_rebuilt_at": "2026-10-11T11:30:19+00:00",
+  "manifest_rebuild_note": "files 数组重建为冻结目录完整实际清单（44 项）。原导出脚本 copy_tree_verbatim 未把 23 个 Skill 文件条目写入 files（磁盘文件本身始终正确）；重建后每项 sha256 均自冻结文件实算。"
+}
