@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "run_id": "PHASE52",
+  "phase": "PHASE52_EFFICIENCY",
+  "frozen_at": "2026-10-21",
+  "source_repo": "父仓 ai工作流（本地非 Git 归档数据，原 PHASE52_* 与 generated-images 目录）",
+  "source_commit_note": "Phase52 由 CodeBuddy (GLM-5.3-Flash) 于 2026-10-11 执行导出，原始冻结口径见 runs/phase52/frozen_inputs/PHASE52_BASELINE_MANIFEST.json",
+  "files_ref": "manifests/sha256-index.csv",
+  "file_count": 52,
+  "sanitization_status": "原样搬运未改内容；无密钥、无活数据库（安全闸 2026-10-20 全历史扫描口径复核）",
+  "approval_record": "用户四仓迁移指令（2026-10-20）：B 仓首批=账本导出+冻结输入+评审图片+场景多视角样张",
+  "contents": {
+    "runs/phase52/ledger/": "生图/视频账本 jsonl + 时间线 csv（701 行）",
+    "runs/phase52/frozen_inputs/": "Phase52 冻结输入（skill 包/项目状态/核准素材/基线指纹，44 文件）",
+    "runs/phase52/reviewed_images/": "人评通过图片样例（2 文件）",
+    "runs/scene_multiview_20260917/": "场景模块多视角生图样张（3 文件，2026-09-17）"
+  }
+}
