@@ -1,0 +1,14 @@
+[A] landing frame uploaded: https://Q-1844.github.io/agnes-frame-host/objects/02e3d338d40fe740.jpg
+[B] bridge inserted: s12_c07 (index=3) relay->s12_c02
+[C] binding created
+[C] binding refresh -> {'ok': True, 'operation': 'shot_binding.
+[D] keyframes PUT ok, invalidated={}
+[E] compiled, basis.binding_revision=4fddb006
+[E] seeded: batch=batch_m5b_lf_672fef cand=cand_m5b_lf_348dfb
+[F] job: fda8a8ed7896
+[F] job state=done err=
+[G] end frame: https://Q-1844.github.io/agnes-frame-host/objects/0c8e0500c15fbfdf.jpg
+C:\Users\曹文淇\Desktop\ai工作流\animation-storyboard\_37_fable\_38_bridge_m5b.py:189: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  pa, pb = list(ia.getdata()), list(ib.getdata())
+[H] MAE 桥尾帧 vs M6首帧(尾槽目标): 2.4 ｜ vs M5尾帧(首槽来源): 46.3
+DONE bridge_sid=s12_c07

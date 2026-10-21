@@ -1,0 +1,10 @@
+2026-09-30 23:44:48,099 - INFO - 全局文本默认 provider = Agnes（model=agnes-2.5-flash）
+2026-09-30 23:45:34,173 - INFO - 图生图 image 位置确定为: extra
+2026-09-30 23:46:11,405 - INFO - 图生图 image 位置确定为: extra
+opening_source=reference_previous | source=s02_c02 | src_ver=vv_4bdf6b08 | continuity=ready 
+first_frame_prompt_override set (899 chars)
+first_frame job 7c4c82ef0b1d: done in 88s
+batch ff_6597cea5 status=pending candidates=2
+   ff_6597cea5_1 https://cos-platform-outputs.agnes-ai.cn/images/i2i/task_Gpze6RgFfxWxDNuWgUPC499Q1TGfpwj6/
+   ff_6597cea5_2 https://cos-platform-outputs.agnes-ai.cn/images/i2i/task_EYnUkcZWJCIl1oLiN422spdcEij4ZO4d/
+STOP：请执行侧亲证后选择（不自动 select、不生成视频）

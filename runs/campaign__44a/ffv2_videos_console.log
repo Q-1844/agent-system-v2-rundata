@@ -1,0 +1,23 @@
+2026-09-30 23:47:20,707 - INFO - 全局文本默认 provider = Agnes（model=agnes-2.5-flash）
+2026-09-30 23:47:23,725 - INFO - 视频任务已提交（2.5 契约）model=agnes-video-2.5-flash mode=keyframe seconds=5 id=task_BBglLxcC6TI9RiBVKx1TjQYjnCKd1H60
+2026-09-30 23:50:35,973 - INFO - 视频任务已提交（2.5 契约）model=agnes-video-2.5-flash mode=keyframe seconds=5 id=task_EsT9v4K6HtpopLWBbzeqtTb1jhoBz5sx
+[204s] 722a3a8608ed done
+[552s] b17b30d4ce7b done
+settled 2 / 2
+Traceback (most recent call last):
+  File "<string>", line 46, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "D:\Delta Force\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "D:\Delta Force\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\Delta Force\Lib\asyncio\base_events.py", line 721, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "<string>", line 45, in main
+    await q.stop()
+          ^^^^^^
+AttributeError: 'JobQueue' object has no attribute 'stop'

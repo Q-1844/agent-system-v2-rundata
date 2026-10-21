@@ -1,0 +1,23 @@
+【Phase 39D Canary · t5：s01_c01 定档落档 + s01_c02 锚定重试（用户已授权自主推进）】
+
+用户运行期授权（本轮起生效）：全部 6 镜视频完成后再交用户审查做桥接纠错。运行期规则：minor=accept+adapt 自动续链；major=【单次】锚定重试（自主执行，诚实落档）；重试后仍 major=停下报告（relay 链锚点已坏，不续链）；🔴 插桥一律不做（用户审查阶段专属）。trace run 已创建：cal_20260926_120319_0791（此前落档失败即因 run 不存在，现已解锁）。
+
+A) s01_c01 档位修正（执行侧帧检证据已给定）：
+   执行侧亲自抽取 5 帧核验结论：鹤全程滑翔✓ 无镜内硬切✓ 丹顶鹤身份✓ 实际尾帧=中央偏上展翅滑翔与 expected_tail 一致✓；背景含森林湖泊与「禁地面背景,禁陆地景物」字面冲突✗——但 s01 段 Location「天空与森林上空」的 approved SIV 本身就是 sky above forest canopy，属冻结措辞比场景真值更严的张力，画面叙事与下一镜 enterability 完好。
+   1. Director 按上述证据定档 minor（accept+adapt）——trace_upsert 到 run cal_20260926_120319_0791 / key s01_c01，字段必须完整：expected_tail / actual_tail / tail_to_first_mae（首镜记 chain_root_baseline）/ deviation_level=minor / root_cause（冻结负面约束措辞与段 Location 语义张力——措辞问题非画面事故）/ options_considered / selected_action=accept_adapt / why / retry_or_adapt=adapt / negative_constraint_check【逐条诚实：禁站立姿态✓ 禁地面背景✗(森林湖泊全程在画面中) 禁陆地景物✗ 禁人物✓ 禁现代建筑✓ 禁车辆✓ 禁多余主体✓】/ vision_vs_director_diff（Vision 报 none 与帧检✗的地理盲区分歧）/ cascade_check / generation_mode=multi / input_reference_role=REFERENCE_ONLY / pose_gate=soft_diagnostic。枚举字段非空。
+   2. 委派 Script Writer 修正 s01_c01 负面约束措辞（措辞精度修正，非迁就结果）：把「禁地面背景,禁陆地景物」改为语义精确的「禁鹤落在地面,禁地面近景为主背景,禁陆地近景特写」（保留其余约束）；Script Writer 出 patch，Director 用 shot.update 写进 s01_c01 的 negative_prompt 字段（回执 changed 必须含 negative_prompt），并把这个措辞修正记进 trace 的 repair 决策链。
+   3. s01_c01 的 legacy_video 僵尸版本（status=generating）在 trace 中记为 archived attempt（archive_existing=true 语义，历史不覆盖）。
+
+B) s01_c02 major → 单次锚定重试：
+   执行侧帧检事实：第 0 帧确已钉住上镜尾帧（像素接缝 2.2 真实，relay 机制工作正常）；0→25% 处镜内漂移——2D 远景滑翔变半 3D 直立近景（站姿折翅）；尾帧鹤远去变小非俯冲滑翔，expected_tail（画面中上部俯冲滑翔+林海铺展）未命中，下一镜 enterability 破坏，风格与 s01_c01 不一致。Director 误诊"opening_source 未继承"应更正：multi relay 看 video_reference_asset_id=prev_tail（已生效），opening_source 是 i2v 机制与本镜无关。
+   1. 先把上轮 s01_c02 的 major 判定与真实根因（镜内漂移：风格/姿态/尺度三重，非 relay 失败、非接缝问题）trace_upsert 到同 run key s01_c02（attempt 1），archive_existing=true。
+   2. 委派 Script Writer 设计 anchor patch（shot_id=s01_c02）：
+      - description 首句环境锚定：明确承接上一镜末帧的云上滑翔姿态直接进入俯冲穿薄云（「大鹤保持滑翔姿态自云层俯冲而下…」类句式，破"切场景/换姿态"的解读空间）；
+      - 收束句尾态：画面中上部俯冲滑翔、双翼收拢、林海铺展至天际（对齐 expected_tail，破"飞离/远去"吸引子）；
+      - 🔴 风格锚定强化：句首或独立短句写死「2D 手绘水彩动画风格，扁平上色，清晰描边，与开场画面同风格同笔触」（破 2D→3D 漂移）；
+      - 尺度锚定：全镜保持中远景别、鹤占画面比例稳定（破远→近→极远漂移）；
+      - negative constraints 保留原串。
+   3. Director 用 shot.update 落库 patch（先 shot.read 拿最新指纹）→ shot.generate_videos 单次重试（archive_existing=true）→ 完整复查：重新 seam_measure → Vision → Director 对照负面约束逐条自检（不得只看原问题是否消失）→ 三档裁定。
+   4. trace_upsert attempt 2（同 key，archive 旧记录语义）：含 retry_or_adapt / repair 决策链全文 / 与 attempt 1 的对比。minor → 续链就绪；仍 major → 停下报告不再续链。
+
+【纪律】只动 s01_c01/s01_c02；不插桥；所有 shot.update 用 shot.read 最新指纹；回执 changed 核对；trace 枚举字段非空。

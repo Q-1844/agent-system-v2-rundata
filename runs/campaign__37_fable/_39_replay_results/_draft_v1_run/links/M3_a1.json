@@ -1,0 +1,26 @@
+{
+  "cascade_check": "本镜为 s11_c03，下游为 s12_c01(M4)。若 retry 成功，需重新测量 s11_c02→s11_c03 接缝与 s11_c03→s12_c01 接缝，确认双侧闭合。下游 s12_c01 已有完成视频，retry 后若新尾帧与 s12_c01 首帧不匹配，需考虑插桥或顺延重生成。",
+  "director_visual_observation": "尾帧呈现低伏前倾姿态，非预期静止站立；头部特写占满画面，缺乏环境上下文（树影、明亮外界）；beginning→early_middle 出现 identity jump（蛋状物→完整狐狸），属于生成过程事故。叙事情绪偏向'紧张蓄势'而非'停定准备'，与预编剧要求不符。",
+  "expected_tail": "狐狸站在雨林边缘树影里，面朝画面深处的明亮外界，姿态停定（全身/中景，静止）",
+  "human_action": "retry_generation",
+  "human_deviation_level": "major",
+  "human_reason": "叙事意图与实际画面相反：预期'姿态停定准备出发'，实际呈现'低伏动势紧张蓄势'；环境上下文缺失（无树影 enclosure、无明亮外界方向性）；视频内部存在 identity jump 事故（白色蛋状物突变为完整狐狸）。MAE 接缝本身正常(2.1)，但叙事状态断裂。",
+  "notes": "这是 attempt M3_a1 的历史存档，非当前定版。当前定版 tail_to_first_mae=2.1 衔接良好，但尾态叙事意图未命中。",
+  "options_considered": [
+    "accept+adapt：接受当前尾态作为'紧张蓄势'版本，依赖下一镜吸收（不可行，因叙事意图相反）",
+    "retry_generation with anchor patch：重生成，使用环境/远景锚定 + 尾态收束句",
+    "add_transition keyframes bridge：在当前尾帧与下一镜首帧之间插入过渡桥（不必要，因本镜本身有叙事问题）",
+    "hard cut intentional：将此镜标记为有意跳切（不可行，因叙事状态与剧本相反）"
+  ],
+  "root_cause": "镜头意图描述可能不足以确保生成模型理解'静态停定'与'动势紧张'的区别；tight crop 放大了 identity 不稳定性；缺少环境锚定导致主体姿态自由发挥",
+  "selected_action": "retry_generation with anchor patch",
+  "why": "叙事意图与画面状态根本性冲突，无法通过 adapt 吸收；identity jump 事故也需要修复。必须重试。",
+  "retry_or_adapt": "retry",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M3_a1",
+  "updated_at": 1790325758.7533267,
+  "anchor_patch": "description 首句锚定环境/远景：'雨林边缘，树冠投下斑驳阴影，狐狸站在土路尽头，背后是浓密树影，面前是通向村子的明亮阳光大道'；收束句写明尾态：'它停住脚步，全身端正站立，面朝画面深处的村庄方向，尾巴自然下垂，姿态静定，尘土未扬'",
+  "negative_constraint_check": "重试后须重查：① 主体完整性（无断肢/多余肢体）② 环境一致性（树影+明亮外界方向性）③ 姿态正确性（静止站立而非低伏动势）④ 无 unexpected elements（空场景闯入人物/动物）⑤ identity 一致性（狐狸三视图匹配）",
+  "repair_decision_chain": "1) 裁定 major：叙事意图与画面状态相反 + identity jump 事故 2) 排除 accept+adapt：叙事根本性冲突，无法吸收 3) 排除 add_transition：本镜本身有叙事问题，非单纯接缝断裂 4) 选择 retry_generation with anchor patch：环境锚定确保空间身份，尾态收束句确保姿态正确 5) 锚定策略：首句建立'雨林边缘+树影+明亮外界'空间关系，收束句锁定'静止站立+面朝前方'姿态"
+}

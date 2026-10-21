@@ -1,0 +1,27 @@
+{
+  "cascade_check": "判定为 major，需插桥修复 M2→M3 断缝。下游链路：M3(s11_c03) → M4(s12_c01)。插桥后需复检 M3 与 M2 新桥的接缝（tail_to_first_mae 应进入 1.7-2.4），以及 M4 与 M3 的原有接缝（确保插桥不影响 M3→M4）。级联风险=中：插桥不重生成邻镜，但需在桥验收时同步检查 M3→M4 段是否仍正常。",
+  "director_visual_observation": "实际尾帧（10s 处）呈现：画面变为雨林边缘远景空镜，狐狸主体消失或化为极小剪影，与预期尾帧「狐狸落地后仍在向深处奔跑，背对镜头」严重不符。叙事上应为「冲向开口」的动态延续，实际却是静态空镜收尾——情绪断裂，从冲刺的高能骤降至静止，无法自然承接 M3「狐狸在雨林边缘阴影里减速停步」。中间段落：middle→late_middle 疑似跳变（狐狸从树枝上突然落地，未见下落过程），late_middle→ending 为严重 hard cut（前景狐狸突然消失变空镜）。",
+  "expected_tail": "狐狸落地后仍在向深处奔跑，背对镜头，前方树影渐稀透亮",
+  "actual_tail": "雨林边缘远景空镜，狐狸主体消失/化为远处小剪影，画面静止或极缓慢推进，无冲刺延续感",
+  "tail_to_first_mae": 55.6,
+  "end_to_end_mae": 55.6,
+  "vision_assessment": "五位采样显示 severe=1（late_middle→ending hard cut）、suspected=1（middle→late_middle 地形跳变）。与预期叙事状态完全偏离。",
+  "deviation_level": "major",
+  "human_deviation_level": "major",
+  "root_cause": "镜头 2 的生成在 ending 段出现 hard cut 式叙事断裂：前半段保留狐狸冲刺动态，但 mid-late 到 ending 突然切为空镜/远景，未执行 description 要求的「落地不停继续向前」动作链。可能原因：视频生成模型在高动态场景末尾丢失主体 tracking，或 seed 方差导致叙事偏离。",
+  "options_considered": [
+    "accept+adapt（minor 判据不适用，叙事已断裂）",
+    "retry_generation（major 判据满足，但需单次锚定重试，禁止裸重试）",
+    "add_transition 插桥（双端对齐需求：M2 需要有效尾帧与 M3 首帧形成地理连续，而非 hard cut）"
+  ],
+  "selected_action": "add_transition",
+  "why": "判定为 major：叙事/情绪与剧本相反（冲刺→静止空镜）、地理丢失（森林小径中段→雨林边缘不明位置）、主体不可见（ending 段狐狸几乎消失）、负面约束未击穿但连续性严重断裂。需要双端对齐：M2 尾帧需是「狐狸冲向开口」的动态帧，M3 首帧是「狐狸在雨林边缘阴影里停步」——二者之间存在地理/姿态断缝，必须插桥过渡而非 retry（retry 不保证 M2 尾帧形态改变，且方差事故风险高）。",
+  "retry_or_adapt": "adapt",
+  "human_action": "add_transition",
+  "negative_constraint_check": "当前 attempt 未发现 photorealistic textures/text/watermark/extra limbs/duplicated characters 等负面约束击穿。重试或插桥后须重查。",
+  "repair_plan": "插桥构造：after_shot_id=s11_c02, duration_s=10s, transition_description='狐狸落地后沿小径继续冲刺→树影渐稀、光线渐亮→速度自然衰减→前爪踩上落叶边缘→身体重心下沉→尾巴停止摆动→眯眼打量前方亮光→四肢定格，站在雨林阴影与明亮外界的交界处'。桥首槽= s11_c02 实际尾帧（inherit_previous），桥尾槽= s11_c03 实际首帧（auto-extracted & hosted）。桥生成后验收：双侧接缝 MAE 进入 1.7-2.4 + visual.sample_frames 逐段检查无 hard cut/identity jump/unexpected element。",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M2",
+  "updated_at": 1790325632.4739437
+}

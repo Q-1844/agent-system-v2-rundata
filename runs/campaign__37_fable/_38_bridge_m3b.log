@@ -1,0 +1,14 @@
+[A] landing frame uploaded: https://Q-1844.github.io/agnes-frame-host/objects/bb1cb54c1301fd80.jpg
+[B] bridge inserted: s11_c04 relay->s11_c03
+[C] binding created
+[C] binding refresh -> {'ok': True, 'operation': 'shot_binding.
+[D] keyframes PUT ok, invalidated={}
+[E] compiled, basis.binding_revision=c4324516
+[E] seeded: batch=batch_m3b_lf_306f9d cand=cand_m3b_lf_c0f5b9 basis.keys=['binding_document_revision', 'binding_readiness', 'binding_revision', 'dependency_fingerprints', 'resolved_scene_instance_view_id', 'visual_profile_fingerprint']
+[F] job: 11c55fe55452
+[F] job state=done err=
+[G] end frame: https://Q-1844.github.io/agnes-frame-host/objects/80cc069c7d3c3b75.jpg
+C:\Users\曹文淇\Desktop\ai工作流\animation-storyboard\_37_fable\_38_bridge_m3b.py:187: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  pa, pb = list(ia.getdata()), list(ib.getdata())
+[H] MAE 桥尾帧 vs M4f60(尾槽目标): 26.0 ｜ vs M3尾帧(首槽来源): 59.5
+   （37A 对标：keyframes 桥=2.9 成功 / 多参考版=43.6 被吸引子劫持）

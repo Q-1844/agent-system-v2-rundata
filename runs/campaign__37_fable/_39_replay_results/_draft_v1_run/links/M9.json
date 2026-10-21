@@ -1,0 +1,20 @@
+{
+  "human_deviation_level": "none",
+  "human_action": "continue",
+  "retry_or_adapt": "adapt",
+  "human_reason": "链末镜头，叙事弧线完整：狐狸坐下→行走→坐下定格→凝视村庄。尾帧匹配预期（暮色大远景、狐狸剪影、村庄背景）。接续接缝 tail_to_first_mae=1.7（近零带），end_to_end_mae=92.7 是导演有意 hard cut 的跨场景构图切换，非故障。帧采样两个 suspected 跳变位于 video 内部姿态转换节点，整体叙事节奏成立（沉思-回顾-停驻）。Visual 评估确认身份/环境/叙事状态一致，无 unexpected elements。",
+  "root_cause": "无叙事/情绪/地理故障；end_to_end_mae 高值源于 intentional cut",
+  "options_considered": [
+    "接受为 none（叙事完整）",
+    "判 minor（内部姿态跳变）",
+    "判 major（要求重试）"
+  ],
+  "selected_action": "continue",
+  "why": "链末镜头无下游依赖，叙事收束成立，画面符合 fable illustration 风格（painterly, emotionally resonant）。内部姿态变化是 motion 而非 continuity failure。",
+  "negative_constraint_check": "无 photorealistic textures / text or watermark / extra limbs 违规；无 unexpected element",
+  "cascade_check": "链末镜头，无下游接缝需复检",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M9",
+  "updated_at": 1790326468.9155915
+}

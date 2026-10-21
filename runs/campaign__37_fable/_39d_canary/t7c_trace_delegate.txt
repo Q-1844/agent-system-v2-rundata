@@ -1,0 +1,16 @@
+【Phase 39D Canary · t7c：trace 补账（必须走 director.delegate，无任何生成）】
+
+前两轮失败原因已定位：你（Producer）的工具面没有 calibration.*（那是 Director 专属工具），直接调用返回"未知工具"。本轮必须用 director.delegate 把下面两条落档委派给 Director 执行（一次委派，envelope 写明两条 upsert + 回读验证）：
+
+trace run_id=cal_20260926_120319_0791， Director 执行：
+1) calibration.trace_upsert trace_key=s01_c03，record（merge，不覆盖已有键）：
+   deviation_level="minor"；selected_action="accept_adapt"；
+   root_cause="provider 站姿/落水吸引子导致动作越位（提前落水），next-shot enterability 完好，画面合格"；
+   why="叙事越位属可吸收偏差；原自由文本「accept+adapt，继续s02段落」移入本字段与 notes"；notes="accept+adapt，继续s02段落"
+2) calibration.trace_upsert trace_key=s02_c02，record（merge）：
+   deviation_level="minor"；selected_action="accept_adapt"；
+   why="attempt3 重试合格：触水→掠水减速→浅水站立，沉水/游泳消失；retry_generation 是 attempt2 的动作，移入 repair 决策链"；
+   negative_constraint_check 补键 {"禁沉入水下":"✓","禁游泳":"✓","禁羽毛脱落":"✓"}
+3) Director 用 calibration.trace_read 回读 s01_c03/s02_c02 两条确认枚举字段非空，结果带回。
+
+禁止任何生成动作；本轮交付物 = 两条 trace 落档回执 + 回读验证结果（缺裁定字段视为未完成）。

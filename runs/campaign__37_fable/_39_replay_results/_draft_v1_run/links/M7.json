@@ -1,0 +1,18 @@
+{
+  "human_action": "continue",
+  "human_deviation_level": "none",
+  "human_reason": "Vision 评估高匹配：四足站定、黄叶在鼻尖、眼睛斜向下看、姿态僵住——全部命中预期尾帧描述。实际 MAE 接缝 2.0（近零带），叙事状态连贯。M8 预期开场为狐狸打喷嚏让叶子飘落，与 M7 尾态（叶子停在鼻尖、狐狸僵住）完美衔接，无断缝。无需插桥或重试。",
+  "negative_constraint_check": "无额外人物/动物/肢体异常；场景为户外村庄，符合项目视觉定义（storybook animation）；无负面约束风险。",
+  "options_considered": [
+    "retry_generation"
+  ],
+  "root_cause": "无断裂；生成命中预期尾态，叙事连续。",
+  "selected_action": "continue",
+  "why": "MAE=2.0（同场景正常接力）+ Vision 高匹配 + M8 开场可自然承接。判 none。",
+  "cascade_check": "无需插桥/重试，下游 M8(s12_c05) 接续无级联风险。",
+  "retry_or_adapt": "adapt",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M7",
+  "updated_at": 1790326291.3269103
+}

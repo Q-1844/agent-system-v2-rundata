@@ -1,0 +1,35 @@
+{
+  "cascade_check": "本镜判定为minor→accept+adapt，不重生成锚点镜头，下游s12_c03（M6）接缝已测量：tail_to_first_mae=8.0，同场景内属合理区间（跨镜头构图变化），无需额外插桥。当前链路整体无级联风险。",
+  "director_visual_observation": "实际尾帧：狐狸位于南瓜旁，鼻子贴近南瓜表面，头部明显低头，表情带一丝狡黠笑意。尾巴完全不可见（画面构图中仅显示狐狸上半身+南瓜，尾部超出画幅下边界）。狐狸身体有一定压低但未完全贴地。整体处于主动探索南瓜的状态，与剧本叙事一致。",
+  "deviation_level": "minor",
+  "expected_tail": "狐狸在大南瓜旁低头嗅闻，姿态压低，尾巴平伸",
+  "human_action": "continue",
+  "human_reason": "叙事/情绪命中（狐狸正在嗅闻南瓜，与M6顶南瓜的动作衔接顺畅），但存在两点minor偏差：①尾巴未在画面中可见（预期平伸但实际超出画幅下边界）；②狐狸面部表情为狡黠/smirk而非中性嗅闻。这两点不破坏叙事连续性，下一镜可自然承接。",
+  "next_shot_readiness": "Ready: 狐狸面向南瓜的主动探索状态，与M6开场（伸鼻顶南瓜）语义衔接",
+  "options_considered": [
+    "retry_generation: 描述中加入尾巴可见性+中性表情约束，重新生成一版"
+  ],
+  "reasoning_summary": "MAE=2.1正常。叙事/情绪命中，偏差仅为尾巴不可见+表情smirk，属minor范畴。按replay协议不重试minor。",
+  "root_cause": "景别MCU构图导致尾部超出画幅下边界；expression偏向'偷吃发现猎物'的情绪（符合Fable风格）但偏离预期中性嗅闻",
+  "selected_action": "accept+adapt: 记录为minor，不重生成，继续推进M6",
+  "why": "叙事连续意图正确，偏差在可接受范围。重试消耗额度且实证显示重试引入新风险的概率高于收益。",
+  "vision_assessment": {
+    "action_endpoint": "Sniffing/nuzzling pumpkin with nose close; expression is intent/smirking rather than purely inquisitive",
+    "camera_state": "Medium close-up, static framing, shallow depth of field",
+    "character_position": "Positioned left of frame, adjacent to large orange pumpkin; tail not visible (out of frame or obscured)",
+    "character_pose_state": "In posture: leaning toward pumpkin, head lowered but body not fully压低 (low to ground)",
+    "environment_consistency": "Consistent: outdoor farm setting with wooden fence and building in background",
+    "expected_tail_match": "Partial mismatch: expected tail平伸 (stretched flat) not visible; head低头 (lowered) partially met",
+    "identity_consistency": "Consistent: red fox with white chest and black legs",
+    "narrative_state": "Fox actively investigating pumpkin; tone leans mischievous rather than neutral sniffing",
+    "prop_state": "Pumpkin present, intact, with small debris/flies on surface",
+    "suggested_deviation": "minor",
+    "unexpected_elements": "Fox's facial expression appears sly/smirking; small flies/debris on pumpkin not mentioned in expected tail"
+  },
+  "vision_vs_director_diff": "无实质分歧。视觉模型同样判定minor，与我判断一致。差异仅在表述详细程度，核心结论相符。",
+  "retry_or_adapt": "adapt",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M5_a2",
+  "updated_at": 1790326028.9049659
+}

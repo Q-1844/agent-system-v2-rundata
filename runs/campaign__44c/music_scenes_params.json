@@ -1,0 +1,28 @@
+{
+ "origin": "locally_composed_synthesized_test_asset",
+ "license": "self_composed_no_third_party_rights",
+ "bpm": 60.0,
+ "sample_rate": 48000,
+ "note": "分场景背景音乐三段（用户指令：每场景不同背景音）；不含任何音效（不脚本生成音效）",
+ "s1_riverside": {
+  "file": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\雨灯归航\\output\\audio_imports\\music\\bgm_44c_s1_riverside.wav",
+  "duration_s": 43.0,
+  "sha256": "ba088c534abb91ae7eb865f9f6ac3ce3df71d39865df44474129a1c4253322e0",
+  "structure": "s01 河岸·拾灯：Am-Em-F-G-Am-F，忧郁稀疏",
+  "n_melody_notes": 13
+ },
+ "s2_workshop": {
+  "file": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\雨灯归航\\output\\audio_imports\\music\\bgm_44c_s2_workshop.wav",
+  "duration_s": 21.0,
+  "sha256": "680d47bb13815e26aea07115e21cbc2db5dc69ecf432f439ce2484e3f34169b0",
+  "structure": "s02 修理间：F-C-Dm-C，高八度温暖明亮",
+  "n_melody_notes": 11
+ },
+ "s3_tower": {
+  "file": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\雨灯归航\\output\\audio_imports\\music\\bgm_44c_s3_tower.wav",
+  "duration_s": 38.0,
+  "sha256": "26fd328f83066a160ed0e856e4144f23d4d7e4b0faa1c86292452c2efa6bc276",
+  "structure": "s03 登塔·归航：Am-F-C-G-F-C(长音)，E5 收束",
+  "n_melody_notes": 15
+ }
+}

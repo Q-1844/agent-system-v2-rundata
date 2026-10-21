@@ -1,0 +1,23 @@
+{
+  "cascade_check": "需检查 c02 首帧与 c01 尾帧的接缝。若插桥成功，c02 首帧应与桥尾帧匹配；否则需重新测量 s11_c02 的 tail_to_first_mae。",
+  "director_visual_observation": "狐狸面向镜头而非朝向场景深处，与 c02 的背跟镜头形成方向断裂。环境（雨林小径、蕨叶、树干层次）一致，但主体朝向错误导致空间连续性丢失。",
+  "human_action": "add_transition",
+  "human_deviation_level": "major",
+  "human_reason": "MAE=72（跨场景切换区间上缘）。预期尾帧要求狐狸身体朝向画面深处（背对镜头向森林深处跑），但实际狐狸面向摄像机。这与 s11_c02 的开场（低机位背后跟随，狐狸背对镜头冲向亮光）形成方向断裂——观众无法建立连续的空间感。叙事 momentum 保持（狐狸在奔跑），但地理/朝向丢失属于 major。判 major 因为：主体不可正确进入下一镜的空间状态，需通过插桥修复。",
+  "negative_constraint_check": "无额外肢体、无克隆、无多余元素。负面约束未击穿。",
+  "options_considered": [
+    "硬接受：容忍方向断裂，依赖 c02 开场重新建立空间关系",
+    "单次锚定重试：重新生成 c01，要求结尾狐狸背对镜头",
+    "keyframes 接续桥：在 c01 和 c02 之间插入过渡镜，让狐狸从面向镜头状态自然过渡到背对镜头向深处跑"
+  ],
+  "repair_decision_chain": "根因：multi_reference 生成模式下，狐狸面向镜头的构图吸引子较强，导致尾帧偏离预期方向。硬接受会保留方向断裂；重试可修复但成本高且引入方差风险；插桥是标准修复手段，双端钉死（首槽=锚点实际尾帧、尾槽=后继镜实际首帧），不重生成邻镜，级联影响=0。选择插桥。",
+  "root_cause": "multi_reference 生成偏好面向镜头构图，与预期尾帧（背对镜头向深处跑）冲突",
+  "selected_action": "add_transition (keyframes bridge)",
+  "retry_or_adapt": "adapt",
+  "vision_assessment": "Vision 评估为 minor，认为叙事 momentum 保持，但 Vision 对地理/朝向问题的敏感度不足——它识别出 fox faces forward 而非 deeply into scene，却未判定为 major。director 判断此为 major：空间方向断裂影响后续镜头连续性。",
+  "vision_vs_director_diff": "Vision 判 minor（叙事命中），director 判 major（地理/朝向丢失，影响下游镜头衔接）。分歧原因：Vision 未充分评估主体朝向对下一镜开场的连锁影响。",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M1",
+  "updated_at": 1790325535.3804002
+}

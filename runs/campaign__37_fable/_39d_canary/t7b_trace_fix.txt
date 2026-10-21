@@ -1,0 +1,18 @@
+【Phase 39D Canary · t7b：仅两条 trace_upsert 补账（上轮 trace_upsert 调用失败重试，无任何生成）】
+
+上一轮 trace_upsert 返回"未知工具"，请重新逐条执行以下两条落档（calibration.trace_upsert，run_id=cal_20260926_120319_0791，merge 语义，成功以回执 ok=true 为准）：
+
+1) trace_key=s01_c03，record（merge 补齐，不覆盖已有键）：
+   deviation_level="minor"
+   selected_action="accept_adapt"
+   root_cause="provider 站姿/落水吸引子导致动作越位（提前落水），next-shot enterability 完好，画面合格"
+   why="叙事越位属可吸收偏差；原自由文本「accept+adapt，继续s02段落」移入本字段与 notes"
+   notes="accept+adapt，继续s02段落"
+
+2) trace_key=s02_c02，record（merge 补齐）：
+   deviation_level="minor"
+   selected_action="accept_adapt"
+   why="attempt3 重试合格：触水→掠水减速→浅水站立，沉水/游泳消失；retry_generation 是 attempt2 的动作，移入 repair 决策链"
+   negative_constraint_check 补键：{"禁沉入水下":"✓","禁游泳":"✓","禁羽毛脱落":"✓"}
+
+完成后用 calibration.trace_read 逐条回读验证三处（s01_c03/s02_c02/全部 link 字段非空），把验证结果写进最终回复。禁止任何生成动作。

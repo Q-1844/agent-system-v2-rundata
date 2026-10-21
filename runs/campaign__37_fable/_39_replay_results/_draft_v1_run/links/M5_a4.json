@@ -1,0 +1,32 @@
+{
+  "actual_tail": "Fox in full running/trotting pose, four legs on ground, body horizontal, mid-ground center-left on dirt path; not beside any pumpkin; background shows thatched houses, children watching",
+  "bridge_plan": null,
+  "cascade_check": "Chain-end shot (s12_c02 is the last shot). No downstream dependency. Cascade risk: none.",
+  "deviation_level": "major",
+  "director_visual_observation": "Fox is clearly in locomotion (running across village path), not stationary or crouching beside a pumpkin. The spatial relationship to pumpkins is absent — fox is not adjacent to any single pumpkin for focused sniffing. This is a narrative-state failure: the beat demands investigation/pause, but the output delivers flight/pursuit energy.",
+  "end_to_end_mae": 57.4,
+  "expected_tail": "Fox beside large pumpkin, head lowered in sniffing posture, body crouched, tail extended horizontally flat",
+  "human_action": "other",
+  "human_deviation_level": "major",
+  "human_reason": "The actual tail frame shows the fox in full running motion across the village path — body horizontal, all four legs in stride, mid-ground center-left. This directly contradicts the expected state of crouching/sniffing beside a large pumpkin with lowered head and flat-extended tail. The error is not minor framing or pose drift; it is a complete narrative-beat inversion (investigation vs flight). MAE mae_prev=62.6 (cross-scene/构图切换 range) further confirms the frame is geometrically distant from both expected and preceding shots. As chain-end, no cascade risk exists. This requires Producer decision on whether to retry with anchor patch.",
+  "negative_constraint_check": "Negative constraints (no photorealistic textures, no extra limbs, no duplicated characters) — no evidence of constraint violations in vision report. Fox identity: orange-red with white chest and bushy white-tipped tail — all correct. No unexpected human/animal intruders reported. NOTE: If retry is approved, negative constraints must be re-checked after regeneration.",
+  "next_shot_readiness": "Chain end — no next shot. N/A.",
+  "options_considered": [
+    "retry_generation with anchor patch (environment + endpoint locked)",
+    "accept as minor and adapt (rejected — deviation is major, not minor)",
+    "insert keyframes bridge (rejected — this is the tail shot itself, not a gap between two existing shots)",
+    "leave as-is (rejected — narrative intent fully missed)"
+  ],
+  "repair_plan": "If retry approved: anchor patch = description opening: wide establishing of village path with pumpkins visible in foreground/mid-ground to re-anchor geography; closing: fox crouched beside one specific large pumpkin, head lowered to sniff, tail extended flat on ground. Add explicit motion cue: 'pauses, crouches down, sniffs'. Target: inherit from s12_c01 tail frame (already verified at mae 2.1).",
+  "root_cause": "Generation drifted from instructed action state. Likely cause: video generation model favored locomotion dynamics over static posture, possibly due to insufficient anchoring of 'crouched + sniffing' in the prompt or competing attraction from preceding running action. The fox's energetic character trait may also have biased generation toward motion.",
+  "selected_action": "report_to_producer",
+  "why": "Major deviation: narrative intent (pause + investigate) is inverted to its opposite (flight). Cannot accept as minor. Bridge is inapplicable (this is a terminal shot, not a gap). Only valid paths are: (a) retry with strong anchor patch, or (b) accept as final with documented failure. Decision belongs to Producer/user.",
+  "vision_assessment": "identity: ok; environment: ok; pose: WRONG (running not crouching); position: WRONG (mid-path not beside pumpkin); prop_interaction: WRONG (no proximity to single pumpkin); action_endpoint: WRONG (locomotion not stationary); camera_state: wide/medium (acceptable); overall: MAJOR",
+  "vision_vs_director_diff": "Vision and director agreement: both identify major deviation in pose/action/state. No disagreement found. Vision's 'unexpected_elements' category flags the same issue — fox running instead of sniffing.",
+  "retry_or_adapt": "retry",
+  "root_cause_detailed": "Action-state failure: the model generated a locomotion sequence when the beat required a static investigative pose. Possible contributing factors: (1) insufficient prompt weight on 'pause'/'stop' cue, (2) natural tendency of video models to maintain motion continuity from preceding shot, (3) character bias toward active poses. The fix requires stronger environmental anchoring + explicit endpoint state description.",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M5_a4",
+  "updated_at": 1790326094.3543186
+}

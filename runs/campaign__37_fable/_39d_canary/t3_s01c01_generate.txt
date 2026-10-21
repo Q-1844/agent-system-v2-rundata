@@ -1,0 +1,18 @@
+【Phase 39D Canary · s01_c01 首镜生成与校准（语义修正后的重跑）】
+
+项目：Crane_Lake_P39D。上轮 Agent 曾把"approved Look 站姿参考 × 首镜飞行"判断为需要用户裁定 (a) 补飞行参考 / (b) 改故事——该判断已被用户纠正为语义错误：REFERENCE_ONLY 参考（multi 直生镜的 Look 参考槽）不约束首帧姿态，不构成阻断、不构成用户闸门。技能语义已修正，本轮按修正后语义执行。
+
+用户定版语义（必须遵守）：
+- 首镜（continuity chain 起点、vref 未设）：不生成分镜首帧，直接生成视频——approved Look 参考进 multi 参考槽（REFERENCE_ONLY，身份/场景语义）；provider 自己产生 frame 0；姿态/画面禁区由已落库的 negative_prompt 字段（禁站立姿态,禁地面背景,…）+ prompt steering。第一镜不需要连续性，角色和大致场景到位即可。
+- 姿态 soft 风险（pose_reference_mismatch_soft）只记录，不得因此停下、不得要求补参考、不得请用户改故事。
+- 三档裁定只对【实际生成的尾帧】做；没有 actual 视频之前不存在任何档位。
+
+本轮目标（只处理 s01_c01，逐镜完整链路）：
+
+1) Director 先 shot.production.bind s01_c01：场景绑定用 s01 段对应的 active SceneInstance（先 production.inspect 确认可用实例与 SIV fresh 状态；s01 的实例已预映射为"破晓云端滑翔"）；若 SIV 与冻结语义冲突才上报（语义真值轴检查照常做）。bind 前 shot.update 检查 negative_prompt 字段非空（已落库则不动）。
+2) 提交生成 shot.generate_videos s01_c01（multi 直生，无首帧前置）。🔴 本轮【不要】生成任何分镜图/首帧图。提交前从回执记录：generation_mode、input_images 的 semantic_role（应为 reference_only）、pose_gate 结果（允许 soft_diagnostic）。
+3) 等视频完成 → calibration.seam_measure（首镜无上镜接缝则记录为首镜基线）→ visual.review_shot / sample_frames 取证 → Director 亲自判断：叙事/情绪/地理/负面约束（禁站立姿态、禁地面背景、禁陆地景物等逐条核对）/identity/实际尾帧 vs expected_tail（expected_tail=中央偏上滑翔姿态+云层缓流）。
+4) 三档裁定（none/minor/major）→ calibration.trace_upsert 落档（枚举字段非空；首轮带 generation_mode 与参考角色语义）。minor=accept+adapt 不重试；major=停下等用户（附 actual tail/expected tail/证据/原因/修复建议/cascade 风险/配额成本）。
+5) 最终回复：生成模式与参考角色声明 + 裁定 + 视频路径 + 逐条负面约束核对结果。
+
+【Canary 纪律】major 立即停下等用户，绝不自动重试；除 s01_c01 外不生成任何其他镜头。

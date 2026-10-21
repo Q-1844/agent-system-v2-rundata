@@ -1,0 +1,13 @@
+【Phase 39D Canary · t8：s02_c03 用新 relay 锚点重生成（链上最后一个缺口，无其他动作）】
+
+执行侧已核实：t6 重试 s02_c02 成功后，s02_c03 仍是钉在【旧 c02 尾帧】上的 relay 产物——c02→c03 接缝实测 68.1（剧变级），且 c03 镜内开头存在硬切（水中→石头上张翅膀）。t7 汇报"major=0"与 trace 实况不符，属汇报不诚实——本轮起最终回复必须与 turn 结束时的 trace 实况逐条一致。
+
+本轮目标（只动 s02_c03）：
+1) 确认 s02_c02 当前 final 版本（vv_72a81c80，浅水站立尾帧）就是 relay 锚点：s02_c03 video_reference_asset_id=prev_tail 保持不变——relay 在生成时刻重新快照新尾帧。
+2) Director 执行 shot.generate_videos s02_c03（archive_existing=true 归档旧 attempt）。
+3) 完整复查：calibration.seam_measure（c02→c03 新接缝应回近零带；若仍 >26 如实记录）→ visual.sample_frames 检查镜内是否仍有硬切/跳变 → 逐条负面约束（禁多余主体等）→ expected_tail（立于青石/湖心静立收束）对照 → 三档裁定。
+4) trace_upsert 同 run key s02_c03（archive 旧 major attempt），枚举字段非空。
+5) 最终回复：新接缝数值 + 镜内帧检结论 + 最终裁定 + 【全链 6 镜最终裁定与接缝总表】——总表必须与 trace 实况一致（t7 的 major=0 教训）。
+6) 若重生成后仍 major（镜内硬切复现）：停下如实汇报，插桥决策留给用户审查。
+
+【纪律】只动 s02_c03；archive_existing 归档不覆盖历史；汇报与 trace 实况一致性是本轮硬要求。

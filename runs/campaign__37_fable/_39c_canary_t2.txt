@@ -1,0 +1,14 @@
+【Phase 39C Canary · 第二步：生产准备（仍然禁止生成任何图/视频）】
+
+你上一轮的编排有三处与项目真实状态不符的事实错误，先核对再行动：
+1. 你说「已有大鹤角色」——项目 characters 为空（0 个角色资产），不存在大鹤角色。我已亲自核对 canonical。
+2. 6 个镜头全部是 link_mode=i2v（新建 Shot 的默认值）。本片是尾帧接力链：除首镜外，接力镜必须显式 link_mode=multi 且 video_reference_asset_id=prev_tail（按播放序解析上一镜尾帧），否则接力不成立。首镜用链根参考直生（multi + 链根参考）。
+3. 场景系统零资产（无 Location/View/SceneInstance/SceneState/SceneInstanceView）。本故事需要森林上空与湖泊两类地点的生产参考；没有 approved 场景参考，后续 BOUND 生成的空间一致性没有依据。
+
+本轮目标（生产准备，仍绝不生成）：
+1. 大鹤的生产身份链：委派 Resource Agent 创建大鹤角色 + 生成三视图（identity seed）→ Clothing/Look 生产并 approved——后续每镜 BOUND 生成靠它做身份锚定。
+2. 场景生产准备：委派 Scene Agent 建立 Location（天空/森林上空、湖泊）与必要视角、SceneInstance + SceneState + SceneInstanceView 到 approved。湖泊与森林的地理要素按冻结剧本。
+3. 分镜字段修正：委派 Director 把 2-6 镜改为 multi + prev_tail 接力（首镜 multi + 链根参考），并按需要补 relay。
+4. 全部就绪后，汇报各镜 binding readiness 现状。
+
+【Canary 纪律】仍然严禁任何生成动作（分镜图/视频都不生成——角色三视图与场景视图的生成本轮允许，它们是生产准备的一部分，但镜头视频与分镜图不生成）。用户将在你汇报后逐镜放行生成。

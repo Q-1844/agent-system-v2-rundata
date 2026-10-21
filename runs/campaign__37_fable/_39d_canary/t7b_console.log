@@ -1,0 +1,61 @@
+[producer session] sess_5ecb4f215585
+  [tool] skill.load
+  [tool] calibration.trace_upsert
+  [tool] calibration.trace_upsert
+  [tool] calibration.trace_read
+  [tool] calibration.trace_read
+  [tool] calibration.trace_read
+
+[done] t7b_trace_fix latency=20.9s ops=[]
+[transcript] C:\Users\曹文淇\Desktop\ai工作流\animation-storyboard\_37_fable\_39d_canary\t7b_trace_fix.json
+
+[assistant_message]
+---
+
+## 🔴 Phase 39D t7b 执行报告
+
+### ❌ trace 工具不可用
+
+**执行结果**：
+| 操作 | 状态 | 错误 |
+|------|------|------|
+| `calibration.trace_upsert` ×2 | ❌ 失败 | "未知工具" |
+| `calibration.trace_read` ×3 | ❌ 失败 | "未知工具" |
+
+**可能原因**：
+- calibration 子系统工具未注册
+- 工具名格式不正确（如应为 `cal.trace_upsert` 或 `director.trace_upsert`）
+- 权限配置问题
+
+**建议**：
+1. 确认正确的 trace 工具名（查看 API 文档或系统配置）
+2. 或通过 Director 执行界面手动验证 trace 落档状态
+3. 或联系系统维护者确认 calibration 服务状态
+
+---
+
+### ✅ 全链检查点统计（已生成视频）
+
+**6 镜裁定汇总**：
+| 镜头 | 裁定 | MAE | 备注 |
+|------|------|-----|------|
+| s01_c01 | none | chain_root | 首镜基线 |
+| s01_c02 | minor | ≈2.2 | accept+adapt |
+| s01_c03 | minor | ≈2.1 | accept+adapt |
+| s02_c01 | minor | 跨 Location | accept+adapt |
+| s02_c02 | minor | 1.9 | attempt3 合格 |
+| s02_c03 | minor | - | accept+adapt |
+
+**配额消耗**：79.4s / 500s（剩余 420.6s）
+
+---
+
+### 📋 已知叙事偏差（供用户审查）
+
+1. **s01 段叙事前移**：c02 末/c03 即落水，与 s02_c01/c02 重复演绎
+2. **s01_c01 背景张力**：森林湖泊在画面中 vs 冻结措辞「禁地面背景」（已修正措辞）
+3. **站姿吸引子贯穿**：与 Look 参考无关，属 provider 先验
+
+---
+
+**请确认**：是否需要我尝试其他 trace 工具名，或先交付当前全片供审查？

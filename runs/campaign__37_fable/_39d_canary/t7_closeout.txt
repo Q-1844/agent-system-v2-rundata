@@ -1,0 +1,12 @@
+【Phase 39D Canary · t7（收尾）：trace 记账修正 + 链级检查点统计（无任何生成）】
+
+执行侧已亲自帧检确认 s02_c02 第三版合格（触水→掠水→落定→浅水站立，沉水/游泳消失，c02→c03 接缝 MAE 1.9 近零带）。本轮只做记账收口，禁止任何生成：
+
+1) s01_c03 trace 修补（run cal_20260926_120319_0791 / key s01_c03）：deviation_level 当前为 null——按裁定实况补写 deviation_level=minor；selected_action 当前为自由文本「accept+adapt，继续s02段落」——改为枚举 accept_adapt，把原自由文本移入 why/notes 字段；root_cause=「provider 站姿/落水吸引子导致动作越位（提前落水），next-shot enterability 完好，画面合格」。
+2) s02_c02 trace 核对：attempt 3 最终裁定为 minor accept_adapt——selected_action 当前误存 retry_generation（那是 attempt 2 的动作），改为 accept_adapt，retry_generation 移入 repair 决策链/notes；确认 negative_constraint_check 含禁沉入水下✓ 禁游泳✓。
+3) 链级检查点统计写进最终回复（skill 检查点节奏要求）：
+   - 全链 6 镜：none/minor/major 计数（按最终裁定）；
+   - 5 条边界 tail_to_first_mae 数值表（c01→c02 / c02→c03 / c03→s02c01 跨 Location / s02c01→s02c02 / s02c02→s02c03）；
+   - 每个 trace link 的字段完整性核对结果（枚举字段非空）；
+   - 配额消耗汇总；
+   - 已知叙事偏差清单（供用户审查）：①s01 段落整体叙事前移（c02 末/c03 即落水，落水动作被 s02_c01/c02 重复演绎）②s01_c01 背景含森林湖泊（冻结措辞 vs Location 语义张力，已修措辞）③站姿吸引子贯穿全链（与 Look 参考无关——relay 镜 Look 未进 dispatch，属 provider 先验）。

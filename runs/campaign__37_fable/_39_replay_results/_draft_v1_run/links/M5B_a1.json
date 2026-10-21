@@ -1,0 +1,21 @@
+{
+  "cascade_check": "判 none：不触发插桥或重试，无需级联复检。若未来用户对 M5B/M6 序列有节奏调整需求，再单独评估。",
+  "director_visual_observation": "狐狸压低前身、鼻尖凑近大南瓜的嗅闻姿态，构图准确呈现预编剧设定的关键帧。与 M6 开场「狐狸伸鼻顶了顶南瓜」形成时间上的连续——本镜尾态即 M6 首态（鼻尖已触南瓜表面，下一瞬即顶撞动作），衔接自然无断裂。",
+  "expected_tail": "狐狸压低前身、鼻尖凑近大南瓜（处于嗅闻状态，鼻尖已贴近南瓜表皮但未撞击）",
+  "human_action": "continue",
+  "human_deviation_level": "none",
+  "human_reason": "1) 叙事命中：狐狸压身嗅南瓜，与预编剧「狐狸靠近/嗅闻瓜皮」完全一致；2) 情绪命中：专注好奇氛围准确呈现；3) 地理命中：南瓜院/木栅栏环境完整；4) 端点状态命中：鼻尖凑近南瓜=接近顶碰前的临界帧，M6 首帧「伸鼻顶南瓜」自然承接；5) MAE=1.7（近零带），与上一镜(s12_c02)接缝极佳；6) 时间轴合理：4.0s within 5.0s budget。",
+  "negative_constraint_check": "无额外人物/动物、无肢体伪影、无文字水印——负面约束通过。",
+  "options_considered": [
+    "keyframes_bridge: 需要双端对齐时才触发，本镜叙事端点已命中，不构成断缝",
+    "retry_generation: 判 none 时无需重试，重试会引入方差风险且无收益"
+  ],
+  "root_cause": "N/A - attempt 成功命中预期",
+  "selected_action": "continue（判 none，直接交付）",
+  "why": "叙事/情绪/地理/端点四维全部命中，MAE 在近零带，Vision pass，无需干预。继续到 M6(s12_c03) 生成。",
+  "retry_or_adapt": "adapt",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M5B_a1",
+  "updated_at": 1790326218.6217756
+}

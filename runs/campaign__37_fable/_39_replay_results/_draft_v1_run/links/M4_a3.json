@@ -1,0 +1,25 @@
+{
+  "cascade_check": "当前裁决为 minor→accept+adapt，不触发下游级联。但若未来对 s12_c01 执行 re-generation，将重新测量 s11_c04→s12_c01 接缝与 s12_c01→s12_c02 两端接缝，检查是否产生新断缝。",
+  "director_visual_observation": "实际尾帧呈现近景构图：狐狸半身入画、正面朝向镜头微笑，环境信息被压缩；预期尾帧要求狐狸全身站在土路中央，身后可见雨林边缘树影与木栅栏/南瓜地远景。MAE 63.6 处于跨场景/构图切换区间，与实际构图差异吻合。叙事上，狐狸『刚刚抵达』的动势未能在尾帧定格，呈现为静态表情而非抵达后的瞬间状态。关键环境元素（pumpkin patch、rainforest edge）缺失。",
+  "deviation_level": "minor",
+  "expected_tail": "狐狸站在村口土路中央，身后是雨林边缘树影，面前是木栅栏与南瓜地，正午阳光，尘土未定。全身构图，远景建立地理空间，动势收尾。",
+  "human_action": "continue",
+  "human_deviation_level": "minor",
+  "human_reason": "叙事意图基本命中（狐狸在村庄入口），但景别/端点状态偏离预期：(1) 景别过紧——预期 full shot 建立环境，实际 MCU 压缩空间；(2) 端点状态偏静态微笑而非抵达瞬间的动态残留；(3) 关键环境元素缺失（南瓜地、雨林边缘）。但叙事主线未断裂，下一镜 s12_c02 开场狐狸『压低身子沿栅栏挪近南瓜地』可在语义上自然承接，导演可通过后续镜头补足空间信息。不构成 major failure。",
+  "narrative_state_match": "partial",
+  "negative_constraint_check": "无克隆人、无额外人物、无多余肢体。环境虽简化但无违规元素。通过。",
+  "next_shot_readiness": "s12_c02 开场要求狐狸沿木栅栏接近南瓜地并嗅闻大南瓜。当前 s12_c01 尾帧中狐狸面向镜头，无南瓜地视觉锚点，但位置（村庄土路）与姿态（站立）可与 c02 的『沿栅栏挪近』建立动作连续性。过渡需要 c02 开头稍作空间重置。",
+  "options_considered": [
+    "retry_generation：re-anchor 环境与动作状态，重新生成 s12_c01",
+    "accept+adapt：标记 minor，继续推进，依赖后续镜头补足空间信息",
+    "insert_bridge：插入 keyframes 桥连接 s11_c04 与 s12_c02（跳过 c01 的断缝问题）"
+  ],
+  "root_cause": "generation model 受到 character close-up 优先吸引子影响，导致景别偏紧、环境信息丢失；同时 action_endpoint 未落在「抵达瞬间」的动势上，而滑向静态表情。",
+  "selected_action": "accept+adapt",
+  "why": "MAE 63.6 在跨场景切换区间上限，但叙事主线未断裂。s12_c02 开场可自然承接狐狸的移动意图。重试成本高（需消耗新的视频额度），且 close-up 吸引子是已知 system bias，retry 不保证解决。adapt 策略：在 c02 开头明确补充环境锚定（如『狐狸从画面右侧入画，背景展现完整村庄入口全景』），抵消 c01 的空间压缩。",
+  "retry_or_adapt": "adapt",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M4_a3",
+  "updated_at": 1790325887.4699564
+}

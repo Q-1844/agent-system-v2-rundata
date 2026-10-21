@@ -1,0 +1,20 @@
+{
+  "human_deviation_level": "major",
+  "human_action": "retry_generation",
+  "retry_or_adapt": "retry",
+  "human_reason": "叙事状态严重偏离预期：剧本要求狐狸在雨林边缘树影中姿态停定、面朝画面深处明亮外界（ contemplative stillness，情绪收束点），实际视频显示狐狸处于walk crouch/mid-stride动态姿势，面向画面右侧而非'画面深处的明亮外界'。这导致：(1) 情绪节拍丢失——从'走向光明'变成'还在路上'；(2) 下一镜M4(s12_c01)的承接逻辑断裂——M4预期狐狸'深吸一口气从雨林边缘一跃而出'，但M3末态是行进中而非停定蓄力状态，两镜之间缺少'停步-深呼吸-冲刺'的情绪铺垫。尽管identity一致、环境一致、tail_to_first_mae=2.1接缝正常，但叙事核心意图失败，属major偏差。",
+  "root_cause": "AI生成模型优先响应'walk/crouch'的动作先验，未能捕捉镜头意图中的'stop/settled contemplation'终点态。description中'站在雨林边缘树影里'可能被解读为'走到那里'而非'停在那里'，缺乏明确的终点态锚定词。",
+  "options_considered": [
+    "accept+adapt：忽略姿态偏差，接受walking crouch作为过渡态，让M4直接承接",
+    "add_transition：在M3与M4之间插keyframes桥，让桥承担'停步蓄力'的叙事功能",
+    "retry_generation：重生成M3，用锚定patch强制定点终态"
+  ],
+  "selected_action": "retry_generation",
+  "why": "M3是段11的高潮收束镜，'停定凝视光明'的情绪节拍不可跳过，也不能用桥替代（桥会稀释原镜的叙事重量）。M4预编剧开场'深吸一口气'直接依赖M3末态的停定蓄力感，两者必须紧密咬合。major偏差必须修复。",
+  "negative_constraint_check": "重试后须重查：角色identity一致性、雨林环境一致性、无unexpected element、无负面约束击穿。目标画面：狐狸全身端立在土路/树影交界处的光暗分界线上，姿态静止如雕塑，朝向画面纵深方向的明亮出口。",
+  "cascade_check": "级联风险：若重试M3成功，需重新测量s11_c02→s11_c03接缝；M4作为下游镜头其视频资产保持不动（本任务禁止修改M4），接缝断裂风险由M3重试后的新尾帧决定。若新M3尾帧与M4首帧不匹配，则需对M4重新生成或插桥。当前M4视频已就绪，待M3重试后再评估是否需要补救。",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M3",
+  "updated_at": 1790325666.9314141
+}

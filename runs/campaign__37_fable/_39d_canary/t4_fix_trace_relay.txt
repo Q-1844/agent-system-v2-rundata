@@ -1,0 +1,21 @@
+【Phase 39D Canary · t4：s01_c01 校准修正落档 + s01_c02 relay 生成（2 镜收口）】
+
+上轮 s01_c01 已生成（multi 直生，REFERENCE_ONLY 参考——语义正确执行✓），但校准有两处缺陷必须修正：
+1. **负面约束核对不诚实**：执行侧（zcode）已亲自抽取 5 帧（0/25%/50%/75%/100% 处）逐帧核验：鹤全程滑翔无站姿✓、无镜内硬切✓、丹顶鹤身份✓、实际尾帧=中央偏上展翅滑翔与 expected_tail 一致✓；**但画面背景自始至终含森林树冠与湖泊/河流**——与 s01_c01 冻结负面约束「禁地面背景,禁陆地景物」字面冲突，上轮却报告"负面约束全部通过"（Vision 地理盲区：skill 失败模型 #1 的已知失效模式，Director 未用自己的眼睛复核）。
+2. **trace_upsert 未落档**：calibration_runs 无任何 record——按技能完成标准，缺 trace 的裁定视为未完成。
+
+注意一个语义事实：s01 段 Location 是「天空与森林上空」，approved SIV 画面本身就是 sky above forest canopy——「禁地面背景」措辞与段 Location 语义存在张力（冻结措辞比场景真值更严）。画面叙事与 enterability 并无问题（下一镜「俯瞰森林」恰需要森林在下方）。
+
+本轮目标：
+
+A) **s01_c01 校准修正**：
+   - Director 重新亲自核对负面约束（诚实逐条：禁站立姿态✓ / 禁地面背景✗森林湖泊全程在画面中 / 禁陆地景物✗同前 / 其余✓），结合 Vision 证据与执行侧帧检事实重新裁定（裁定权在你：若判 minor accept+adapt 需说明为什么措辞冲突不构成 major——例如 Location 语义一致性+enterability 完好+建议 SW 修正约束措辞；若判 major 按纪律停等用户）。
+   - 🔴 calibration.trace_upsert 必须落档 s01_c01：expected_tail/actual_tail/deviation_level/root_cause/options_considered/selected_action/why/retry_or_adapt/negative_constraint_check（逐条诚实记录，含✗项）/vision_vs_director_diff（Vision 报 none 与帧检✗的分歧）+ generation_mode=multi + input 参考 semantic_role=reference_only + pose_gate 结果。枚举字段非空。
+   - 顺带检查 s01_c01 的 video_versions：存在一个 status=generating 的 legacy_video 僵尸版本，用 archive_existing=true 归档（历史不覆盖）。
+
+B) **s01_c02 relay 链**：
+   - shot.update s01_c02：link_mode=multi + video_reference_asset_id=prev_tail（工具 schema 已修复，可直接设置）。
+   - shot.generate_videos s01_c02（开场=上一镜实际末帧，RELAY_START_BOUNDARY——参考槽应为 relay 末帧而非 Look）。回执记录 reference_roles 的 semantic_role（应为 relay_start_boundary）。
+   - 完成后完整校准：calibration.seam_measure（首个真实接缝：s01_c01 实际尾帧→s01_c02 实际首帧）→ Vision → Director 亲自抽帧核对 → 三档裁定 → trace_upsert（枚举字段非空）。
+
+【Canary 纪律】只处理 s01_c01/s01_c02；major 停等用户；不生成其余镜头；trace 是验收对象，两镜都必须有完整 trace record。

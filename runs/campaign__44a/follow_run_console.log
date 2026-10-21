@@ -1,0 +1,11 @@
+2026-09-30 23:29:46,944 - INFO - 全局文本默认 provider = Agnes（model=agnes-2.5-flash）
+2026-09-30 23:29:47,365 - INFO - [text] provider=agnes model=agnes-2.5-flash
+2026-09-30 23:30:00,565 - INFO - 视频任务已提交（2.5 契约）model=agnes-video-2.5-flash mode=reference seconds=5 id=task_X1PWCXkkqQl30sAprJmQ9gFpRKjfCoyy
+2026-09-30 23:33:34,019 - INFO - 视频任务已提交（2.5 契约）model=agnes-video-2.5-flash mode=reference seconds=5 id=task_6ni2MmREV0LwIWIXO8GiDBGfENKTBH8t
+state: link_mode=multi sentinel=prev_tail_look_scene opening=independent | description v3 set（246 chars）
+  [228s] job fa90ed3e566e done
+  [492s] job 1b009b246932 done
+jobs settled 2/2 in 492s
+final now: vv_49e4bd19
+  vv_6bf66392 | task: task_X1PWCXkkqQl30sAprJmQ9gFpRKjfCoyy
+  vv_49e4bd19 | task: task_6ni2MmREV0LwIWIXO8GiDBGfENKTBH8t

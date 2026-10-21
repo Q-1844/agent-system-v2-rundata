@@ -1,0 +1,9 @@
+【Phase 39C Canary · 第五步：大鹤身份链收口（用户已拍板：方案 B = 丹顶鹤）】
+
+用户裁定：采用丹顶鹤设定（红冠、颈/翼后黑色、体羽白——经典丹顶鹤特征是强识别锚点，勿再写成白鹤）。本轮是纯执行收口，快速完成，不要在物种上再做任何发挥：
+
+1. 委派 Resource Agent：把大鹤 description_en 改写为丹顶鹤特征（red-crowned crane: pure white body plumage, black neck with white eye-patch stripe, bare red crown patch, black secondary flight feathers, long thin dark beak and legs；体态优雅修长）。改完 description 再重新生成三视图（先改文本再生成）。→ Look 生产到 approved（这次 description 与模型先验一致，审查应能通过）。
+2. 注意 generate_views/look.prepare 的纪律：耐心等真实返回，同一问题不要无修改反复重试。
+3. 完成后汇报：三视图状态 + Look approved 状态 + Look 的参考资产 id（首镜 chain-root 直生要用它）。
+
+【Canary 纪律】仍不生成分镜图与镜头视频。这是身份链收口，不是本轮测试重点——重点是接下来的 2 镜接力校准，动作要快。

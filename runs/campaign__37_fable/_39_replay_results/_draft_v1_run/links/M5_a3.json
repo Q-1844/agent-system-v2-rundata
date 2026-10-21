@@ -1,0 +1,26 @@
+{
+  "cascade_check": "下游 s12_c03 接力依赖本镜尾帧；重生成后需测新尾帧→s12_c03 首帧接缝（tail_to_first_mae），若超出近零带需插桥或顺延重生成",
+  "deviation_level": "major",
+  "director_visual_observation": "Fox 直立、头部抬起、表情得意（smug），与预期低头嗅南瓜姿态相反；尾巴高抬非平伸贴地；视觉语义断裂",
+  "end_to_end_mae": 57.4,
+  "expected_tail": "狐狸在大南瓜旁低头嗅闻，姿态压低，尾巴平伸",
+  "human_action": "retry_generation",
+  "human_reason": "叙事意图严重偏离：Fox 直立 smug 而非低头嗅南瓜，动作端点未落成完整状态，下一镜弓背压低姿态无法自然承接。MAE 虽接近近零带但属构图漂移，接缝本身无问题。属 major 级叙事断裂，需 anchor patch 锚定重试。",
+  "negative_constraint_check": "重试后须重查：空场景禁闯入人物/动物、肢体数量正确、身份一致性、环境连续性",
+  "next_shot_readiness": "Poor - upright/smug posture incompatible with M6 crouching-low entry requirement",
+  "options_considered": [
+    "accept+adapt（排除：姿态与剧本相反，无法自然进入下一镜）",
+    "add_transition/插桥（排除：本镜未就绪，桥需两侧均合格）",
+    "retry_generation with anchor patch（选定：修复叙事意图）"
+  ],
+  "root_cause": "Generation model selected attractor state（smug upright posture）over planned low-sniffing action; narrative endpoint unfulfilled",
+  "selected_action": "retry_generation",
+  "tail_to_first_mae": 2.1,
+  "vision_assessment": "identity_consistency=correct; environment_consistency=consistent; character_pose_state=Incorrect; action_endpoint=incomplete; expected_tail_match=Mismatch; narrative_state=weak (gaze conveys intent but physical action absent)",
+  "why": "叙事意图与预期相反，主体状态无法自然进入下一镜；minor 判据不适用（非姿态小偏，而是核心动作缺失）",
+  "retry_or_adapt": "retry",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M5_a3",
+  "updated_at": 1790326056.0240426
+}

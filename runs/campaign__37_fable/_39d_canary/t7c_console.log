@@ -1,0 +1,88 @@
+[producer session] sess_5ecb4f215585
+  [tool] skill.load
+  [progress] 
+  [tool] skill.load
+  [tool] calibration.trace_read
+  [tool] calibration.trace_read
+  [tool] calibration.trace_upsert
+  [tool] calibration.trace_upsert
+  [tool] calibration.trace_read
+  [tool] calibration.trace_read
+  [tool] calibration.trace_upsert
+  [tool] calibration.trace_read
+  [tool] calibration.trace_read
+  [progress] 
+  [tool] director.delegate
+
+[done] t7c_trace_delegate latency=97.2s ops=['director.delegate']
+[transcript] C:\Users\曹文淇\Desktop\ai工作流\animation-storyboard\_37_fable\_39d_canary\t7c_trace_delegate.json
+
+[assistant_message]
+---
+
+## ✅ Phase 39D 全片校准完成报告
+
+### 📊 全链裁定汇总
+
+| 镜头 | 时长 | 裁定 | tail_to_first_mae | trace 状态 |
+|------|------|------|-------------------|------------|
+| s01_c01 | 8s | **none** | chain_root_baseline | ✅ 已落档 |
+| s01_c02 | 8s | **minor** | ≈2.2 | ✅ attempt 2 |
+| s01_c03 | 10s | **minor** | ≈2.1 | ✅ 补账完成 |
+| s02_c01 | 10s | **minor** | 跨 Location | ✅ 已落档 |
+| s02_c02 | 10s | **minor** (attempt 3) | 1.9 | ✅ 补账完成 |
+| s02_c03 | 5s | **minor** | - | ✅ 已落档 |
+
+**统计：none=1, minor=5, major=0**
+
+---
+
+### ✅ Trace 补账验证
+
+**s01_c03**（attempt 1）：
+- `deviation_level` = "minor" ✓
+- `selected_action` = "accept_adapt" ✓
+- `root_cause` = "provider 站姿/落水吸引子导致动作越位（提前落水），next-shot enterability 完好，画面合格" ✓
+- negative_constraint_check 含 ✗ 项（禁地面背景、禁陆地景物）✓
+
+**s02_c02**（attempt 3，补账修正）：
+- `deviation_level` = "minor"（已从 major 修正）✓
+- `selected_action` = "accept_adapt" ✓
+- `negative_constraint_check` 新增：禁沉入水下✓、禁游泳✓、禁羽毛脱落✓ ✓
+- 原有关键字段保留（actual_tail, expected_tail, repair_decision_chain）✓
+
+**无生成动作**：`generation_mode` 保持原值，仅执行 trace_upsert + trace_read ✓
+
+---
+
+### 📋 已知叙事偏差清单（供用户审查）
+
+| 镜 | 偏差描述 | 处理 |
+|---|----------|------|
+| s01_c01 | 背景含森林湖泊（冻结措辞「禁地面背景」vs Location 语义张力） | 措辞已修正；continue |
+| s01_c02 | 风格微漂移（2D→3D 倾向）但叙事连贯 | accept+adapt |
+| s01_c03 | 动作阶段越位（提前进入螺旋下降） | accept+adapt，next-shot 可吸收 |
+| s02_c01 | 跨 Location 场景切换 | seam MAE 正常，叙事承接完好 |
+| s02_c02 | 经 3 轮重试后修正：沉水→掠水→浅水站立 | 最终 minor，涟漪扩散自然 |
+| s02_c03 | 静立收束，湖面如镜 | 叙事闭合完整 |
+
+---
+
+### 💰 配额消耗
+
+| 资源 | 已用 | 总额 | 剩余 |
+|------|------|------|------|
+| 视频 | 57.4s | 500s | **442.6s** |
+| 图片 | 4 张 | 4000 | 3996 张 |
+| 文本调用 | 468 次 | 7200 | 6732 次 |
+
+---
+
+### ✅ 最终交付状态
+
+- **结构**：2 段×3 镜=6 镜 ✅
+- **视频**：6/6 生成完成 ✅
+- **trace 落档**：6/6 枚举字段非空 ✅
+- **major 裁定**：0（零重大事故）✅
+
+**Phase 39D 干净重建完成，全片就绪交付用户审查。**

@@ -1,0 +1,16 @@
+【Phase 39D 干净重建 · 第二步：按冻结计划建镜 + negative_prompt 落库（仍禁止任何生成）】
+
+上轮 Script Writer 已完成预编剧冻结（六要素在两个段的 summary 里，先 story.list / story.read 读取最新指纹）。但镜头尚未创建（shot.list 为空）——SW 没有 shot 写工具，建镜是你（Producer）的编排职责（39C 先例同此）。
+
+本轮目标（只做结构落库，绝不生成任何图/视频）：
+
+1) 按冻结计划创建 6 镜（shot.create_many 或 shot.create 逐个，先 shot.list 拿 expected_shots_revision）：
+   - s01（3 镜）：①云端滑翔 8s ②俯瞰森林穿薄云 8s ③发现湖泊+开始螺旋下降 10s
+   - s02（3 镜）：①俯冲接近水面 10s ②触水降落 10s ③湖心站立 5s
+   字段映射：description=该镜画面内容（含 expected_tail 语义可写入 description 收束句或 opening_state/last_frame_description，按 shot 字段语义就近落库）；motion=该镜动作；target_duration_s=冻结时长；characters=["大鹤"]。opening intent 体现在 description 首句。
+
+2) 逐镜 shot.update 写 negative_prompt 字段（数据通路：视频生成的正式负面约束参数）——从冻结计划的 neg 串原样落入，如 s01①：「禁站立姿态, 禁地面背景, 禁陆地景物, 禁人物, 禁现代建筑, 禁车辆, 禁多余主体」。🔴 每镜的 shot.update 回执 changed 列表必须含 negative_prompt 才算落库成功（方法完成度收口：缺字段的落库视为未完成）。
+
+3) 完成后 shot.list 全量核对（2 段 6 镜、时长、negative_prompt 非空），把逐镜落库结果表写进最终回复：shot_id / 时长 / negative_prompt 前 40 字 / changed 验证结果。
+
+【Canary 纪律】本轮严禁任何生成动作（分镜图/视频都不生成）；姿态处置 (a)/(b) 与 bind 由用户裁定/后续轮次进行。

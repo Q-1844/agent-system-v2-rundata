@@ -1,0 +1,22 @@
+{
+  "cascade_check": "下游无依赖镜头，无级联风险",
+  "director_visual_observation": "实际尾帧：狐狸呈前倾坐姿、身体前倾重心在前爪、神态警觉、尾巴平放侧边而非环抱前爪；环境为有木栅栏与房屋的乡村庭院（比预期'土路'更具体），有秋叶飘落；叙事情绪偏警觉/好奇而非放松",
+  "expected_tail": "狐狸端坐在土路上，尾巴环过前爪，神态放松，午后暖光",
+  "human_action": "continue",
+  "human_deviation_level": "minor",
+  "human_reason": "1) 叙事状态偏差：预期'放松'→实际'警觉好奇'，情绪基调偏强；2) 道具偏差：尾巴未环抱前爪而是平放侧边；3) 景别/构图基本成立：主体居中清晰可见；4) 接缝MAE=2.3在近零带内（正常接力）；5) end_to_end_mae=39.4在跨场景切换区间（合理）；6) 下一镜M9要求暮色大远景，与本镜中景形成有效景别梯度，可自然承接",
+  "negative_constraint_check": "无克隆/无额外人物/无禁移动物/无人体解剖伪影/无意外新增元素",
+  "options_considered": [
+    "retry_generation：重置整个镜头生成",
+    "add_transition：插入keyframes桥过渡",
+    "accept+adapt：接受当前尾态，由下一镜自然承接"
+  ],
+  "root_cause": "生成时狐狸姿态偏向'准备行动'的动态瞬间而非'静态放松'，尾巴未响应环抱指令；环境细节被模型扩展超出预期（村庄庭院vs土路）",
+  "retry_or_adapt": "adapt",
+  "selected_action": "accept+adapt，不重试。理由：偏差minor，叙事主线未断，下一镜M9已是暮色大远景，无需本镜精确尾态作为桥接锚点",
+  "vision_vs_director_diff": "Vision判定'narrative_state=slightly more energetic than relaxed'与导演判断一致，均确认minor级别偏差；no conflict",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M8",
+  "updated_at": 1790326440.8120615
+}

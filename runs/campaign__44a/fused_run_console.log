@@ -1,0 +1,11 @@
+2026-09-30 22:57:27,425 - INFO - 全局文本默认 provider = Agnes（model=agnes-2.5-flash）
+2026-09-30 22:57:31,171 - INFO - 视频任务已提交（2.5 契约）model=agnes-video-2.5-flash mode=keyframe seconds=5 id=task_94L0ojNY0XQmZddyERuLGgSG5KeJzEXs
+2026-09-30 23:03:31,722 - INFO - 视频任务已提交（2.5 契约）model=agnes-video-2.5-flash mode=keyframe seconds=5 id=task_hBMEVT5R5ZXerIc1l5j1oj9FlY2812qC
+link_mode -> i2v | selected_first_frame=ff_1e20bdb8_1
+dry-run: provider_mode=i2v | first_frame=https://cos-platform-outputs.agnes-ai.cn/images/i2i/task_4zckNI3T8yqnkVzrGjgEFh7
+  [370s] job b17ad3817586 done
+  [620s] job 037e76b539fe done
+jobs settled: 2/2 in 620s
+final now: vv_e8d43507
+  vv_eacf0026 | task: task_94L0ojNY0XQmZddyERuLGgSG5KeJzEXs
+  vv_e8d43507 | task: task_hBMEVT5R5ZXerIc1l5j1oj9FlY2812qC

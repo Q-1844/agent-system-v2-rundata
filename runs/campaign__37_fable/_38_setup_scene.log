@@ -1,0 +1,46 @@
+village location exists: loc_2039debe6f68
+village view created: view_21c6bab8b0fb
+[village-view] r0 gen committed
+[village-view] r0 review: pass
+[village-view] APPROVED (补批)
+[s11] instance created: scin_7f922f31e5f2
+[s11] state patched
+[s12] instance created: scin_c20fc5401d1e
+[s12] state patched
+[seg C] SCIV created: sciv_f5e6aa46e5bc
+[seg-C-siv] r0 gen committed
+[seg-C-siv] r0 review: uncertain
+[seg-C-siv] r1 gen committed
+[seg-C-siv] r1 review: uncertain
+[seg-C-siv] r2 gen committed
+[seg-C-siv] r2 review: uncertain
+[seg-C-siv] r3 gen committed
+[seg-C-siv] r3 review: needs_fix
+[seg-C-siv] r4 gen committed
+[seg-C-siv] r4 review: uncertain
+[seg-C-siv] r5 gen committed
+[seg-C-siv] r5 review: pass
+[seg-C-siv] APPROVED (补批)
+[seg D] SCIV created: sciv_0de0502fef03
+[seg-D-siv] r0 gen committed
+[seg-D-siv] r0 review: pass
+[seg-D-siv] APPROVED (补批)
+[s11_c01] binding created
+[s11_c01] binding refresh -> {'ok': True, 'operation': 'shot_binding.refresh', 
+[s11_c02] binding created
+[s11_c02] binding refresh -> {'ok': True, 'operation': 'shot_binding.refresh', 
+[s11_c03] binding created
+[s11_c03] binding refresh -> {'ok': True, 'operation': 'shot_binding.refresh', 
+[s12_c01] binding created
+[s12_c01] binding refresh -> {'ok': True, 'operation': 'shot_binding.refresh', 
+[s12_c02] binding created
+[s12_c02] binding refresh -> {'ok': True, 'operation': 'shot_binding.refresh', 
+[s12_c03] binding created
+[s12_c03] binding refresh -> {'ok': True, 'operation': 'shot_binding.refresh', 
+[s12_c04] binding created
+[s12_c04] binding refresh -> {'ok': True, 'operation': 'shot_binding.refresh', 
+[s12_c05] binding created
+[s12_c05] binding refresh -> {'ok': True, 'operation': 'shot_binding.refresh', 
+[s12_c06] binding created
+[s12_c06] binding refresh -> {'ok': True, 'operation': 'shot_binding.refresh', 
+done: 场景系统接线完成 {"C": "sciv_f5e6aa46e5bc", "D": "sciv_0de0502fef03"}

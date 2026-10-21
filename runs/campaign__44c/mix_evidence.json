@@ -1,0 +1,98 @@
+{
+ "audio_plan": {
+  "revision": "0ff0b92b",
+  "layer_count": 6,
+  "base_gain_db": -6.0,
+  "ducking": {
+   "threshold_db": -30.0,
+   "ratio": 4.0,
+   "attack_ms": 50,
+   "release_ms": 800,
+   "trigger_roles": [
+    "narration"
+   ],
+   "ducked_roles": [
+    "music"
+   ]
+  },
+  "loudness": {
+   "i": -16.0,
+   "tp": -2.0,
+   "lra": 11.0
+  }
+ },
+ "mixed_render": {
+  "render_version_id": "srender_a95fbb7a",
+  "job_id": "52e261d332f8",
+  "status": "done",
+  "seconds": 12.1,
+  "planned_ms": 89902,
+  "duration_ms": 89926,
+  "output": "projects\\雨灯归航\\output\\sequences\\seq_a3d5b19b\\srender_a95fbb7a.mp4",
+  "audio_peak_warning": null,
+  "base_render_version_id": "srender_aca99c81",
+  "error": null
+ },
+ "stems": {
+  "narration": {
+   "file": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\雨灯归航\\output\\assembly\\stems\\stem_narration_rev0ff0b92b.wav",
+   "sha256": "d694724bd86db70f7d0ae1b8c341d7636cc13d05c2455579a39dd98a35ed8a6a",
+   "plan_revision": "0ff0b92b"
+  },
+  "music": {
+   "file": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\雨灯归航\\output\\assembly\\stems\\stem_music_rev0ff0b92b.wav",
+   "sha256": "7ae5715df6ec14ad4e31166f6bd7a0e47716365e2c51c9084e57b3479e59d0f4",
+   "plan_revision": "0ff0b92b"
+  }
+ },
+ "measurements": {
+  "final": {
+   "i_lufs": -16.7,
+   "peak_dbfs": -1.5
+  },
+  "av_duration": {
+   "container_ms": 89926,
+   "audio_ms": 89926.0,
+   "delta_ms": 0.0
+  },
+  "target_loudness": {
+   "i": -16.0,
+   "tp": -2.0,
+   "lra": 11.0
+  },
+  "note": "目标平台=桌面/在线流媒体（I=-16 LUFS 口径存 plan，非全平台通用声明）；自动测量不替代人耳验收"
+ },
+ "silent_baseline": {
+  "sequence_id": "seq_900fdf75",
+  "render_version_id": "srender_9e9ba8ee",
+  "status": "done",
+  "seconds": 26.3,
+  "duration_ms": 89855,
+  "output": "projects\\雨灯归航\\output\\sequences\\seq_900fdf75\\srender_9e9ba8ee.mp4",
+  "freshness_after_revert": "stale"
+ },
+ "pure_bgm_narration_render": {
+  "note": "第四次重渲（接管测试师，两遍渲染修复）：真实根因=单遍「混音图→AAC」丢延迟层——amix+adelay 与定长帧编码器(aac)组合缺陷，nc02–05 全丢、仅首个延迟层幸存（新进程复现排除旧代码假说；同一图 PCM/MP3/FLAC 输出逐句相关 0.9+ 全在场、PCM 两跑逐字节同判；触发随延迟值漂移、apad/asetnsamples 均不可靠）。修复=图→中间 PCM WAV→视频 copy+WAV→AAC 两遍。srender_9978e82a 为缺陷版（已作废）。配比：旁白+6dB/音乐-16.5dB/原生静默(-60dB)",
+  "render_version_id": "srender_c081beae",
+  "status": "done",
+  "duration_ms": 90197,
+  "output": "projects\\雨灯归航\\output\\sequences\\seq_a3d5b19b\\srender_c081beae.mp4",
+  "plan_revision": "be64b193",
+  "measurements": {
+   "i_lufs": -18.1,
+   "peak_dbfs": -1.9
+  },
+  "narration_cue_correlation": {
+   "lay_nc01": 0.9903,
+   "lay_nc02": 0.9122,
+   "lay_nc03": 0.9227,
+   "lay_nc04": 0.9415,
+   "lay_nc05": 0.9537
+  },
+  "superseded_broken_render": "srender_9978e82a",
+  "spectral_check": {
+   "music_window_hi_lo": 0.0004603722969000069,
+   "ambience_hi_lo": 0.037070984157097794
+  }
+ }
+}

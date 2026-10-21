@@ -1,0 +1,19 @@
+{
+  "cascade_check": "判 minor，不重生成，无 cascade 风险。但需关注 s12_c02（M5）首帧是否自然承接狐狸 moving 状态——若 M5 首帧出现 identity jump 或场景跳切，则降级为 major 并重新评估。",
+  "director_visual_observation": "视频前段（0~2.5s）狐狸在雨林奔跑与预期衔接良好；中后段场景跳切至村庄，但叙事意图本就是 cross-location transition，此跳切可视为有意 cut 而非断裂。实际尾帧 Fox 处于 walking 姿态，非 standing still；但狐狸位置在土路附近，环境元素（木栅栏、南瓜地、树影）齐全，叙事状态正确——狐狸已进入村庄。MAE 2.1 表明与 s11_c04 的接缝几乎无缝。",
+  "expected_tail": "狐狸站在村口土路中央，身后是雨林边缘树影，面前是木栅栏与南瓜地，正午阳光，尘土未定",
+  "human_action": "continue",
+  "human_deviation_level": "minor",
+  "human_reason": "叙事/情绪命中：狐狸成功从雨林过渡到村庄，地理环境正确（土路、木栅栏、南瓜地、树影）。但端点姿态偏：Fox 在 walking 而非 standing still，尘土未可见。这是 multi_relay 模式下方差导致的典型 minor 偏差——动作未落在预期静帧。判定为 minor 的依据：①地理与叙事连续无丢失；②M5 预设狐狸从村口走向南瓜地，walking 状态反而提供更自然的衔接；③MAE 2.1 处于近零带，接缝本身无断裂；④无负面约束击穿（无克隆人/多余人物/道具错误）。",
+  "options_considered": [
+    "accept+adapt: 接受 minor 偏差，继续推进 M5"
+  ],
+  "root_cause": "multi_relay 生成模式下，provider 对动作延续性有强吸引子——end 帧自然落在 walking pose 而非 static standing，这是已知的特写/近景吸引子 variance。",
+  "selected_action": "accept+adapt",
+  "why": "叙事目的已达成（狐狸进入村庄），姿态偏差可由 M5 自然吸收。重试会消耗额度且无法保证 standing 姿态必成（历史实证：特写吸引子导致 retry 无效）。",
+  "retry_or_adapt": "adapt",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M4_a1",
+  "updated_at": 1790325825.1008432
+}

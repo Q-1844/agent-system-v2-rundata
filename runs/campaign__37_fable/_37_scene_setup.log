@@ -1,0 +1,130 @@
+
+==== resume at 20:05:45 ====
+clearing view exists approved: view_2e39dc22c34b
+[s09] instance exists: scin_5c013cf766b4
+[s09] state patched
+[s10] instance exists: scin_52e3650e3991
+[s10] state patched
+[seg A] SCIV exists (unapproved): sciv_279740796345
+[seg-A-siv] r0 gen committed
+[seg-A-siv] r0 review: uncertain
+[seg-A-siv] r1 gen committed
+[seg-A-siv] r1 review: uncertain
+[seg-A-siv] r2 gen committed
+[seg-A-siv] r2 review: uncertain
+[seg-A-siv] r3 gen committed
+[seg-A-siv] r3 review: uncertain
+[seg-A-siv] r4 gen committed
+[seg-A-siv] r4 review: uncertain
+[seg-A-siv] r5 gen committed
+[seg-A-siv] r5 review: uncertain
+[seg-A-siv] r6 gen committed
+[seg-A-siv] r6 review: uncertain
+[seg-A-siv] r7 gen committed
+[seg-A-siv] r7 review: uncertain
+[seg-A-siv] r8 gen committed
+[seg-A-siv] r8 review: uncertain
+[seg-A-siv] r9 gen committed
+[seg-A-siv] r9 review: uncertain
+FATAL: seg A SIV æœªè¿‡å®¡
+
+==== resume rounds=24 at 20:24:08 ====
+clearing view exists approved: view_2e39dc22c34b
+[s09] instance exists: scin_5c013cf766b4
+[s09] state patched
+[s10] instance exists: scin_52e3650e3991
+[s10] state patched
+[seg A] SCIV exists (unapproved): sciv_279740796345
+[seg-A-siv] r0 gen committed
+[seg-A-siv] r0 review: uncertain
+[seg-A-siv] r1 gen committed
+[seg-A-siv] r1 review: uncertain
+[seg-A-siv] r2 gen committed
+[seg-A-siv] r2 review: uncertain
+[seg-A-siv] r3 gen committed
+[seg-A-siv] r3 review: uncertain
+[seg-A-siv] r4 gen committed
+[seg-A-siv] r4 review: uncertain
+[seg-A-siv] r5 gen committed
+[seg-A-siv] r5 review: uncertain
+[seg-A-siv] r6 gen committed
+[seg-A-siv] r6 review: uncertain
+[seg-A-siv] r7 gen committed
+[seg-A-siv] r7 review: uncertain
+[seg-A-siv] r8 gen committed
+
+==== resume after identity patch at 20:36:03 ====
+clearing view exists approved: view_2e39dc22c34b
+[s09] instance exists: scin_5c013cf766b4
+[s09] state patched
+[s10] instance exists: scin_52e3650e3991
+[s10] state patched
+[seg A] SCIV exists (unapproved): sciv_279740796345
+[seg-A-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_279740796345/generate 409: {"detail":{"ok":false
+[seg-A-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_279740796345/generate 409: {"detail":{"ok":false
+[seg-A-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_279740796345/generate 409: {"detail":{"ok":false
+[seg-A-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_279740796345/generate 409: {"detail":{"ok":false
+[seg-A-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_279740796345/generate 409: {"detail":{"ok":false
+[seg-A-siv] already approved
+Traceback (most recent call last):
+  File "C:\Users\²ÜÎÄä¿\Desktop\ai¹¤×÷Á÷\animation-storyboard\_37_fable\_37_setup_scene_system.py", line 247, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\²ÜÎÄä¿\Desktop\ai¹¤×÷Á÷\animation-storyboard\_37_fable\_37_setup_scene_system.py", line 208, in main
+    api("POST", f"/api/project/{PROJ}/scen[seg B] SCIV created: sciv_c80d0d3f9b56
+[seg-B-siv] r0 gen committed
+[seg-B-siv] r0 review: uncertain
+[seg-B-siv] r1 gen committed
+[seg-B-siv] r1 review: uncertain
+[seg-B-siv] r2 gen committed
+[seg-B-siv] r2 review: uncertain
+[seg-B-siv] r3 gen committed
+[seg-B-siv] r3 review: uncertain
+[seg-B-siv] r4 gen committed
+[seg-B-siv] r4 review: uncertain
+[seg-B-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_c80d0d3f9b56/generate 409: {"detail":{"ok":false
+[seg-B-siv] r6 gen committed
+[seg-B-siv] r6 review: uncertain
+[seg-B-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_c80d0d3f9b56/generate 409: {"detail":{"ok":false
+[seg-B-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_c80d0d3f9b56/generate 409: {"detail":{"ok":false
+[seg-B-siv] r9 gen committed
+[seg-B-siv] r9 review: needs_fix
+[seg-B-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_c80d0d3f9b56/generate 409: {"detail":{"ok":false
+[seg-B-siv] r11 gen committed
+[seg-B-siv] r11 review: uncertain
+[seg-B-siv] r12 gen committed
+[seg-B-siv] review err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_c80d0d3f9b56/review 409: {"detail":{"ok":false,"
+[seg-B-siv] r13 gen committed
+[seg-B-siv] r13 review: needs_fix
+gen committed
+[seg-B-siv] r3 review: uncertain
+[seg-B-siv] r4 gen committed
+[seg-B-siv] review err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_c80d0d3f9b56/review 409: {"detail":{"ok":false,"
+[seg-B-siv] r5 gen committed
+[seg-B-siv] r5 review: needs_fix
+[seg-B-siv] gen err: /api/project/Fable_Pilot_Fox_and_Grapes_V1/scene-system/scene-instance-views/sciv_c80d0d3f9b56/generate 409: {"detail":{"ok":false
+[seg-B-siv] r7 gen committed
+[seg-B-siv] r7 review: needs_fix
+[seg-B-siv] r8 gen committed
+[seg-B-siv] r8 review: uncertain
+[seg-B-siv] r9 gen committed
+[seg-B-siv] r9 review: needs_fix
+[seg-B-siv] r10 gen committed
+[seg-B-siv] r10 review: uncertain
+[seg-B-siv] r11 gen committed
+[seg-B-siv] r11 review: uncertain
+[seg-B-siv] r12 gen committed
+[seg-B-siv] r12 review: uncertain
+[seg-B-siv] r13 gen committed
+[seg-B-siv] r13 review: pass
+[seg-B-siv] APPROVED (è¡¥æ‰¹)
+[s09_c01] binding created
+Traceback (most recent call last):
+  File "C:\Users\²ÜÎÄä¿\Desktop\ai¹¤×÷Á÷\animation-storyboard\_37_fable\_37_setup_scene_system.py", line 258, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\²ÜÎÄä¿\Desktop\ai¹¤×÷Á÷\animation-storyboard\_37_fable\_37_setup_scene_system.py", line 252, in main
+    r = api("POST", f"/api/project/{PROJ}/shot-bindings/{sid}/refresh")
+  File "C:\Users\²ÜÎÄä¿\Desktop\ai¹¤×÷Á÷\animation-storyboard\_37_fable\_37_setup_scene_system.py", line 29, in api
+    raise RuntimeError(f"{p} {r.status_code}: {r.text[:350]}")
+RuntimeError: /api/project/Fable_Pilot_Fox_and_Grapes_V1/shot-bindings/s09_c01/refresh 422: {"detail":[{"type":"missing","loc":["body"],"msg":"Field required","input":null}]}

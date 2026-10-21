@@ -1,0 +1,22 @@
+{
+  "cascade_check": "本桥已成功衔接s11_c03→s11_c04→s12_c01，无级联风险。不触发重生成或插桥需求。",
+  "director_visual_observation": "画面叙事节奏与情绪完全命中预期：狐狸从森林冲出→落地→冲刺→急停→尘土飞扬→转身回望→打量村庄。主体行为完整，情绪弧线饱满。",
+  "expected_tail": "狐狸站在村口土路中央，身后是雨林边缘树影，面前是木栅栏与南瓜地，正午阳光，尘土未定",
+  "human_action": "continue",
+  "human_deviation_level": "none",
+  "human_reason": "MAE=2.3（同场景接力近零带），与M4首帧地理空间连续，叙事状态完整承接，无需重试或插桥",
+  "negative_constraint_check": "无多余人物/动物/肢体伪影，符合负面约束",
+  "options_considered": [
+    "accept+continue（当前裁定）",
+    "retry_generation（MAE已达标，无理由）",
+    "add_transition（双端已对齐，无需桥）"
+  ],
+  "root_cause": "keyframes桥构造正确，双端钉死成功",
+  "selected_action": "continue",
+  "why": "叙事、情绪、地理、姿态全部命中，MAE达理想值",
+  "retry_or_adapt": "adapt",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M3B",
+  "updated_at": 1790325772.9749854
+}

@@ -1,0 +1,128 @@
+{
+ "plan": {
+  "revision": "e4c7b33f",
+  "layer_count": 16,
+  "narration_gain_db": 2.0,
+  "music_gain_db": -13.5,
+  "base_gain_db": -60.0,
+  "ducking": {
+   "threshold_db": -30.0,
+   "ratio": 4.0,
+   "attack_ms": 50,
+   "release_ms": 800,
+   "trigger_roles": [
+    "narration"
+   ],
+   "ducked_roles": [
+    "music"
+   ]
+  },
+  "loudness": {
+   "i": -16.0,
+   "tp": -2.0,
+   "lra": 11.0
+  }
+ },
+ "render": {
+  "render_version_id": "srender_fa9a2b7a",
+  "status": "done",
+  "base_render_version_id": "srender_aca99c81",
+  "duration_ms": 90197,
+  "output": "projects\\雨灯归航\\output\\sequences\\seq_a3d5b19b\\srender_fa9a2b7a.mp4",
+  "audio_peak_warning": null,
+  "error": null
+ },
+ "verify": {
+  "narration_cue_correlation": {
+   "nd01": 0.967,
+   "nd02": 0.9518,
+   "nd03": 0.948,
+   "nd04": 0.9463,
+   "nd05": 0.973,
+   "nd06": 0.9778,
+   "nd07": 0.8978,
+   "nd08": 0.8594,
+   "nd09": 0.9436,
+   "nd10": 0.8856,
+   "nd11": 0.9103,
+   "nd12": 0.9474,
+   "nd13": 0.9649
+  },
+  "music_window_correlation": {
+   "s1": 0.9999,
+   "s2": 1.0,
+   "s3": 0.9984
+  },
+  "native_leak_correlation": {
+   "s1": 0.0054,
+   "s2": -0.0062,
+   "s3": 0.006
+  },
+  "all_passed": true,
+  "note": "旁白逐句相关>0.3=在场；音乐间隙窗相关>0.3=在场；原生同窗相关<0.3=无泄漏；自动测量不替代人耳验收"
+ },
+ "stems": {
+  "narration": {
+   "file": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\雨灯归航\\output\\assembly\\stems\\stem_narration_reve4c7b33f.wav",
+   "sha256": "5ba3b42e65b33343e6902110d557c065d0e943df65c8abcf4b462b97f3cc8198",
+   "plan_revision": "e4c7b33f"
+  },
+  "music": {
+   "file": "C:\\Users\\曹文淇\\Desktop\\ai工作流\\animation-storyboard\\projects\\雨灯归航\\output\\assembly\\stems\\stem_music_reve4c7b33f.wav",
+   "sha256": "d36f717391e870dc4830b50179c2e3290584572da49ef985b1785ff4d63c6b95",
+   "plan_revision": "e4c7b33f"
+  }
+ },
+ "measurements": {
+  "final": {
+   "i_lufs": -16.0,
+   "lra_lu": 4.0,
+   "true_peak_dbtp": -1.8,
+   "lra_note": "LRA 取 ebur128 汇总段末值（此前 0.0 为进度行误取）"
+  },
+  "av_duration": {
+   "container_ms": 90197,
+   "audio_ms": 90197,
+   "delta_ms": 0
+  }
+ },
+ "scene_music_plan": {
+  "lay_music_s1_riverside": {
+   "file": "audio_imports/music/bgm_44c_s1_riverside.wav",
+   "start_ms": 0,
+   "duration_ms": 39543,
+   "source_in_ms": 0,
+   "gain_db": -13.5,
+   "fade_in_ms": 2000,
+   "fade_out_ms": 2500
+  },
+  "lay_music_s2_workshop": {
+   "file": "audio_imports/music/bgm_44c_s2_workshop.wav",
+   "start_ms": 39543,
+   "duration_ms": 18359,
+   "source_in_ms": 0,
+   "gain_db": -13.5,
+   "fade_in_ms": 1500,
+   "fade_out_ms": 1500
+  },
+  "lay_music_s3_tower": {
+   "file": "audio_imports/music/bgm_44c_s3_tower.wav",
+   "start_ms": 57902,
+   "duration_ms": 32000,
+   "source_in_ms": 6000,
+   "gain_db": -13.5,
+   "fade_in_ms": 1500,
+   "fade_out_ms": 3500
+  }
+ },
+ "source_loudness": {
+  "bgm_44c_s1_riverside": -13.4,
+  "bgm_44c_s2_workshop": -13.7,
+  "bgm_44c_s3_tower": -14.1,
+  "narration_samples_lufs": [
+   -26.0,
+   -24.5
+  ],
+  "note": "实测 ebur128（2026-10-01）；配比沿用 44C+ 重调口径"
+ }
+}

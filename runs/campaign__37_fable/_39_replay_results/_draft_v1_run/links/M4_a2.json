@@ -1,0 +1,38 @@
+{
+  "cascade_check": "判定为major但非级联断缝场景：s11_c04→s12_c01接缝MAE=2.1正常（近零带），叙事从雨林边缘无缝过渡到村口，无下游断裂风险。若重试s12_c01需重新生成后复查s12_c01→s12_c02首尾接缝。",
+  "director_visual_observation": "实际画面为狐狸正面特写/近景肖像，背景虚化仅剩绿色植物与模糊木栅栏轮廓，无土路、无南瓜地、无村庄纵深、无尘土、无正午阳光的全景信息。狐狸表情呈柔和微笑状，姿态静态，完全不符合剧本要求的'冲上土路急停、尘土未定、全村空寂'的叙事状态。",
+  "deviation_level": "major",
+  "expected_tail": "狐狸站在村口土路中央，身后是雨林边缘树影，面前是木栅栏与南瓜地，正午阳光，尘土未定",
+  "human_action": "retry_generation",
+  "human_deviation_level": "major",
+  "human_reason": "实际尾帧为特写肖像，严重偏离剧本要求的远景建立镜头（medium shot/wide establishing）。地理信息丢失（无土路、无南瓜地、无村庄），叙事状态错误（静态微笑 vs 急停环顾），镜头语言失效（无法承接M5的压低身子动作）。属于major——主体可见但场景上下文完全缺失，叙事情绪相反。",
+  "negative_constraint_check": "无克隆人、无多余角色、无额外肢体；正面约束检查通过。重试后须重查负面约束。",
+  "narrative_state_mismatch": "剧本要求'冲进村庄急停-环顾空村'的动态到达状态；实际画面为静态微笑特写，叙事功能失效。",
+  "next_shot_readiness_at_risk": "M5(s12_c02)要求'狐狸压低身子沿栅栏挪近南瓜地'，当前特写尾帧无法自然过渡到低姿动作，连续性断裂。",
+  "options_considered": [
+    "accept+adapt（minor方案）- 不适用：地理信息完全丢失，无法通过下一镜吸收",
+    "add_transition桥（keyframes bridge）- 不适用：当前失败的是本镜自身内容，不是两镜之间的过渡",
+    "retry_generation（单次锚定重试）- 适用：需重建远景建立镜头的空间叙事功能"
+  ],
+  "root_cause": "multi_relay生成模式下，镜头被模型选择为特写肖像构图而非剧本指定的中远景建立镜头。可能原因：(1)接力描述过度强调狐狸主体而弱化场景锚定；(2)模型对'狐狸进入村庄'的叙事理解偏差为近景角色镜头；(3)缺乏足够的环境空间提示词强度。",
+  "selected_action": "retry_generation with anchor patch",
+  "why": "当前画面丧失建立镜头核心功能——展示空间关系与地理上下文。特写肖像无法传递'狐狸初抵陌生村庄'的叙事，也无法与M5的南瓜地动作形成连贯空间逻辑。必须重建远景建立镜头。",
+  "vision_assessment_summary": "Vision判定为major deviation：'Extreme close-up framing and soft smile are unexpected compared to specified environmental setup'. 视觉评估与导演判断一致：地理信息缺失、景别错误、叙事状态错误。",
+  "retry_anchor_patch": {
+    "description_anchor_start": "远景建立镜头：正午阳光照耀的空旷村庄入口，土路纵深穿过画面中央，两侧木栅栏围起橙色南瓜地，远处干草垛与茅草顶小屋静立。镜头先展示完整村庄空间关系，然后——",
+    "description_anchor_end": "——狐狸全身小比例身影刚从画面边缘的树林冲上土路，急停在路中央，爪下扬起尘土，回头望一眼来路，再转向前方打量空寂的村庄。",
+    "composition_anchor": "medium-wide establishing shot with full body visibility; scene composition establishes spatial relationship between treeline, dirt road, pumpkin patch, and village structures before fox enters frame",
+    "key_spatial_elements": [
+      "dirt road depth",
+      "wooden fences on both sides",
+      "orange pumpkin patch",
+      "haystacks and thatched cottages in distance",
+      "fox as small full-body figure entering from treeline"
+    ],
+    "motion_anchor": "Fox dashes from forest edge onto sunlit road, skids to halt with dust puff, then stands still surveying the empty village"
+  },
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M4_a2",
+  "updated_at": 1790325872.0131807
+}

@@ -1,0 +1,11 @@
+【Phase 39D Canary · t8b：s02_c03 trace 终值覆盖（最后一条记账，无任何生成）】
+
+执行侧已帧检确认 s02_c03 重生成合格（浅水→踏上青石→立定远望，无硬切，MAE 2.3）。当前 trace 顶层枚举字段仍是重生成前的旧值（major/68.1/break_chain_and_reanchor）——merge 语义下旧键未被覆盖。本轮委派 Director 执行一次 trace_upsert【显式写入以下顶层键】（run_id=cal_20260926_120319_0791, trace_key=s02_c03）：
+
+  deviation_level="minor"
+  tail_to_first_mae=2.3
+  selected_action="accept_adapt"
+  why="重生成后（新 relay 锚点=重试后 c02 浅水站立尾帧）：接缝 MAE 2.3 近零带，镜内无硬切，浅水→青石→立定远望过渡平滑，expected_tail 命中"
+  repair_decision_chain="attempt1(major,旧relay+镜内硬切) → break_chain_and_reanchor → attempt2(minor,MAE 2.3)"
+
+随后 calibration.trace_read 回读 s02_c03 确认顶层三键已是 minor/2.3/accept_adapt，并输出全链 6 镜最终裁定+接缝总表（与 trace 实况一致）。禁止任何生成动作。

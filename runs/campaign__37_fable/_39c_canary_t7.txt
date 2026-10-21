@@ -1,0 +1,15 @@
+【Phase 39C Canary · 第七步：Bind + 前 2 镜生成与校准（Canary Gate 核心）】
+
+生产前置已全部就绪（我已核对 canonical，以此为准）：approved Look = look_ffc8094d1cdb（大鹤丹顶鹤站姿身份参考，approved 参考资产 ref_4e452a094407）；6 个 SIV 全 approved；6 镜已 multi 化（s02-s06 prev_tail）。校准 run 已建：cal_20260925_201335_5c77。
+
+本轮任务（Canary Gate——只生成前 2 镜）：
+1. 委派 Director 为 6 镜完成生产绑定（shot.production.bind：cast=大鹤+look_ffc8094d1cdb，scene_binding 用各镜已 approved 的 SIV），并核对 6 镜 binding readiness。
+2. 首镜锚定：s01_c01 是链根直生镜——把它的 video_reference_asset_id 设为 ref_4e452a094407（Look 的 approved 参考资产，身份锚定）。
+3. 只生成 s01_c01 与 s02_c01 两个镜头的视频（shot.generate_videos 只传这两个 shot_id，绝不带上 3-6 镜）。串行生成，每镜约 4 分钟，耐心等。
+4. 每镜生成完成后立即执行校准链路并落档到 run cal_20260925_201335_5c77（trace_key 用 s01_c01 / s02_c01）：
+   - s01_c01（链根首镜，无上一镜接缝）：visual.review_shot / review_image 看实际尾帧 → 三档裁定 → calibration.trace_upsert（含 negative_constraint_check：仅一只大鹤无其他生物）；
+   - s02_c01（接力镜）：先 calibration.seam_measure(s01_c02) 实测 s01→s02 接缝（基线：同场景正常接力≈2，近零带 1.7-2.4）→ Vision 评估 → 亲证 → 三档裁定 → trace_upsert（含 cascade_check）。
+   - 若判 major：🔴 不要重试——按纪律停下报告用户，等批复。
+5. 两镜校准全部落档后汇报：两镜的裁定等级、接缝值、trace 落档确认。
+
+【Canary Gate 纪律】本轮只允许生成这两个镜头；3-6 镜等你汇报后由用户放行。若出现管线异常（生成失败/工具报错/路由异常），如实报告并停止。

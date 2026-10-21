@@ -1,0 +1,271 @@
+{
+ "voice": "Chinese (Mandarin)_Gentleman",
+ "speed": 0.9,
+ "n_cues": 13,
+ "total_speech_s": 62.9,
+ "film_duration_s": 89.9,
+ "cues": [
+  {
+   "cue_id": "nd01",
+   "shot_id": "s01_c01",
+   "text": "暴雨过后的河面，总会留下一些东西，等着被谁捡起。",
+   "version_id": "nver_89bad82f",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd01__nver_89bad82f.wav",
+   "sha256": "b4cd43c7450152c39c8b2c87ddf5173c7d940534e1bccd043966b8e2e4605753",
+   "duration_ms": 4737,
+   "window_ms": [
+    0,
+    8000
+   ],
+   "start_ms": 800,
+   "end_ms": 5537,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d63130e1d4a1f636ed2d7a8fe5148"
+  },
+  {
+   "cue_id": "nd02",
+   "shot_id": "s01_c02",
+   "text": "河岸上，阿獭正在收晾晒的斗篷，忽然停住了。",
+   "version_id": "nver_27f90e79",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd02__nver_27f90e79.wav",
+   "sha256": "32b08adbf7c0e3d33d10b6d39f408edcbada22d6b18ce05418a68da110802d1c",
+   "duration_ms": 5399,
+   "window_ms": [
+    8000,
+    16000
+   ],
+   "start_ms": 8800,
+   "end_ms": 14199,
+   "fits_window": true,
+   "cache_hit": false,
+   "trace_id": "070d634a1d110e2264fad401897375c8"
+  },
+  {
+   "cue_id": "nd03",
+   "shot_id": "s01_c03",
+   "text": "栈桥的尽头，有什么东西闪了一下微光。",
+   "version_id": "nver_cb3eb216",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd03__nver_cb3eb216.wav",
+   "sha256": "c5db292a15c5e1dff25cac8fea9a91ff3faaaf0c5a74af56206acdbd48a9d428",
+   "duration_ms": 4122,
+   "window_ms": [
+    16000,
+    24000
+   ],
+   "start_ms": 16800,
+   "end_ms": 20922,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d631b8dc68032038e71b30b5c3e9d"
+  },
+  {
+   "cue_id": "nd04",
+   "shot_id": "s01_c04",
+   "text": "它踩着湿滑的木板，朝那点光跑了过去。",
+   "version_id": "nver_87ad1c80",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd04__nver_87ad1c80.wav",
+   "sha256": "d25896f2d19a3b90706809ae352357f4056a65a6082b10f80abe16053f574024",
+   "duration_ms": 3738,
+   "window_ms": [
+    24000,
+    29175
+   ],
+   "start_ms": 24500,
+   "end_ms": 28238,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d631d3b2dabbf6fd48a5955cdd30e"
+  },
+  {
+   "cue_id": "nd05",
+   "shot_id": "s01_c05",
+   "text": "那是一盏被暴雨打落的旧铜灯。",
+   "version_id": "nver_f31f4d06",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd05__nver_f31f4d06.wav",
+   "sha256": "2f8f497458caa5911d6b4f9251964ff49da3dbc9801fa05f32180ade214ab3c8",
+   "duration_ms": 2368,
+   "window_ms": [
+    29175,
+    34359
+   ],
+   "start_ms": 29675,
+   "end_ms": 32043,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d63209a7fc038ba34a38b24a9cc48"
+  },
+  {
+   "cue_id": "nd06",
+   "shot_id": "s01_c06",
+   "text": "山坡上的灯塔，很多年没人点亮过了。",
+   "version_id": "nver_158c8422",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd06__nver_158c8422.wav",
+   "sha256": "af9f9d31931d1cd96f2a89b880a4fe8a220448bf0e01ff105f15713872c1b197",
+   "duration_ms": 3831,
+   "window_ms": [
+    34359,
+    39543
+   ],
+   "start_ms": 34959,
+   "end_ms": 38790,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d63238d8737e3649298651a54a517"
+  },
+  {
+   "cue_id": "nd07",
+   "shot_id": "s02_c01",
+   "text": "夜色落下，修理间的台灯亮了，阿獭要亲手修好这盏灯。",
+   "version_id": "nver_0328fc81",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd07__nver_0328fc81.wav",
+   "sha256": "d11e372eade3cb6428766467e30874831d1aa894b737945dcd7d3b777f21839d",
+   "duration_ms": 5875,
+   "window_ms": [
+    39543,
+    47543
+   ],
+   "start_ms": 40343,
+   "end_ms": 46218,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d63251f3886e800b77943cbcaa89a"
+  },
+  {
+   "cue_id": "nd08",
+   "shot_id": "s02_c02",
+   "text": "灯芯亮起的那一刻，像有什么被重新修好了。",
+   "version_id": "nver_2ea09ac3",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd08__nver_2ea09ac3.wav",
+   "sha256": "5ffc9d7404a5f44dab495d45501626e54c190b637f1f8c70655dd8d92b95084a",
+   "duration_ms": 4029,
+   "window_ms": [
+    47543,
+    52718
+   ],
+   "start_ms": 47843,
+   "end_ms": 51872,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d63285e474154ec595363850c18aa"
+  },
+  {
+   "cue_id": "nd09",
+   "shot_id": "s02_c03",
+   "text": "它抱起灯推开门，门外立着灯塔的黑影。",
+   "version_id": "nver_2c62b758",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd09__nver_2c62b758.wav",
+   "sha256": "f8735aadf10c2e758d49884da7436e4729d0053847e070b10151d9e2b11413e1",
+   "duration_ms": 4122,
+   "window_ms": [
+    52718,
+    57902
+   ],
+   "start_ms": 53118,
+   "end_ms": 57240,
+   "fits_window": true,
+   "cache_hit": false,
+   "trace_id": "070d634d4257be0224a52d0a146bc220"
+  },
+  {
+   "cue_id": "nd10",
+   "shot_id": "s03_c01",
+   "text": "塔门在身后轻轻合上，阿獭抱着灯，走进了安静的塔里。",
+   "version_id": "nver_6ad91add",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd10__nver_6ad91add.wav",
+   "sha256": "0488f57887d3d31709a89b6b69ebbaf42c445b2e8c232739fbcf9659addee556",
+   "duration_ms": 5689,
+   "window_ms": [
+    57902,
+    65902
+   ],
+   "start_ms": 58702,
+   "end_ms": 64391,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d632d9b2922557e6daa4881fd3fad"
+  },
+  {
+   "cue_id": "nd11",
+   "shot_id": "s03_c02",
+   "text": "螺旋的石梯一圈一圈向上，抱着灯往上走的人，其实也在往家走。",
+   "version_id": "nver_911afd65",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd11__nver_911afd65.wav",
+   "sha256": "35732e26837338d32079adda2bd433debc12a5a2680b8608a95d6bd60e0a2ae8",
+   "duration_ms": 6351,
+   "window_ms": [
+    65902,
+    73902
+   ],
+   "start_ms": 66502,
+   "end_ms": 72853,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d63307fdb070879ddbe95287fddcc"
+  },
+  {
+   "cue_id": "nd12",
+   "shot_id": "s03_c03",
+   "text": "灯影在墙上转了一圈又一圈，它把铜灯稳稳装上了灯座。",
+   "version_id": "nver_17dd996f",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd12__nver_17dd996f.wav",
+   "sha256": "39d665af484bba40da43917c1fcd5bd3be4bbbbc2e3b3dadaa2e39cb2a4343da",
+   "duration_ms": 6351,
+   "window_ms": [
+    73902,
+    81902
+   ],
+   "start_ms": 74702,
+   "end_ms": 81053,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d63333f9fae45d2e1e69e671930af"
+  },
+  {
+   "cue_id": "nd13",
+   "shot_id": "s03_c04",
+   "text": "光束扫过河面，灯亮了，晚归的船，就认得回家的路。",
+   "version_id": "nver_c90c8f91",
+   "voice_id": "Chinese (Mandarin)_Gentleman",
+   "speed": 0.9,
+   "file": "audio_imports/narration/nd13__nver_c90c8f91.wav",
+   "sha256": "0b48191e45946975b99704312c7b9d107b702ed763acff6d195a697361d8a2ec",
+   "duration_ms": 6258,
+   "window_ms": [
+    81902,
+    89902
+   ],
+   "start_ms": 82902,
+   "end_ms": 89160,
+   "fits_window": true,
+   "cache_hit": true,
+   "trace_id": "070d6336bb8250923a9cb6b06eb1dd4c"
+  }
+ ],
+ "placement_rule": "start>=镜起点+300ms；end<=镜终点-150ms",
+ "all_fit": true
+}

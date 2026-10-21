@@ -1,0 +1,26 @@
+{
+  "actual_tail": "Fox in forward-leaning crouch stance, tail elevated and curved upward, positioned left of pumpkin, investigating posture",
+  "cascade_check": "下游 M7 (s12_c04) 需复检：实际尾态为前倾动态，M7 开场要求狐狸「静止后突然动」——accept+adapt 策略依赖 M7 自身 opening_state 提供足够差异来覆盖此偏差；下一轮校准时重点检查 s12_c04 的 tail_to_first_mae 是否进入正常区间",
+  "director_visual_observation": "狐狸姿态从预期「弓身后退/警惕」偏移为「前倾好奇/探究」，情绪方向相反但核心关系（狐狸关注南瓜区域）成立。尾巴状态是关键偏差：预期垂落 vs 实际上翘，这一视觉信号传递了不同的心理状态",
+  "end_to_end_mae": 56.3,
+  "expected_tail": "狐狸弓身后退半步盯着静止南瓜，尾巴垂落，尘土微扬——警觉、退让、蓄势待发的紧张状态",
+  "human_action": "continue",
+  "human_deviation_level": "minor",
+  "human_reason": "叙事核心（狐狸与南瓜区域的互动关系）成立，但姿态端点从预期的「后退静止」偏移为「前倾动态」。情绪方向相反（警惕vs好奇），属于 minor 级偏差。根据导演协议：强先验吸引子（狐狸好奇姿态）单独出现时 retry 无效；且 MAE=8.0 虽高于近零带但可被下一镜自然吸收。选择 accept+adapt，不消耗重试额度",
+  "negative_constraint_check": "无负面约束击穿：主体可见、地理连贯、无多余人物/动物闯入、道具状态正常（南瓜静止完整）",
+  "options_considered": [
+    "retry_generation（放弃，因强先验吸引子单独出现时重试无效，且消耗额度）",
+    "add_transition/bridge（不适用，同场景内动作连续，非双端钉死需求）",
+    "major escalation（不符合，主体可见、地理连贯、无严重叙事断裂）",
+    "accept+adapt（选择）"
+  ],
+  "root_cause": "multi_relay 生成模式下，狐狸的「好奇探究」行为作为强先验吸引子覆盖了预期的「警觉后退」指令；尾态由 prompt 中的动作节奏与姿态引导共同决定",
+  "selected_action": "accept+adapt",
+  "why": "minor 级偏差，符合 accept+adapt 判据。MAE=8.0 在合理容忍区间内（虽偏高但未达剧变构图阈值）。下一镜 M7 将以强烈动作（追逐落叶跳跃）覆盖当前静止端点偏差，无需额外修复成本",
+  "vision_assessment": "Fox maintains expected design; environment consistent; character_pose_state differs from plan (forward-leaning vs arched-back retreat); action_endpoint shows investigation not withdrawal; suggested_deviation: minor",
+  "vision_vs_director_diff": "Vision 已识别 pose_state 与 action_endpoint 偏差并建议 minor，与导演判断一致；无分歧",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M6",
+  "updated_at": 1790326251.6282504
+}

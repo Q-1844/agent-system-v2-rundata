@@ -1,0 +1,85 @@
+{
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "title": "Phase39B Shadow Replay",
+  "created_at": 1790325511.4430413,
+  "updated_at": 1790325511.4430418,
+  "story_frozen": true,
+  "chain_root_reference_id": "ref_d27e1a01c36f",
+  "story_plan": [
+    {
+      "shot_id": "s11_c01",
+      "n_key": "M1",
+      "description": "清晨放晴的雨林小径，阳光比清晨雾天更亮。狐狸沿小径向画面深处轻快奔跑，忽然远处传来公鸡打鸣声，它耳朵猛地竖起，脚步加快，穿行于树干与蕨叶之间，镜头侧面跟拍",
+      "expected_tail": "狐狸在小径中段加速奔跑，身体朝向画面深处，耳朵前竖，四足离地或落地皆可",
+      "duration_s": 8.0,
+      "story_type": "dynamic_establishing"
+    },
+    {
+      "shot_id": "s11_c02",
+      "n_key": "M2",
+      "description": "狐狸全力冲刺，纵身跃过倒伏树干，落地不停继续向前，冲向小径尽头越来越亮的开口，镜头从背后低机位跟随",
+      "expected_tail": "狐狸落地后仍在向深处奔跑，背对镜头，前方树影渐稀透亮",
+      "duration_s": 10.0,
+      "story_type": "high_motion"
+    },
+    {
+      "shot_id": "s11_c03",
+      "n_key": "M3",
+      "description": "小径尽头树木渐稀，前方透进刺眼的明亮。狐狸在雨林边缘的阴影里减速停步，眯起眼睛打量外面的亮光，前爪还踩在落叶上，尾巴微微摆动，迟疑又好奇",
+      "expected_tail": "狐狸站在雨林边缘树影里，面朝画面深处的明亮外界，姿态停定",
+      "duration_s": 8.0,
+      "story_type": "environment_change"
+    },
+    {
+      "shot_id": "s12_c01",
+      "n_key": "M4",
+      "description": "狐狸深吸一口气，从雨林边缘一跃而出，冲进正午阳光下的小村村口：脚下变成土路，两侧是木栅栏，路边一片橙色南瓜地，远处干草垛和茅草顶小屋。它冲过村口土路猛地急停，爪下扬起一小片尘土，回头看一眼来路的树林，再转回头打量村庄，村子空无一人",
+      "expected_tail": "狐狸站在村口土路中央，身后是雨林边缘树影，面前是木栅栏与南瓜地，正午阳光，尘土未定",
+      "duration_s": 10.0,
+      "story_type": "cross_location_transition"
+    },
+    {
+      "shot_id": "s12_c02",
+      "n_key": "M5",
+      "description": "狐狸压低身子，沿着木栅栏小心挪近南瓜地，在一只有它半个身子大的橙色大南瓜旁停下，伸头低头嗅闻，尾巴平伸保持平衡",
+      "expected_tail": "狐狸在大南瓜旁低头嗅闻，姿态压低，尾巴平伸",
+      "duration_s": 5.0,
+      "story_type": "static_reaction"
+    },
+    {
+      "shot_id": "s12_c03",
+      "n_key": "M6",
+      "description": "狐狸伸鼻顶了顶南瓜，南瓜晃了晃、滚出小半圈停住。狐狸吓得弹开半步，弓背压低盯住南瓜，尾巴炸起，南瓜旁扬起一点尘土",
+      "expected_tail": "狐狸弓身后退半步盯着静止的南瓜，尾巴垂落，尘土微扬",
+      "duration_s": 8.0,
+      "story_type": "prop_interaction"
+    },
+    {
+      "shot_id": "s12_c04",
+      "n_key": "M7",
+      "description": "一阵风卷起几片金黄落叶绕着狐狸打转，狐狸兴奋地追着落叶原地转圈跳跃，最后一跃扑空落地，落叶悠悠飘散，其中一片恰好落在它的鼻尖上。狐狸猛地僵住，眼睛斜向下盯着鼻尖上的叶子，一动不动",
+      "expected_tail": "狐狸四足站定，一片黄叶停在鼻尖上，眼睛斜向下看，姿态僵住",
+      "duration_s": 10.0,
+      "story_type": "multi_body_contact"
+    },
+    {
+      "shot_id": "s12_c05",
+      "n_key": "M8",
+      "description": "狐狸打了个小喷嚏，鼻尖的叶子飘落。它甩甩头，端坐下来舔了舔前爪，午后暖光把它的毛染成暖金色，村子安安静静",
+      "expected_tail": "狐狸端坐在土路上，尾巴环过前爪，神态放松，午后暖光",
+      "duration_s": 5.0,
+      "story_type": "static_reaction"
+    },
+    {
+      "shot_id": "s12_c06",
+      "n_key": "M9",
+      "description": "暮色降临，影子拉长。狐狸沿土路小跑回雨林边缘，在树影前停步，回头望了一眼沉入黄昏的安静村庄，剪影小小的停在明暗交界处",
+      "expected_tail": "暮色大远景：狐狸小剪影停在雨林边缘树影前，身后村庄沉入黄昏",
+      "duration_s": 8.0,
+      "story_type": "static_final"
+    }
+  ],
+  "status": "active",
+  "notes": "38 历史 evidence 的 Agent Shadow Replay（replay run；gold=cal_20260925_004933_6b30 不触碰）"
+}

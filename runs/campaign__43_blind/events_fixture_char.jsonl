@@ -1,0 +1,541 @@
+{"type": "tool.pending", "step_id": 0, "name": "character.create", "label": "创建角色"}
+{"type": "tool.started", "step_id": 0, "call_id": "call_6391a301ccc54c18a7b8152a", "name": "character.create", "label": "创建角色"}
+{"type": "tool.completed", "step_id": 0, "call_id": "call_6391a301ccc54c18a7b8152a", "name": "character.create", "ok": false, "summary": "创建角色未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 1, "name": "character.create", "label": "创建角色"}
+{"type": "tool.pending", "step_id": 1, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.pending", "step_id": 1, "name": "character.list", "label": "读取角色列表"}
+{"type": "tool.started", "step_id": 1, "call_id": "call_58a2d4e20a914cd6b6b02b59", "name": "character.create", "label": "创建角色"}
+{"type": "tool.completed", "step_id": 1, "call_id": "call_58a2d4e20a914cd6b6b02b59", "name": "character.create", "ok": true, "summary": "创建角色 榛果"}
+{"type": "tool.started", "step_id": 1, "call_id": "call_317e1c837ce84996ab992306", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 1, "call_id": "call_317e1c837ce84996ab992306", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.started", "step_id": 1, "call_id": "call_021c808ee88646c4a03d3281", "name": "character.list", "label": "读取角色列表"}
+{"type": "tool.completed", "step_id": 1, "call_id": "call_021c808ee88646c4a03d3281", "name": "character.list", "ok": true, "summary": "读取角色列表完成"}
+{"type": "tool.pending", "step_id": 2, "name": "character.generate_views", "label": "生成角色三视图"}
+{"type": "tool.started", "step_id": 2, "call_id": "call_78e459e340e541f6ac347ddd", "name": "character.generate_views", "label": "生成角色三视图"}
+{"type": "views.progress", "character_name": "榛果", "view": "front", "message": "榛果 front 生成中", "pct": 15}
+{"type": "views.progress", "character_name": "榛果", "view": "side", "message": "榛果 side 生成中", "pct": 45}
+{"type": "views.progress", "character_name": "榛果", "view": "back", "message": "榛果 back 生成中", "pct": 75}
+{"type": "views.progress", "character_name": "榛果", "view": "done", "message": "榛果 三视图完成", "pct": 100}
+{"type": "tool.completed", "step_id": 2, "call_id": "call_78e459e340e541f6ac347ddd", "name": "character.generate_views", "ok": true, "summary": "已完成 1/1 个角色三视图"}
+{"type": "tool.pending", "step_id": 3, "name": "character.read", "label": "读取角色"}
+{"type": "tool.pending", "step_id": 3, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.started", "step_id": 3, "call_id": "call_35842594381548c99fcb989d", "name": "character.read", "label": "读取角色"}
+{"type": "tool.completed", "step_id": 3, "call_id": "call_35842594381548c99fcb989d", "name": "character.read", "ok": true, "summary": "读取角色完成"}
+{"type": "tool.started", "step_id": 3, "call_id": "call_af21873eb33846439282e32f", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 3, "call_id": "call_af21873eb33846439282e32f", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.pending", "step_id": 4, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.pending", "step_id": 4, "name": "resource.prop.register", "label": "登记道具参考"}
+{"type": "tool.started", "step_id": 4, "call_id": "call_5ad1534bf42c41399e92e84c", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 4, "call_id": "call_5ad1534bf42c41399e92e84c", "name": "resource.look.prepare", "ok": true, "summary": "准备角色造型（生成+审查）完成"}
+{"type": "tool.started", "step_id": 4, "call_id": "call_2a31d373df63457ba62d7eb6", "name": "resource.prop.register", "label": "登记道具参考"}
+{"type": "tool.completed", "step_id": 4, "call_id": "call_2a31d373df63457ba62d7eb6", "name": "resource.prop.register", "ok": false, "summary": "本步写工具串行，已跳过"}
+{"type": "tool.pending", "step_id": 5, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 5, "call_id": "call_3763edf6fd7e4501a66ef0c3", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 5, "call_id": "call_3763edf6fd7e4501a66ef0c3", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 6, "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.pending", "step_id": 6, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.started", "step_id": 6, "call_id": "call_2669475d8f7948dcbefc91d5", "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.completed", "step_id": 6, "call_id": "call_2669475d8f7948dcbefc91d5", "name": "resource.read", "ok": true, "summary": "读取生产资源完成"}
+{"type": "tool.started", "step_id": 6, "call_id": "call_87e88ffe42a04de393b5900a", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 6, "call_id": "call_87e88ffe42a04de393b5900a", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.pending", "step_id": 7, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 7, "call_id": "call_e84f67d3d1dd432280fa16d6", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 7, "call_id": "call_e84f67d3d1dd432280fa16d6", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 8, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.pending", "step_id": 8, "name": "character.read", "label": "读取角色"}
+{"type": "tool.started", "step_id": 8, "call_id": "call_5a2ff0f55f04452090592ba1", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 8, "call_id": "call_5a2ff0f55f04452090592ba1", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.started", "step_id": 8, "call_id": "call_7cd1dd4308e54233a49977ad", "name": "character.read", "label": "读取角色"}
+{"type": "tool.completed", "step_id": 8, "call_id": "call_7cd1dd4308e54233a49977ad", "name": "character.read", "ok": true, "summary": "读取角色完成"}
+{"type": "tool.pending", "step_id": 9, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 9, "call_id": "call_f8aecb9445a34ac88157dbd2", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 9, "call_id": "call_f8aecb9445a34ac88157dbd2", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 10, "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.pending", "step_id": 10, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.started", "step_id": 10, "call_id": "call_24279ba435fe48fc807d7c44", "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.completed", "step_id": 10, "call_id": "call_24279ba435fe48fc807d7c44", "name": "resource.read", "ok": true, "summary": "读取生产资源完成"}
+{"type": "tool.started", "step_id": 10, "call_id": "call_45ba47b555af43be9b13088b", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 10, "call_id": "call_45ba47b555af43be9b13088b", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.pending", "step_id": 11, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 11, "call_id": "call_4856bc7bfecc43b797afbc93", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 11, "call_id": "call_4856bc7bfecc43b797afbc93", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 12, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.pending", "step_id": 12, "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.started", "step_id": 12, "call_id": "call_16bed5d69791459c895b8303", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 12, "call_id": "call_16bed5d69791459c895b8303", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.started", "step_id": 12, "call_id": "call_36caad1dbe75435a936e2d39", "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.completed", "step_id": 12, "call_id": "call_36caad1dbe75435a936e2d39", "name": "resource.read", "ok": true, "summary": "读取生产资源完成"}
+{"type": "tool.pending", "step_id": 13, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 13, "call_id": "call_0bc7d0f5697e44e2bf8e4b85", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 13, "call_id": "call_0bc7d0f5697e44e2bf8e4b85", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 14, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 14, "call_id": "call_0d7042a4c4944cfe97683efc", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 14, "call_id": "call_0d7042a4c4944cfe97683efc", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 15, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.pending", "step_id": 15, "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.started", "step_id": 15, "call_id": "call_30181ee32057496aa76b0d9c", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 15, "call_id": "call_30181ee32057496aa76b0d9c", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.started", "step_id": 15, "call_id": "call_39aac36078c040498aadea02", "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.completed", "step_id": 15, "call_id": "call_39aac36078c040498aadea02", "name": "resource.read", "ok": true, "summary": "读取生产资源完成"}
+{"type": "tool.pending", "step_id": 16, "name": "character.read", "label": "读取角色"}
+{"type": "tool.started", "step_id": 16, "call_id": "call_ebf59eaa947a498a8d06ee1a", "name": "character.read", "label": "读取角色"}
+{"type": "tool.completed", "step_id": 16, "call_id": "call_ebf59eaa947a498a8d06ee1a", "name": "character.read", "ok": true, "summary": "读取角色完成"}
+{"type": "tool.pending", "step_id": 17, "name": "character.update", "label": "修改角色"}
+{"type": "tool.started", "step_id": 17, "call_id": "call_6ada70a4c9774798b20a53c5", "name": "character.update", "label": "修改角色"}
+{"type": "tool.completed", "step_id": 17, "call_id": "call_6ada70a4c9774798b20a53c5", "name": "character.update", "ok": true, "summary": "修改角色 榛果（description_en）"}
+{"type": "tool.pending", "step_id": 18, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.started", "step_id": 18, "call_id": "call_14bd256fdc944b2fb62fcb33", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 18, "call_id": "call_14bd256fdc944b2fb62fcb33", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.pending", "step_id": 19, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 19, "call_id": "call_ee6a7732a15647df982840bf", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 19, "call_id": "call_ee6a7732a15647df982840bf", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 20, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.pending", "step_id": 20, "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.started", "step_id": 20, "call_id": "call_411e6030352b43a38cb29469", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 20, "call_id": "call_411e6030352b43a38cb29469", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.started", "step_id": 20, "call_id": "call_4c5add5e1fea45b180f27dad", "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.completed", "step_id": 20, "call_id": "call_4c5add5e1fea45b180f27dad", "name": "resource.read", "ok": true, "summary": "读取生产资源完成"}
+{"type": "tool.pending", "step_id": 21, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 21, "call_id": "call_8c45832254044f4e98543f22", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 21, "call_id": "call_8c45832254044f4e98543f22", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 22, "name": "resource.prop.register", "label": "登记道具参考"}
+{"type": "tool.started", "step_id": 22, "call_id": "call_a5619527bff04c37b12f7135", "name": "resource.prop.register", "label": "登记道具参考"}
+{"type": "tool.completed", "step_id": 22, "call_id": "call_a5619527bff04c37b12f7135", "name": "resource.prop.register", "ok": true, "summary": "登记道具参考完成"}
+{"type": "tool.pending", "step_id": 23, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.pending", "step_id": 23, "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.started", "step_id": 23, "call_id": "call_b8e4b5aa79dc4b47976c50d3", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 23, "call_id": "call_b8e4b5aa79dc4b47976c50d3", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.started", "step_id": 23, "call_id": "call_bf244cda01834d688d738ad4", "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.completed", "step_id": 23, "call_id": "call_bf244cda01834d688d738ad4", "name": "resource.read", "ok": true, "summary": "读取生产资源完成"}
+{"type": "tool.pending", "step_id": 24, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 24, "call_id": "call_2d7fb9281d5048989898cf06", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 24, "call_id": "call_2d7fb9281d5048989898cf06", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 25, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 25, "call_id": "call_c6f608acf79549c5aa55426d", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 25, "call_id": "call_c6f608acf79549c5aa55426d", "name": "resource.look.prepare", "ok": true, "summary": "准备角色造型（生成+审查）完成"}
+{"type": "tool.pending", "step_id": 26, "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.pending", "step_id": 26, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.started", "step_id": 26, "call_id": "call_bceda9bfe48d41c188ecf31f", "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.completed", "step_id": 26, "call_id": "call_bceda9bfe48d41c188ecf31f", "name": "resource.read", "ok": true, "summary": "读取生产资源完成"}
+{"type": "tool.started", "step_id": 26, "call_id": "call_70c1d807b67e42439767635a", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 26, "call_id": "call_70c1d807b67e42439767635a", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.pending", "step_id": 27, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 27, "call_id": "call_e23ad11bd7dc48f2970ffd3f", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 27, "call_id": "call_e23ad11bd7dc48f2970ffd3f", "name": "resource.look.prepare", "ok": true, "summary": "准备角色造型（生成+审查）完成"}
+{"type": "tool.pending", "step_id": 28, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 28, "call_id": "call_1d68632ca8584bb1958bd9cb", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 28, "call_id": "call_1d68632ca8584bb1958bd9cb", "name": "resource.look.prepare", "ok": false, "summary": "准备角色造型（生成+审查）未完成：版本过期，已拒绝"}
+{"type": "tool.pending", "step_id": 29, "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.started", "step_id": 29, "call_id": "call_88ebbd21ac924d4dad4ec98f", "name": "resource.read", "label": "读取生产资源"}
+{"type": "tool.completed", "step_id": 29, "call_id": "call_88ebbd21ac924d4dad4ec98f", "name": "resource.read", "ok": true, "summary": "读取生产资源完成"}
+{"type": "tool.pending", "step_id": 30, "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.started", "step_id": 30, "call_id": "call_b5b86553ff7c4c84ba1bdba9", "name": "resource.look.prepare", "label": "准备角色造型（生成+审查）"}
+{"type": "tool.completed", "step_id": 30, "call_id": "call_b5b86553ff7c4c84ba1bdba9", "name": "resource.look.prepare", "ok": true, "summary": "准备角色造型（生成+审查）完成"}
+{"type": "tool.pending", "step_id": 31, "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.pending", "step_id": 31, "name": "character.read", "label": "读取角色"}
+{"type": "tool.started", "step_id": 31, "call_id": "call_5e50837cc1be471ba24131fa", "name": "resource.inventory", "label": "列出生产资源"}
+{"type": "tool.completed", "step_id": 31, "call_id": "call_5e50837cc1be471ba24131fa", "name": "resource.inventory", "ok": true, "summary": "列出生产资源完成"}
+{"type": "tool.started", "step_id": 31, "call_id": "call_22acf66834da40e1977cbda2", "name": "character.read", "label": "读取角色"}
+{"type": "tool.completed", "step_id": 31, "call_id": "call_22acf66834da40e1977cbda2", "name": "character.read", "ok": true, "summary": "读取角色完成"}
+{"type": "assistant.delta", "delta": "---"}
+{"type": "assistant.delta", "delta": "\n\n"}
+{"type": "assistant.delta", "delta": "**"}
+{"type": "assistant.delta", "delta": "执行"}
+{"type": "assistant.delta", "delta": "结果"}
+{"type": "assistant.delta", "delta": "汇报"}
+{"type": "assistant.delta", "delta": "：**"}
+{"type": "assistant.delta", "delta": "\n\n"}
+{"type": "assistant.delta", "delta": "**"}
+{"type": "assistant.delta", "delta": "已完成"}
+{"type": "assistant.delta", "delta": " ✅"}
+{"type": "assistant.delta", "delta": "**"}
+{"type": "assistant.delta", "delta": "\n"}
+{"type": "assistant.delta", "delta": "1"}
+{"type": "assistant.delta", "delta": "."}
+{"type": "assistant.delta", "delta": " **"}
+{"type": "assistant.delta", "delta": "角色"}
+{"type": "assistant.delta", "delta": "「"}
+{"type": "assistant.delta", "delta": "榛"}
+{"type": "assistant.delta", "delta": "果"}
+{"type": "assistant.delta", "delta": "」**"}
+{"type": "assistant.delta", "delta": " —"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "已"}
+{"type": "assistant.delta", "delta": "创建"}
+{"type": "assistant.delta", "delta": "（"}
+{"type": "assistant.delta", "delta": "character"}
+{"type": "assistant.delta", "delta": "_name"}
+{"type": "assistant.delta", "delta": ":"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "榛"}
+{"type": "assistant.delta", "delta": "果"}
+{"type": "assistant.delta", "delta": "，"}
+{"type": "assistant.delta", "delta": "revision"}
+{"type": "assistant.delta", "delta": ":"}
+{"type": "assistant.delta", "delta": " f"}
+{"type": "assistant.delta", "delta": "9"}
+{"type": "assistant.delta", "delta": "f"}
+{"type": "assistant.delta", "delta": "6"}
+{"type": "assistant.delta", "delta": "5"}
+{"type": "assistant.delta", "delta": "abe"}
+{"type": "assistant.delta", "delta": "），"}
+{"type": "assistant.delta", "delta": "三"}
+{"type": "assistant.delta", "delta": "视图"}
+{"type": "assistant.delta", "delta": "已"}
+{"type": "assistant.delta", "delta": "生成"}
+{"type": "assistant.delta", "delta": "（"}
+{"type": "assistant.delta", "delta": "front"}
+{"type": "assistant.delta", "delta": "/s"}
+{"type": "assistant.delta", "delta": "ide"}
+{"type": "assistant.delta", "delta": "/back"}
+{"type": "assistant.delta", "delta": "）"}
+{"type": "assistant.delta", "delta": "\n"}
+{"type": "assistant.delta", "delta": "2"}
+{"type": "assistant.delta", "delta": "."}
+{"type": "assistant.delta", "delta": " **"}
+{"type": "assistant.delta", "delta": "道具"}
+{"type": "assistant.delta", "delta": "「"}
+{"type": "assistant.delta", "delta": "露珠"}
+{"type": "assistant.delta", "delta": "信"}
+{"type": "assistant.delta", "delta": "」**"}
+{"type": "assistant.delta", "delta": " —"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "已"}
+{"type": "assistant.delta", "delta": "登记"}
+{"type": "assistant.delta", "delta": "并"}
+{"type": "assistant.delta", "delta": "批准"}
+{"type": "assistant.delta", "delta": "（"}
+{"type": "assistant.delta", "delta": "prop"}
+{"type": "assistant.delta", "delta": "_id"}
+{"type": "assistant.delta", "delta": ":"}
+{"type": "assistant.delta", "delta": " prop"}
+{"type": "assistant.delta", "delta": "_c"}
+{"type": "assistant.delta", "delta": "5"}
+{"type": "assistant.delta", "delta": "2"}
+{"type": "assistant.delta", "delta": "8"}
+{"type": "assistant.delta", "delta": "6"}
+{"type": "assistant.delta", "delta": "2"}
+{"type": "assistant.delta", "delta": "d"}
+{"type": "assistant.delta", "delta": "4"}
+{"type": "assistant.delta", "delta": "3"}
+{"type": "assistant.delta", "delta": "2"}
+{"type": "assistant.delta", "delta": "3"}
+{"type": "assistant.delta", "delta": "3"}
+{"type": "assistant.delta", "delta": "，"}
+{"type": "assistant.delta", "delta": "reference"}
+{"type": "assistant.delta", "delta": "_asset"}
+{"type": "assistant.delta", "delta": ":"}
+{"type": "assistant.delta", "delta": " ref"}
+{"type": "assistant.delta", "delta": "_e"}
+{"type": "assistant.delta", "delta": "3"}
+{"type": "assistant.delta", "delta": "c"}
+{"type": "assistant.delta", "delta": "3"}
+{"type": "assistant.delta", "delta": "3"}
+{"type": "assistant.delta", "delta": "b"}
+{"type": "assistant.delta", "delta": "8"}
+{"type": "assistant.delta", "delta": "2"}
+{"type": "assistant.delta", "delta": "2"}
+{"type": "assistant.delta", "delta": "d"}
+{"type": "assistant.delta", "delta": "6"}
+{"type": "assistant.delta", "delta": "8"}
+{"type": "assistant.delta", "delta": "，"}
+{"type": "assistant.delta", "delta": "review"}
+{"type": "assistant.delta", "delta": "="}
+{"type": "assistant.delta", "delta": "pass"}
+{"type": "assistant.delta", "delta": "，"}
+{"type": "assistant.delta", "delta": "approved"}
+{"type": "assistant.delta", "delta": "）"}
+{"type": "assistant.delta", "delta": "\n\n"}
+{"type": "assistant.delta", "delta": "**"}
+{"type": "assistant.delta", "delta": "未完成"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "❌"}
+{"type": "assistant.delta", "delta": "**"}
+{"type": "assistant.delta", "delta": "\n"}
+{"type": "assistant.delta", "delta": "3"}
+{"type": "assistant.delta", "delta": "."}
+{"type": "assistant.delta", "delta": " **"}
+{"type": "assistant.delta", "delta": "Look"}
+{"type": "assistant.delta", "delta": "「"}
+{"type": "assistant.delta", "delta": "hero"}
+{"type": "assistant.delta", "delta": "」**"}
+{"type": "assistant.delta", "delta": " —"}
+{"type": "assistant.delta", "delta": " look"}
+{"type": "assistant.delta", "delta": "_"}
+{"type": "assistant.delta", "delta": "1"}
+{"type": "assistant.delta", "delta": "a"}
+{"type": "assistant.delta", "delta": "5"}
+{"type": "assistant.delta", "delta": "4"}
+{"type": "assistant.delta", "delta": "8"}
+{"type": "assistant.delta", "delta": "6"}
+{"type": "assistant.delta", "delta": "9"}
+{"type": "assistant.delta", "delta": "4"}
+{"type": "assistant.delta", "delta": "6"}
+{"type": "assistant.delta", "delta": "0"}
+{"type": "assistant.delta", "delta": "0"}
+{"type": "assistant.delta", "delta": "2"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "已"}
+{"type": "assistant.delta", "delta": "生成"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "4"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "次"}
+{"type": "assistant.delta", "delta": "候选"}
+{"type": "assistant.delta", "delta": "图"}
+{"type": "assistant.delta", "delta": "，"}
+{"type": "assistant.delta", "delta": "但"}
+{"type": "assistant.delta", "delta": "审查"}
+{"type": "assistant.delta", "delta": "连续"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "4"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "次"}
+{"type": "assistant.delta", "delta": " `"}
+{"type": "assistant.delta", "delta": "needs"}
+{"type": "assistant.delta", "delta": "_fix"}
+{"type": "assistant.delta", "delta": "`"}
+{"type": "assistant.delta", "delta": "，"}
+{"type": "assistant.delta", "delta": "未按"}
+{"type": "assistant.delta", "delta": " approved"}
+{"type": "assistant.delta", "delta": "_if"}
+{"type": "assistant.delta", "delta": "_pass"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "批准"}
+{"type": "assistant.delta", "delta": "："}
+{"type": "assistant.delta", "delta": "\n"}
+{"type": "assistant.delta", "delta": "  "}
+{"type": "assistant.delta", "delta": " -"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "第"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "1"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "轮"}
+{"type": "assistant.delta", "delta": "："}
+{"type": "assistant.delta", "delta": "identity"}
+{"type": "assistant.delta", "delta": " +"}
+{"type": "assistant.delta", "delta": " costume"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "均"}
+{"type": "assistant.delta", "delta": " concern"}
+{"type": "assistant.delta", "delta": "（"}
+{"type": "assistant.delta", "delta": "眼睛"}
+{"type": "assistant.delta", "delta": "太大"}
+{"type": "assistant.delta", "delta": "、"}
+{"type": "assistant.delta", "delta": "身体"}
+{"type": "assistant.delta", "delta": "太"}
+{"type": "assistant.delta", "delta": "蓬松"}
+{"type": "assistant.delta", "delta": "、"}
+{"type": "assistant.delta", "delta": "背包"}
+{"type": "assistant.delta", "delta": "形状"}
+{"type": "assistant.delta", "delta": "不对"}
+{"type": "assistant.delta", "delta": "）"}
+{"type": "assistant.delta", "delta": "\n"}
+{"type": "assistant.delta", "delta": "  "}
+{"type": "assistant.delta", "delta": " -"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "第"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "2"}
+{"type": "assistant.delta", "delta": "-"}
+{"type": "assistant.delta", "delta": "3"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "轮"}
+{"type": "assistant.delta", "delta": "："}
+{"type": "assistant.delta", "delta": "identity"}
+{"type": "assistant.delta", "delta": " pass"}
+{"type": "assistant.delta", "delta": "，"}
+{"type": "assistant.delta", "delta": "但"}
+{"type": "assistant.delta", "delta": " costume"}
+{"type": "assistant.delta", "delta": " fail"}
+{"type": "assistant.delta", "delta": "（"}
+{"type": "assistant.delta", "delta": "背包"}
+{"type": "assistant.delta", "delta": "仍"}
+{"type": "assistant.delta", "delta": "被"}
+{"type": "assistant.delta", "delta": "渲染"}
+{"type": "assistant.delta", "delta": "成"}
+{"type": "assistant.delta", "delta": " p"}
+{"type": "assistant.delta", "delta": "uffy"}
+{"type": "assistant.delta", "delta": " backpack"}
+{"type": "assistant.delta", "delta": "）"}
+{"type": "assistant.delta", "delta": "\n"}
+{"type": "assistant.delta", "delta": "  "}
+{"type": "assistant.delta", "delta": " -"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "第"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "4"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "轮"}
+{"type": "assistant.delta", "delta": "："}
+{"type": "assistant.delta", "delta": "cost"}
+{"type": "assistant.delta", "delta": "ume"}
+{"type": "assistant.delta", "delta": " fail"}
+{"type": "assistant.delta", "delta": "（"}
+{"type": "assistant.delta", "delta": "仍"}
+{"type": "assistant.delta", "delta": "为"}
+{"type": "assistant.delta", "delta": " backpack"}
+{"type": "assistant.delta", "delta": "）"}
+{"type": "assistant.delta", "delta": "+"}
+{"type": "assistant.delta", "delta": " identity"}
+{"type": "assistant.delta", "delta": " concern"}
+{"type": "assistant.delta", "delta": "（"}
+{"type": "assistant.delta", "delta": "审查"}
+{"type": "assistant.delta", "delta": "说"}
+{"type": "assistant.delta", "delta": "\""}
+{"type": "assistant.delta", "delta": "character"}
+{"type": "assistant.delta", "delta": " appears"}
+{"type": "assistant.delta", "delta": " to"}
+{"type": "assistant.delta", "delta": " be"}
+{"type": "assistant.delta", "delta": " a"}
+{"type": "assistant.delta", "delta": " hedge"}
+{"type": "assistant.delta", "delta": "hog"}
+{"type": "assistant.delta", "delta": " rather"}
+{"type": "assistant.delta", "delta": " than"}
+{"type": "assistant.delta", "delta": " the"}
+{"type": "assistant.delta", "delta": " expected"}
+{"type": "assistant.delta", "delta": " hedge"}
+{"type": "assistant.delta", "delta": "hog"}
+{"type": "assistant.delta", "delta": "\""}
+{"type": "assistant.delta", "delta": "）"}
+{"type": "assistant.delta", "delta": "\n\n"}
+{"type": "assistant.delta", "delta": "**"}
+{"type": "assistant.delta", "delta": "Block"}
+{"type": "assistant.delta", "delta": "er"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "分析"}
+{"type": "assistant.delta", "delta": "**"}
+{"type": "assistant.delta", "delta": "："}
+{"type": "assistant.delta", "delta": "AI"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "图像"}
+{"type": "assistant.delta", "delta": "生成"}
+{"type": "assistant.delta", "delta": "对"}
+{"type": "assistant.delta", "delta": " \""}
+{"type": "assistant.delta", "delta": "flat"}
+{"type": "assistant.delta", "delta": " postal"}
+{"type": "assistant.delta", "delta": " s"}
+{"type": "assistant.delta", "delta": "atch"}
+{"type": "assistant.delta", "delta": "el"}
+{"type": "assistant.delta", "delta": "/b"}
+{"type": "assistant.delta", "delta": "ag"}
+{"type": "assistant.delta", "delta": "\""}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "的理解"}
+{"type": "assistant.delta", "delta": "似乎"}
+{"type": "assistant.delta", "delta": "不够"}
+{"type": "assistant.delta", "delta": "准确"}
+{"type": "assistant.delta", "delta": "，"}
+{"type": "assistant.delta", "delta": "持续"}
+{"type": "assistant.delta", "delta": "生成"}
+{"type": "assistant.delta", "delta": "类似"}
+{"type": "assistant.delta", "delta": " backpack"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "的"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "3"}
+{"type": "assistant.delta", "delta": "D"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "形状"}
+{"type": "assistant.delta", "delta": "。"}
+{"type": "assistant.delta", "delta": "连续"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "4"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "次"}
+{"type": "assistant.delta", "delta": "重试"}
+{"type": "assistant.delta", "delta": "后"}
+{"type": "assistant.delta", "delta": "已达到"}
+{"type": "assistant.delta", "delta": "停止"}
+{"type": "assistant.delta", "delta": "纪律"}
+{"type": "assistant.delta", "delta": "。"}
+{"type": "assistant.delta", "delta": "\n\n"}
+{"type": "assistant.delta", "delta": "**"}
+{"type": "assistant.delta", "delta": "建议"}
+{"type": "assistant.delta", "delta": "下一步"}
+{"type": "assistant.delta", "delta": "**"}
+{"type": "assistant.delta", "delta": "："}
+{"type": "assistant.delta", "delta": "\n"}
+{"type": "assistant.delta", "delta": "-"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "方案"}
+{"type": "assistant.delta", "delta": " A"}
+{"type": "assistant.delta", "delta": "："}
+{"type": "assistant.delta", "delta": "修改"}
+{"type": "assistant.delta", "delta": " description"}
+{"type": "assistant.delta", "delta": "_en"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "中"}
+{"type": "assistant.delta", "delta": "关于"}
+{"type": "assistant.delta", "delta": "包的"}
+{"type": "assistant.delta", "delta": "描述"}
+{"type": "assistant.delta", "delta": "方式"}
+{"type": "assistant.delta", "delta": "（"}
+{"type": "assistant.delta", "delta": "如"}
+{"type": "assistant.delta", "delta": "改用"}
+{"type": "assistant.delta", "delta": "更"}
+{"type": "assistant.delta", "delta": "具体的"}
+{"type": "assistant.delta", "delta": "视觉"}
+{"type": "assistant.delta", "delta": "参照"}
+{"type": "assistant.delta", "delta": "词"}
+{"type": "assistant.delta", "delta": "）"}
+{"type": "assistant.delta", "delta": "后"}
+{"type": "assistant.delta", "delta": "继续"}
+{"type": "assistant.delta", "delta": "重试"}
+{"type": "assistant.delta", "delta": "\n"}
+{"type": "assistant.delta", "delta": "-"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "方案"}
+{"type": "assistant.delta", "delta": " B"}
+{"type": "assistant.delta", "delta": "："}
+{"type": "assistant.delta", "delta": "改用"}
+{"type": "assistant.delta", "delta": " `"}
+{"type": "assistant.delta", "delta": "approval"}
+{"type": "assistant.delta", "delta": "_mode"}
+{"type": "assistant.delta", "delta": "="}
+{"type": "assistant.delta", "delta": "review"}
+{"type": "assistant.delta", "delta": "_only"}
+{"type": "assistant.delta", "delta": "`"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "先生"}
+{"type": "assistant.delta", "delta": "成"}
+{"type": "assistant.delta", "delta": "候选"}
+{"type": "assistant.delta", "delta": "图"}
+{"type": "assistant.delta", "delta": "让用户"}
+{"type": "assistant.delta", "delta": "视觉"}
+{"type": "assistant.delta", "delta": "验收"}
+{"type": "assistant.delta", "delta": "，"}
+{"type": "assistant.delta", "delta": "再"}
+{"type": "assistant.delta", "delta": "决定是否"}
+{"type": "assistant.delta", "delta": "调整"}
+{"type": "assistant.delta", "delta": "或"}
+{"type": "assistant.delta", "delta": "批准"}
+{"type": "assistant.delta", "delta": "\n"}
+{"type": "assistant.delta", "delta": "-"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "方案"}
+{"type": "assistant.delta", "delta": " C"}
+{"type": "assistant.delta", "delta": "："}
+{"type": "assistant.delta", "delta": "提供"}
+{"type": "assistant.delta", "delta": "一张"}
+{"type": "assistant.delta", "delta": "参考"}
+{"type": "assistant.delta", "delta": "图"}
+{"type": "assistant.delta", "delta": "（"}
+{"type": "assistant.delta", "delta": "reference"}
+{"type": "assistant.delta", "delta": "_local"}
+{"type": "assistant.delta", "delta": " "}
+{"type": "assistant.delta", "delta": "或"}
+{"type": "assistant.delta", "delta": " reference"}
+{"type": "assistant.delta", "delta": "_url"}
+{"type": "assistant.delta", "delta": "）"}
+{"type": "assistant.delta", "delta": "辅助"}
+{"type": "assistant.delta", "delta": "生成"}
+{"type": "assistant.delta", "delta": "\n\n"}
+{"type": "assistant.delta", "delta": "请"}
+{"type": "assistant.delta", "delta": "决定"}
+{"type": "assistant.delta", "delta": "如何处理"}
+{"type": "assistant.delta", "delta": "这个"}
+{"type": "assistant.delta", "delta": " Look"}
+{"type": "assistant.delta", "delta": " blocker"}
+{"type": "assistant.delta", "delta": "。"}

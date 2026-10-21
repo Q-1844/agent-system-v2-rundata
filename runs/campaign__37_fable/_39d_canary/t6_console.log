@@ -1,0 +1,143 @@
+[producer session] sess_5ecb4f215585
+  [tool] skill.load
+  [tool] skill.load
+  [tool] shot.read
+  [tool] shot.read
+  [tool] shot.read
+  [tool] shot.list
+  [progress] 
+  [tool] story.read
+  [tool] skill.load
+  [tool] story.read
+  [tool] story.list
+  [tool] story.update
+  [tool] story.list
+  [tool] story.read
+  [progress] 
+  [tool] script_writer.delegate
+  [tool] calibration.seam_measure
+  [progress] 
+  [tool] skill.load
+  [tool] shot.read
+  [tool] shot.update
+  [tool] shot.generate_videos
+  [progress] 已提交 1 个视频生成任务，开始等待完成…
+  [progress] 视频排队中（串行 worker，1 RPM）… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [progress] 正在生成 s02_c02 视频… 已完成 0/1
+  [tool] shot.generate_videos
+  [tool] calibration.seam_measure
+  [tool] visual.sample_frames
+  [tool] video.extract_frame
+  [tool] calibration.trace_upsert
+  [tool] calibration.seam_measure
+  [tool] visual.sample_frames
+  [tool] calibration.trace_upsert
+  [tool] shot.list
+  [progress] 
+  [tool] director.delegate
+  [tool] director.delegate
+
+[done] t6_c02_retry2 latency=620.3s ops=['script_writer.delegate', 'director.delegate', 'director.delegate']
+[transcript] C:\Users\曹文淇\Desktop\ai工作流\animation-storyboard\_37_fable\_39d_canary\t6_c02_retry2.json
+
+[assistant_message]
+已完成。

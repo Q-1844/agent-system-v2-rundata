@@ -1,0 +1,27 @@
+{
+  "human_deviation_level": "none",
+  "human_action": "continue",
+  "retry_or_adapt": "adapt",
+  "human_reason": "叙事状态命中：狐狸向森林深处奔跑，情绪为追逐/逃脱张力；景别与构图正确（低机位跟随，朝向画面深处）；动作端点为加速中，可自然进入 M2 跃过树干；接缝 MAE=72 处于跨场景区间（s10→s11 段间过渡），非异常；无重大意外元素（红鸟为环境细节，不违反负面约束）；整体质量足以继续。",
+  "root_cause": null,
+  "options_considered": [
+    "accept+adapt (continue)",
+    "retry_generation (锚定重试)"
+  ],
+  "selected_action": "accept+adapt",
+  "why": "叙事与情绪正确，端点状态可自然承接下一镜；MAE 72 符合跨场景切换基线；无 major 风险（主体可见、地理清晰、负面约束未击穿）；retry 成本高于收益，且本镜已达成导演意图。",
+  "negative_constraint_check": "通过——无 photorealistic textures / text/watermark / extra limbs / duplicated characters；红鸟为新增环境元素但属合法生物（非禁用的'一群儿童'类事故），不触发负面约束。",
+  "cascade_check": "本镜为 s11 起始镜，下游接续桥/M2 将由 Producer 决定；无直接级联风险需本次处理。",
+  "vision_assessment": "identity_consistency=通过; environment_consistency=通过; character_pose_state=正确（crouched/running low, facing away）; action_endpoint=正确（mid-movement, accelerating）; next_shot_readiness=良好（moving away into distance）; unexpected_elements=红鸟（不违规）; overall=pass",
+  "director_visual_observation": "画面呈现狐狸低机位跟拍、朝向画面深处加速奔跑，符合追逐戏节奏需求；与 M2 '跃过树干'开场形成自然时间连续。",
+  "vision_vs_director_diff": null,
+  "expected_tail": "狐狸在小径中段加速奔跑，身体朝向画面深处，耳朵前竖，四足离地或落地皆可",
+  "actual_tail": "狐狸低伏于 foliage 中，朝向画面深处加速移动，白尾尖可见（部分被叶遮挡），低机位跟拍",
+  "tail_to_first_mae": 72.0,
+  "end_to_end_mae": 43.4,
+  "continuity_type": "intentional_cut",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M1_a1",
+  "updated_at": 1790325557.9381144
+}

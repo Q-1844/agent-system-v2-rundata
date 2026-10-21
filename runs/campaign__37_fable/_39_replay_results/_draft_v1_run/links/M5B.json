@@ -1,0 +1,23 @@
+{
+  "cascade_check": "当前为 keyframes_bridge 桥镜，无下游接力依赖。M6 (s12_c03) 是独立镜头，已完整视频，不存在级联风险。无需复检下游接缝。",
+  "director_visual_observation": "尾帧档案图显示狐狸处于低位姿态、鼻尖凑近大南瓜，与 M6 首帧着陆目标（狐狸伸鼻顶南瓜）完全匹配。动作语义正确、环境一致、角色状态符合预期。唯一可疑点：late_middle→ending 帧间嘴部表情变化稍快，但这是动作完成瞬间的正常加速，不是 discontinuity 断点。",
+  "expected_tail": "狐狸压低前身、鼻尖凑近大南瓜，接近嗅闻/准备顶撞的状态",
+  "human_action": "continue",
+  "human_deviation_level": "none",
+  "human_reason": "叙事状态命中：狐狸从 s12_c02 的行走/寻找 → 本镜靠近南瓜 → 尾帧就位，M6 可直接承接「伸鼻顶南瓜」的动作。地理/环境一致（果园）。无负面约束击穿。MAE=1.7 在近零带。中间四段采样均无 jump 证据，仅结尾帧表情变化较快但属正常动作完成加速。整体判定：桥成功，接驳无缝。",
+  "options_considered": [
+    "hard_accept（硬接受）",
+    "add_transition（插桥）",
+    "retry_generation（重试生成）",
+    "continue（直接继续）"
+  ],
+  "root_cause": "keyframes_bridge 双端钉死结构成功执行：首槽锚定上镜尾帧（s12_c02），尾槽锚定 M6 首帧，中间插值自然过渡。",
+  "selected_action": "continue",
+  "why": "叙事/情绪/地理全部命中，MAE=1.7 近零带，无断裂证据。bridge_create 机制工作正常，无需干预。",
+  "negative_constraint_check": "无额外人物/动物闯入，无文字水印，无肢体重复——通过。",
+  "retry_or_adapt": "adapt",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M5B",
+  "updated_at": 1790326140.784734
+}

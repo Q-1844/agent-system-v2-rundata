@@ -1,0 +1,24 @@
+{
+  "anchor_patch": "description首句环境锚定：大南瓜位于土路旁（清晰可见，占据画面一侧）；收束句尾态：狐狸全身压低身体，鼻子贴近南瓜表面嗅闻，尾巴平伸向后。禁止裸重试，必须提供两端锚定。",
+  "action_plan": "1. 使用shot.update修改s12_c02的description，加入南瓜空间锚定和嗅闻姿态收束 2. 调用shot.production.bind刷新binding 3. 调用shot.generate_images生成首帧 4. 调用shot.generate_videos生成视频 5. 验收新尾帧并复查与C03的接缝",
+  "cascade_check": "若C02重生成成功，需复查s12_c03首帧接缝（新C02尾帧→C03首帧）。当前end_to_end_mae=57.4是C01→C02的漂移，不涉及C03。若新C02尾帧与C03首帧MAE异常，可能需要插桥（10s+，双端钉死）。",
+  "director_visual_observation": "实际尾帧显示狐狸在土路中央行走、头抬起、无南瓜。预期是狐狸在南瓜旁低头嗅闻。核心叙事动作完全未发生。南瓜缺失导致M6无法自然承接（M6开场需要南瓜作为视觉前提）。",
+  "expected_tail": "狐狸在大南瓜旁低头嗅闻，姿态压低，尾巴平伸",
+  "human_action": "retry_generation",
+  "human_deviation_level": "major",
+  "human_reason": "核心叙事动作（与南瓜互动）未发生，关键道具南瓜完全缺失，狐狸姿态与意图相反（walking upright vs crouched sniffing），下游M6无法自然承接（需要南瓜作为空间锚点）。不是机位/朝向的minor偏差，而是叙事事实错误。",
+  "negative_constraint_check": "重试后须重查：1. 无克隆人/多余肢体 2. 无unexpected element闯入（空场景不要出现无关人物/动物）3. 南瓜形态与预编剧一致 4. 狐狸三视图参考有效",
+  "next_shot_readiness": "M6 (s12_c03) 预期开场：狐狸伸鼻顶了顶南瓜。当前C02未建立南瓜存在的事实，M6承接断裂。需先修复C02。",
+  "options_considered": [
+    "accept+adapt (minor处理) - 否决理由：关键道具缺失导致下游无法承接，非机位微调可吸收",
+    "add_transition/插桥 - 否决理由：这是叙事事实错误而非端点对齐问题，插桥不能修复C02本身的缺失",
+    "retry_generation - 选择理由：需要重新建立南瓜存在的事实+狐狸嗅闻姿态，属于major叙事断裂"
+  ],
+  "root_cause": "multi_relay模式下，模型可能偏向'行走'的先验吸引子，忽略了'与南瓜互动'的具体指令。南瓜作为道具可能在prompt中被弱化或未充分绑定。",
+  "selected_action": "retry_generation with anchor patch",
+  "why": "major裁定标准：叙事/情绪与剧本相反、关键状态无法自然进入下一镜、关键元素缺失。本例满足：1. 预期是嗅闻南瓜，实际是走路离开 2. 南瓜完全不在画面 3. M6需要南瓜作为前提。单一重试可修正，无需复杂级联修复。",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M5_a1",
+  "updated_at": 1790325970.2673612
+}

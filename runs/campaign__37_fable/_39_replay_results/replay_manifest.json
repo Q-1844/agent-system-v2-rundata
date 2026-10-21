@@ -1,0 +1,22 @@
+{
+ "replay_run": "cal_20260925_170235_d911",
+ "gold_run": "cal_20260925_004933_6b30",
+ "thinking": true,
+ "started_at": 1790330194.719812,
+ "points": {
+  "M3_a1": {
+   "ok": true,
+   "latency_s": 22.4,
+   "operations": [
+    "calibration.trace_upsert"
+   ],
+   "ownership_violations": [],
+   "verdict": {
+    "lvl": "minor",
+    "act": "continue",
+    "retry_or_adapt": "adapt"
+   },
+   "assistant_message": "**裁定：minor，accept+adapt（continue）**——该 attempt 尾帧的 ECU 偏差已被系统插入的桥镜 s11_c04 双端钉死修复，下游 s11_c04 尾→s12_c01 首接缝实测 2.1（近零带）验证桥成立，按预编剧继续即可。trace 已落档。\n\n---\n【实际执行记录】（系统据真实回执生成，非模型叙述）\n✓ calibration.trace_upsert()\n\n已完成 1 项。\n当前分镜共 29 个镜头。"
+  }
+ }
+}

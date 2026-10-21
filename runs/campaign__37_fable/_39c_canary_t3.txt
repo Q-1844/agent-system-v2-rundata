@@ -1,0 +1,12 @@
+【Phase 39C Canary · 第三步：完成大鹤生产身份链（仍禁止镜头视频/分镜图生成）】
+
+背景：上一轮 Resource Agent 的一个委派在后台残留并长期占用会话锁（已由系统取消终止，事件已记录）。本轮重新完成大鹤的身份链。
+
+项目当前真实状态（供你核对，不要凭上轮记忆）：6 故事段/6 镜（已 multi 化）、场景链已 approved、角色仍为 0。
+
+本轮目标：
+1. 委派 Resource Agent 完成大鹤生产身份链：创建大鹤角色（description_en 按 Profile 风格：优美自然、清雅）→ 生成三视图（identity seed）→ Clothing/Look 生产到 approved。生成很慢，耐心等真实返回，不要重复提交。
+2. 完成后汇报：角色/三视图/Look 的 approved 状态，以及 6 镜的 binding readiness 现状（哪些镜已可 READY，缺什么）。
+3. 若委派再次遇到 specialist_busy：如实报告并停止，不要反复重试烧文本配额。
+
+【Canary 纪律】仍不生成分镜图与镜头视频；用户将在你汇报后放行前 2 镜。

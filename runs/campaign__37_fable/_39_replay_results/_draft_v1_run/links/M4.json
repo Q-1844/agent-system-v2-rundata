@@ -1,0 +1,21 @@
+{
+  "director_visual_observation": "s12_c01 实际尾帧画面确认：狐狸站立于村口土路中央，姿态稳定静止。背景元素全部就位——身后雨林边缘树影、面前木栅栏与南瓜地，正午阳光明亮，尘土未定感（画面中有可见光尘效果）。叙事状态正确：狐狸到达村庄边缘的停顿/观察时刻。与预期尾帧描述完全一致，no narrative regression.",
+  "options_considered": [
+    "accept+continue 不重试（判 minor/none 时的标准路径）",
+    "retry_generation（判 major 时才考虑）",
+    "add_transition/keyframes bridge（需要双端对齐时才考虑）"
+  ],
+  "root_cause": null,
+  "selected_action": "continue",
+  "why": "视觉证据三维度一致确认 none：① narrative_hit=true（狐狸已到村口、画面状态=到达后的停顿观察，符合预期尾帧）② endpoint_state_correct=true（狐狸站在土路中央，姿态稳定；环境元素全就位：树影/栅栏/南瓜地/正午阳光）③ negative_constraints_not_violated=true（仅一只狐狸、无多余动物/人物、无多余肢体）。接缝MAE 2.1在历史近零带1.7-2.4范围内，属于同场景接力正常水平。端点有效：下一镜M5（s12_c02）的开场承接——狐狸压低身子沿栅栏靠近南瓜地——与此处静止观察的状态自然衔接，无地理/姿态/情绪断裂。无 cascade risk。",
+  "cascade_check": "无级联风险——s12_c01为段内首镜，无下游接力依赖此镜尾帧。",
+  "human_action": "continue",
+  "human_deviation_level": "none",
+  "human_reason": "MAE 2.1（同场景接力正常区间1.7-2.4）。Narrative hit + endpoint correct + no unexpected elements = none deviation。狐狸已到村口中央，环境全部就位（树影/栅栏/南瓜地/正午阳光），画面是到达后停顿观察的正确叙事状态，与M5下一镜开场自然衔接。接受不重试。",
+  "negative_constraint_check": "通过——仅一只狐狸，无多余角色/动物，无肢体异常。",
+  "retry_or_adapt": "adapt",
+  "run_id": "cal_20260925_163831_bd51",
+  "story_id": "s11+s12_shadow_replay_p39b",
+  "shot_id": "M4",
+  "updated_at": 1790325787.194065
+}
